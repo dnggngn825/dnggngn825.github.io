@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Hello! I'm Dang Nguyen. Welcome to my portfolio
 
 You can use the [editor on GitHub](https://github.com/dnggngn825/dnggngn825.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
