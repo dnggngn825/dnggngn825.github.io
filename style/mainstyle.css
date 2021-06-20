@@ -2,13 +2,13 @@
 
 :root {
     background-color: white;
-    --primary-color: #888888;
+    --primary-color: #777777;
 }
 
 body
 {
     font-family: 'Quicksand';
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 2em;
     background-color: white;
 }
@@ -22,9 +22,9 @@ p {
 h1
 {
     color: black;
+    margin-top: 0.3em;
+    margin-bottom: 0;
 }
-
-
 
 a
 {
@@ -54,10 +54,75 @@ section {
 
 /* -------- Nav bar style------------- */
 .navbar {
-    background: white;
-    padding: 1em;
-    font-size: 1.5em;
+    
+    font-size: 1.2em;
+    padding: 0 1em 1em 1em;
   }
+
+nav
+{
+    z-index: 999;
+
+}
+
+/* .desktop-nav
+{
+    display: none;
+    justify-content: space-between;
+} */
+
+.menu-div,.fa-bars
+{
+    padding-top: 0.1em;
+    display: block;
+    float: right;
+}
+.fa-bars,.fa-times
+{
+    padding-left: 0.5em;
+}
+
+.menu-btn
+{
+    display: inline-block;
+    float: right;
+}
+
+.menu-div
+{
+    cursor: pointer;
+}
+
+.fa-times
+{
+    float: right;
+    padding-top: 0.2em;
+    display: block;
+}
+
+.close-div
+{
+    float: right;
+    display: block;
+}
+
+.desktop-nav
+{
+    float: right;
+    padding-left: 2em;
+    background: rgba(255, 255, 255, 0.26);
+}
+
+.desktop-nav a
+{
+    float: right;
+    width: 66%;
+    display: block;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
 
 
 /* .navbar .container {
@@ -103,13 +168,33 @@ section {
 
 @media only screen and (min-width: 725px)
 {
-    .desktop-nav
+    .navbar nav .desktop-nav
     {
-        display: float;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.205);
     }
 
-    .mobile-nav
+    .menu-div, .close-div
     {
-        display: hidden;
+        display: none;
+    }
+
+    .desktop-nav a
+    {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.205);
+        text-align: center;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 725px)
+{
+    .desktop-nav
+    {
+        overflow: hidden;
+        background-color: #878a8f;
     }
 }

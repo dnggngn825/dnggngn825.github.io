@@ -2,6 +2,7 @@
 
 <html lang="en">
     <head>
+        <script src="https://kit.fontawesome.com/f93d56c715.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
@@ -39,13 +40,25 @@
             <div class="container">
                 <nav>
 
-                    <div class="desktop-nav">
+                    <div class="menu-div" id="menu-div-id">
+                        <span>MENU</span><i class="fas fa-bars"></i>
+                    </div>
+
+                    <div class="close-div">
+                        <span>CLOSE</span><i class="fas fa-times" id="menu-exit"></i>
+                    </div>
+                    
+                    <div class="desktop-nav" id="desktop-nav-id">                        
                         <a href="#">Home</a>
                         <a href="#skill">Skills</a>
                         <a href="#education">Education</a>
                         <a href="#projects">Projects</a>
+                        <a href="#activities">Activities</a>
                         <a href="#contact">Contact Me</a>
                     </div>
+
+                    
+                    
 
                     <!-- <div class="mobile-nav">
                         <ul class="primary-nav">
@@ -62,7 +75,7 @@
         </div>
 
         <section class="about">
-            <div class="container" style="color: #444444;">Hai Dang Nguyen
+            <div class="container" style="color: #444444;"><span style="font-size: small;">Hai Dang Nguyen</span>
                 <h1>Mechatronics Graduate</h1>
                 <p>I graduated from the University of Melbourne, with a major in Mechatronics.</p>
                 <div class="about-nav">
@@ -87,13 +100,14 @@
                     <li>
                         <h4 style="color: #888888;">7/2019 - 12/2021</h4>
                         <h3>Master of Engineering - Mechatronics</h3>
-                        <h4>University of Melbourne</h4>
-                        <p>WAM: 78.5</p></li>
+                        <h4 style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
+                        <p>WAM 78.5 &#x2014 GPA 3.85</p>
+                    </li>
                     <li>
                         <h4 style="color: #888888;">7/2016 - 6/2019</h4>
                         <h3>Bachelor of Science - Mechatronics</h3>
-                        <h4>University of Melbourne</h4>
-                        <p>WAM: 74</p>
+                        <h4 style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
+                        <p>WAM 74 &#x2014 GPA 3.4</p>
                     </li>
                 </ul>
                 <p class="bottomline"></p>
@@ -156,5 +170,20 @@
             </footer>
         </section>
         
+        <script>
+        const mobileBtn = document.getElementById('menu-div-id')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('menu-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+            console.log(true);
+            
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+        </script>
     </body>
 </html>
