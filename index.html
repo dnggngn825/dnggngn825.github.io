@@ -2,59 +2,84 @@
 
 <html lang="en">
     <head>
-        <script src="https://kit.fontawesome.com/f93d56c715.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-        $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-        
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
+            nav = document.querySelector('.menu-list')
+            mobileBtnExit = document.getElementById('close-div-id');
+            menuBtn = document.querySelector('.menu-div');
+            closeBtn = document.querySelector('.close-div');
+    
+            $(document).ready(function(){
+    
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                nav.classList.add('menu-list');
+                nav.classList.remove('menu-btn');
+                closeBtn.classList.add('show-menu');
+                menuBtn.classList.remove('show-menu');
+                
+    
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+    
+                // Store hash
+                var hash = this.hash;
+    
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                } // End if
             });
-            } // End if
-        });
-        });
+            });
         </script>
-        <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/f93d56c715.js" crossorigin="anonymous"></script>
+        
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <title>Dang's Website</title>
         <link rel="stylesheet" href="style/mainstyle.css">
+        <!-- <style>
+            html 
+            {
+                scroll-behavior: smooth;
+            }
+        </style> -->
     </head>
     <body>
         <div class="navbar">
             <div class="container">
                 <nav>
-
-                    <div class="menu-div" id="menu-div-id">
-                        <span>MENU</span><i class="fas fa-bars"></i>
+                    <div class="home">
+                        <a href="#" class="mobile-menu">Home</a>
                     </div>
 
-                    <div class="close-div">
-                        <span>CLOSE</span><i class="fas fa-times" id="menu-exit"></i>
-                    </div>
+                    <div class="desktop-nav" id="desktop-nav-id">
+                        <div class="menu-div" id="menu-div-id">
+                            <span>MENU</span><i class="fas fa-bars"></i>
+                        </div>
+
+                        <div class="close-div show-menu" id="close-div-id">
+                            <span>CLOSE</span><i class="fas fa-times" id="menu-exit"></i>
+                        </div>
                     
-                    <div class="desktop-nav" id="desktop-nav-id">                        
-                        <a href="#">Home</a>
-                        <a href="#skill">Skills</a>
-                        <a href="#education">Education</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#activities">Activities</a>
-                        <a href="#contact">Contact Me</a>
+                        <ul class="menu-list" id="menu-list-id">
+                            <li><a href="#skill" class="mobile-menu underline">Skills</a></li>
+                            <li><a href="#education" class="mobile-menu underline">Education</a></li>
+                            <li><a href="#projects" class="mobile-menu underline">Projects</a></li>
+                            <li><a href="#activities" class="mobile-menu underline">Activities</a></li>
+                            <li><a href="#contact" class="mobile-menu underline">Contact Me</a></li>
+                        </ul>
+
+                        
                     </div>
 
                     
@@ -155,7 +180,16 @@
             </div>
         </section>
 
-        <section class="footer">
+        <section class="activities" id="activities">
+            <h2>Activities</h2>
+            <div class="container">
+                <ul>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="footer" id="contact">
             <footer>
                 <div class="footer-left-col">
                     <h3>Contact Information &#x2014</h3>
@@ -172,18 +206,27 @@
         
         <script>
         const mobileBtn = document.getElementById('menu-div-id')
-            nav = document.querySelector('nav')
-            mobileBtnExit = document.getElementById('menu-exit');
+            nav = document.querySelector('.menu-list')
+            mobileBtnExit = document.getElementById('close-div-id');
+            menuBtn = document.querySelector('.menu-div');
+            closeBtn = document.querySelector('.close-div');
 
         mobileBtn.addEventListener('click', () => {
             nav.classList.add('menu-btn');
-            console.log(true);
+            nav.classList.remove('menu-list');
+            menuBtn.classList.add('show-menu');
+            closeBtn.classList.remove('show-menu');
             
         })
 
         mobileBtnExit.addEventListener('click', () => {
+            nav.classList.add('menu-list');
             nav.classList.remove('menu-btn');
+            closeBtn.classList.add('show-menu');
+            menuBtn.classList.remove('show-menu');
         })
         </script>
+
+    
     </body>
 </html>
