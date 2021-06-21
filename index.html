@@ -4,6 +4,22 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
+            $(document).ready(function()
+            {
+                $(".unimelb").mouseenter(function(){   
+                    var val = $(window).width();                 
+                    if( val >= 725 )
+                    {
+                        $(".edu-photo").css("filter", "grayscale(100%) blur(0px) brightness(200%)");
+                    }
+                });
+                $(".unimelb").mouseleave(function(){
+                    $(".edu-photo").css("filter", "grayscale(100%) blur(0px) brightness(1200%)");
+                });
+            });
+        </script>
+        
+        <script>
 
             nav = document.querySelector('.menu-list')
             mobileBtnExit = document.getElementById('close-div-id');
@@ -27,6 +43,8 @@
     
                 // Store hash
                 var hash = this.hash;
+                console.log($(hash).offset().top);
+                
     
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
@@ -36,6 +54,8 @@
                 
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
+                    console.log(hash);
+                    
                 });
                 } // End if
             });
@@ -74,6 +94,7 @@
                         <ul class="menu-list" id="menu-list-id">
                             <li><a href="#skill" class="mobile-menu underline">Skills</a></li>
                             <li><a href="#education" class="mobile-menu underline">Education</a></li>
+                            <li><a href="#experience" class="mobile-menu underline">Experience</a></li>
                             <li><a href="#projects" class="mobile-menu underline">Projects</a></li>
                             <li><a href="#activities" class="mobile-menu underline">Activities</a></li>
                             <li><a href="#contact" class="mobile-menu underline">Contact Me</a></li>
@@ -100,109 +121,119 @@
         </div>
 
         <section class="about">
-            <div class="container" style="color: #444444;"><span style="font-size: small;">Hai Dang Nguyen</span>
-                <h1>Mechatronics Graduate</h1>
-                <p>I graduated from the University of Melbourne, with a major in Mechatronics.</p>
-                <div class="about-nav">
-                    <p><a href="#projects">Projects</a> or <a href="Resume.html">Resume</a></p>
+            
+            <div class="container" style="color: #444444;">
+                <img class="about-image" src="image/about-image.jpg" alt="Abstract Image" style="width: 100%; height: auto;">
+                <div class="info-about">
+                    <span style="font-size: small;">Hai Dang Nguyen</span>
+                    <h1>Mechatronics Graduate</h1>
+                    <p>I graduated from the University of Melbourne, with a major in Mechatronics.</p>
+                    <div class="about-nav">
+                        <p><a href="#projects">Projects</a> or <a href="Resume.html">Resume</a></p>
+                    </div>
                 </div>
             </div>
         </section>
         
         
-        <section class="skill-section" id="skill">
-            <div class="container">
+        <div class="body-2">
+            <section class="skill-section" id="skill">
                 <h2>Skills</h2>
-                <p class="bottomline"></p>
-            </div>
-        </section>
-        
-
-        <section class="education-section" id="education">
-            <h2>Education</h2>
-            <div class="container">
-                <ul>
-                    <li>
-                        <h4 style="color: #888888;">7/2019 - 12/2021</h4>
-                        <h3>Master of Engineering - Mechatronics</h3>
-                        <h4 style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
-                        <p>WAM 78.5 &#x2014 GPA 3.85</p>
-                    </li>
-                    <li>
-                        <h4 style="color: #888888;">7/2016 - 6/2019</h4>
-                        <h3>Bachelor of Science - Mechatronics</h3>
-                        <h4 style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
-                        <p>WAM 74 &#x2014 GPA 3.4</p>
-                    </li>
-                </ul>
-                <p class="bottomline"></p>
-            </div>
-        </section>
-        
-
-        <section class="experience-section" id="experience">
-            <h2>Experience</h2>
-            <div class="container">
-                <ul>
-                    <li>
-                        <div class="aquaterra-container">
-                            <div class="aquaterra">AquaTerra
-                                <h2>Internet of Things (IOT) Product Developer Officer</h2>
-                                <h3>Internship</h3>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="mur-container">
-                            <div class="MUR">Melbourne University Racing Motorsports
-                                <h2>Autonomous Steering Engineer</h2>
-                                <h3>Professional Volunteer</h3>
-                            </div>
-                        </div>
-    
-                    </li>
-                </ul>
-            </div>
-        </section>
-        
-        <section class="projects-section" id="projects">
-            <h2>Projects</h2>
-            <div class="container">
-                <ul>
-                    
-                    <li>The Autonomous Steering System</li>
-                    <li>The Autonomous Warehouse Robot</li>
-                    <li>The Chess-bot</li>
-                    <li>The 3D-printed Dental Mirror</li>
-                    <li>The Prosthetic Arm</li>
-    
-                </ul>
-            </div>
-        </section>
-
-        <section class="activities" id="activities">
-            <h2>Activities</h2>
-            <div class="container">
-                <ul>
-
-                </ul>
-            </div>
-        </section>
-
-        <section class="footer" id="contact">
-            <footer>
-                <div class="footer-left-col">
-                    <h3>Contact Information &#x2014</h3>
-                    <p>Please feel free to contact me at anytime.</p>
+                <div class="container">
+                    <p class="bottomline"></p>
                 </div>
-                <div class="footer-right-col">
-                    <ul class="contact-links">
-                        <li>E: <a href="mailto:h.danggnguyen@gmail.com" style="color: black;">h.danggnguyen@gmail.com</a></li>
-                        <li>P: <span style="color: black;">+61 432 581 587</span></li>
+            </section>
+            
+    
+            <section class="education-section" id="education">
+                <h2>Education</h2>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <h4 style="color: #888888;">7/2019 - 12/2021</h4>
+                                <h3>Master of Engineering - Mechatronics</h3>
+                                <h4 class="unimelb" style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
+                                <p>WAM 78.5 &#x2014 GPA 3.85</p>
+                            </li>
+                            <li>
+                                <h4 style="color: #888888;">7/2016 - 6/2019</h4>
+                                <h3>Bachelor of Science - Mechatronics</h3>
+                                <h4 class="unimelb" style="color: #535353;"><i class="fas fa-map-marker-alt"></i> University of Melbourne</h4>
+                                <p>WAM 74 &#x2014 GPA 3.4</p>
+                            </li>
+                        </ul>
+                        <!-- <img class="edu-photo" src="image/unimelb.jpg" alt="unimelbPhoto"> -->
+                        <p class="bottomline"></p>
+                        
+                    </div>
+                
+            </section>
+            
+    
+            <section class="experience-section" id="experience">
+                <h2>Experience</h2>
+                <div class="container">
+                    <ul>
+                        <li>
+                            <div class="aquaterra-container">
+                                <div class="aquaterra">AquaTerra
+                                    <h2>Internet of Things (IOT) Product Developer Officer</h2>
+                                    <h3>Internship</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mur-container">
+                                <div class="MUR">Melbourne University Racing Motorsports
+                                    <h2>Autonomous Steering Engineer</h2>
+                                    <h3>Professional Volunteer</h3>
+                                </div>
+                            </div>
+        
+                        </li>
                     </ul>
                 </div>
-            </footer>
-        </section>
+            </section>
+            
+            <section class="projects-section" id="projects">
+                <h2>Projects</h2>
+                <div class="container">
+                    <ul>
+                        
+                        <li>The Autonomous Steering System</li>
+                        <li>The Autonomous Warehouse Robot</li>
+                        <li>The Chess-bot</li>
+                        <li>The 3D-printed Dental Mirror</li>
+                        <li>The Prosthetic Arm</li>
+        
+                    </ul>
+                </div>
+            </section>
+    
+            <section class="activities" id="activities">
+                <h2>Activities</h2>
+                <div class="container">
+                    <ul>
+    
+                    </ul>
+                </div>
+            </section>
+    
+            <section class="footer" id="contact">
+                <footer>
+                    <div class="footer-left-col">
+                        <h3>Contact Information &#x2014</h3>
+                        <p>Please feel free to contact me at anytime.</p>
+                    </div>
+                    <div class="footer-right-col">
+                        <ul class="contact-links">
+                            <li>E: <a href="mailto:h.danggnguyen@gmail.com" style="color: black;">h.danggnguyen@gmail.com</a></li>
+                            <li>P: <span style="color: black;">+61 432 581 587</span></li>
+                        </ul>
+                    </div>
+                </footer>
+            </section>
+        </div>
         
         <script>
         const mobileBtn = document.getElementById('menu-div-id')
@@ -225,6 +256,10 @@
             closeBtn.classList.add('show-menu');
             menuBtn.classList.remove('show-menu');
         })
+        </script>
+
+        <script>
+
         </script>
 
     
