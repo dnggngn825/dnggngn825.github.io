@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans&family=Quicksand:wght@500&display=swap');
 :root {
     background-color: white;
     --primary-color: #777777;
@@ -7,10 +7,10 @@
 
 .navbar,.body-2,body
 {
-    font-family: 'Quicksand';
+    font-family: 'Open Sans';
     font-size: 1.2em;
     margin:0 auto 0 auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.014);
 }
 
 
@@ -29,15 +29,36 @@ p {
 
 h1
 {
-    color: black;
+    color: rgba(29, 29, 29, 0.863);
     margin-top: 0.3em;
     margin-bottom: 0;
 }
 
+h2,h3
+{
+    color: rgb(41, 41, 41);
+}
+
 a
 {
-    color: #444444;
+    color: #525252;
     text-decoration: none;
+}
+
+h2,h3,h1,p,h4,h5,span,a
+{
+    letter-spacing: 2.5px;
+}
+
+.unimelb,.company
+{
+    font-family: 'Quicksand';
+    color: var(--primary-color);
+}
+
+.time 
+{
+    font-family: 'Maven Pro';
 }
 
 ul
@@ -280,12 +301,26 @@ nav
     z-index: 3;
 }
 
+/* ---------- skill style -----------*/
+
+.skill-container
+{
+    display: flex;
+}
+
+.skill-div
+{
+    text-align: justify;
+    width: 48%;
+}
+
 /* --------------- education style --------*/
 
 .education-section .container
 {
     position: relative;
     overflow: hidden;
+    z-index: 5;
 }
 
 .education-section ul
@@ -293,6 +328,17 @@ nav
     z-index: 2;
     position: relative;
 }
+
+.edu-container div,.exp-container div
+{
+    background-color: rgba(214, 214, 214, 0.041);
+    box-shadow: 0 5px 20px 0 rgba(199, 199, 199, 0.514);
+    border-radius: 0.8rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 
 .education-section .edu-photo
 {
@@ -343,7 +389,9 @@ nav
 
 /* p.bottomline
 {
+    margin-top: 2rem;
     border-style: none none solid none;
+    border-color: rgba(221, 221, 221, 0.562) ;
 } */
 
 @media only screen and (min-width: 725px)
@@ -662,14 +710,14 @@ nav
     {
         display: flex;
         text-align: left;
-        width: 40%;
+        width: 47%;
     }
 
     .exp-container div 
     {
         display: flex;
         text-align: left;
-        width: 40%;
+        width: 47%;
     }
 
     .exp-container ul 
