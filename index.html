@@ -261,6 +261,9 @@
             </section>
         </div>
         
+        <div class="end-page">
+            <p>Made with &hearts; by Dang Nguyen<br>from Melbourne, VIC, AU</p>
+        </div>
         <script>
         const mobileBtn = document.getElementById('menu-div-id')
             nav = document.querySelector('.menu-list')
@@ -285,7 +288,33 @@
         </script>
 
         <script>
+            windowWidth = $(window).width();
+            var checkpoint;
+            if (windowWidth <= 834)
+            {
+                checkpoint = 350;
+            } 
+            else
+            {
+                checkpoint = 500;
+            }
 
+            window.addEventListener("scroll", () =>
+            {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll <= checkpoint)
+                {
+                    brightness = 0.3* (1-currentScroll/checkpoint);
+                }  else
+                {
+                    brightness = 0;
+                }
+                command = "brightness("+brightness+")";
+                $(".about-image").css("filter",command);
+                console.log(checkpoint);
+                
+                // document.querySelector(".about-image").style.filter.add("brighness")
+            })
         </script>
 
     

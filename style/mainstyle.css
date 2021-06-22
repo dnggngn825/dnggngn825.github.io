@@ -61,7 +61,6 @@ section
 .container
 {
     margin-top: 1em;
-    margin-bottom: 1em;
     border-bottom-width: 3px;
 
     top: 0;
@@ -122,7 +121,16 @@ nav
     padding-left: 0.4em;
 }
 
+.end-page
+{
+    margin-left: 1em;
+    margin-top: 5em;
+}
 
+.end-page p
+{
+    font-size:x-small;
+}
 
 .menu-div
 {
@@ -224,7 +232,6 @@ nav
 .about .container
 {
     position: relative;
-    margin: 0em 0em 1em 0em;
     font-size: 1.4em;
     padding-left: 0;
     padding-right: 0;
@@ -250,9 +257,9 @@ nav
 .about-image
 {
     /* Add the blur effect */
-    filter: grayscale(100%) blur(1px) brightness(30%);
-    /* filter: blur(5px);
-    filter: brightness(110%); */
+    /* filter: grayscale(80%);
+    filter: blur(1px); */
+    filter: brightness(30%);
     /* -webkit-filter: blur(1px); */
     height: 100%;
     width: 100%;
