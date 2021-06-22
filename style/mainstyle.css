@@ -60,7 +60,7 @@ section
 
 .container
 {
-    margin-top: 1em;
+    margin-top: 0.3em;
     border-bottom-width: 3px;
 
     top: 0;
@@ -75,7 +75,7 @@ section
     /* width: 100%; */
     background-color: #ffffffdc;
     /* border-radius: 1em; */
-    height: 70px;
+    height: 50px;
     position: absolute;
     left: 0;
     right: 0;
@@ -235,8 +235,8 @@ nav
     font-size: 1.4em;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .info-about
@@ -588,6 +588,7 @@ nav
         top: 0;
         width: 100%;
         z-index: 999;
+        height: 50px;
     }
 
     .desktop-nav .menu-list
@@ -674,4 +675,12 @@ nav
         justify-content: space-evenly;
     }
 
+}
+
+@media only screen and (max-height: 812px) 
+{
+    .about
+    {
+        height: 730px;
+    }
 }
