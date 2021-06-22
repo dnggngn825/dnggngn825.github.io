@@ -13,6 +13,7 @@
     background-color: white;
 }
 
+
 .about
 {
     font-family: 'Quicksand';
@@ -51,9 +52,10 @@ section
     padding-top: 5em;
 }
 
-section.about 
+.about 
 {
     margin: 0;
+    padding-top: 0;
 }
 
 .container
@@ -226,6 +228,8 @@ nav
     font-size: 1.4em;
     padding-left: 0;
     padding-right: 0;
+    width: 100%;
+    height: auto;
 }
 
 .info-about
@@ -246,15 +250,25 @@ nav
 .about-image
 {
     /* Add the blur effect */
-    filter: grayscale(100%);
-    filter: blur(5px);
-    filter: brightness(110%);
+    filter: grayscale(100%) blur(1px) brightness(30%);
+    /* filter: blur(5px);
+    filter: brightness(110%); */
     /* -webkit-filter: blur(1px); */
+    height: 100%;
+    width: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.blacklayer
+{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 3;
 }
 
 /* --------------- education style --------*/
@@ -410,6 +424,11 @@ nav
         margin: 0em 3em 3em 3em;
     }
 
+    .navbar
+    {
+        margin-bottom: 0;
+        
+    }
     
 
 }
