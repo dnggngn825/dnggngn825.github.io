@@ -76,7 +76,7 @@ section
     /* width: 100%; */
     background-color: #ffffffdc;
     /* border-radius: 1em; */
-    height: 100px;
+    height: 70px;
     position: absolute;
     left: 0;
     right: 0;
@@ -188,14 +188,14 @@ nav
 .navbar .container
 {
     text-align: center;
-    padding: 1.2em 2em 1.2em 2em;
+    padding: .2em 2em .2em 2em;
     display: flex;
     float: center;
 }
 
 .menu-btn li
 {
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.8em 0 0.8em 0;
 }
 
 
@@ -477,16 +477,18 @@ nav
     .menu-btn
     {
         float: right;
-        width: 66%;
+        width: 80%;
         display: block;
         color: white;
         text-align: right;
         position: relative;
         padding-right: 1em;
-        background-color: #8b8b8bdc;
+        background-color: #fafafaf0;
         border-radius: 0.3em 0.2em 0.3em 0.3em;
         box-shadow: 0 5px 10px 0 #0000004f;
         z-index: 9999;
+        font-size: 1.2em;
+        margin-top: 1em;
     }
 
     /* .menu-btn a
@@ -579,7 +581,7 @@ nav
     .menu-btn
     {
         float: right;
-        width: 100px;
+        width: 150px;
         display: block;
         color: white;
         text-align: right;
