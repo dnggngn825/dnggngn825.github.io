@@ -306,6 +306,23 @@ nav
     font-size: 1.1em;
 }
 
+.projects-container ul
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.projects-container div
+{
+    content: '';
+    background-color: bisque;
+    width: 100%;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+}
+
 
 
 /*------------ foot style ------------ */
@@ -617,4 +634,37 @@ nav
         width: auto;
         filter: grayscale(100%) blur(0px) brightness(1000%);
     }
+
+}
+
+@media only screen and (min-width: 768px)
+{
+    .edu-container ul
+    {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .edu-container div
+    {
+        display: flex;
+        text-align: left;
+        width: 40%;
+    }
+
+    .exp-container div 
+    {
+        display: flex;
+        text-align: left;
+        width: 40%;
+    }
+
+    .exp-container ul 
+    {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
 }
