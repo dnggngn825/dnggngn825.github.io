@@ -45,9 +45,20 @@ a
     text-decoration: none;
 }
 
-h2,h3,h1,p,h4,h5,span,a
+p
+{
+    letter-spacing: 1.5px;
+}
+
+h3,h1,h4,h5,span,a
 {
     letter-spacing: 2.5px;
+}
+
+h2
+{
+    letter-spacing: 3.5px;
+    font-family: 'Maven Pro';
 }
 
 .unimelb,.company
@@ -66,6 +77,14 @@ ul
     list-style-type:  none;
     margin: 0;
     padding: 0
+}
+
+.about-text-div
+{
+    text-align: justify;
+    padding: 0 1em;
+    border-radius: 1rem;
+    box-shadow: 0 3px 40px 0 #c7c7c74f;
 }
 
 section
@@ -202,8 +221,8 @@ nav
     top: 0;
     z-index: 999;
     float: right;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
   }
 
 
@@ -290,7 +309,7 @@ nav
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    object-position: center;
+    object-position: center 10%;
 }
 
 .blacklayer
@@ -332,7 +351,7 @@ nav
 .edu-container div,.exp-container div
 {
     background-color: rgba(214, 214, 214, 0.041);
-    box-shadow: 0 5px 20px 0 rgba(199, 199, 199, 0.514);
+    box-shadow: 0 3px 40px 0 #c7c7c74f;
     border-radius: 0.8rem;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -394,7 +413,7 @@ nav
     border-color: rgba(221, 221, 221, 0.562) ;
 } */
 
-@media only screen and (min-width: 725px)
+@media only screen and (min-width: 834px)
 {
     .navbar nav .desktop-nav
     {
@@ -493,7 +512,7 @@ nav
         padding: 0;
     }
 
-    .navbar,.body-2 
+    .body-2 
     {
         margin: 0em 3em 3em 3em;
     }
@@ -507,7 +526,7 @@ nav
 
 }
 
-@media only screen and (max-width: 725px)
+@media only screen and (max-width: 834px)
 {
     .desktop-nav .menu-list
     {
@@ -519,7 +538,7 @@ nav
     .about .container
     {
         position: relative;
-        font-size: 85%;
+        font-size: 1.2em
     }
 
     .info-about
@@ -591,7 +610,7 @@ nav
 
     .info-about
     {
-        padding-left: 3em;
+        padding-left: 6em;
     }
 
 
