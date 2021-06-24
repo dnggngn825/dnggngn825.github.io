@@ -68,6 +68,21 @@
     background-color: white;
 }
 
+/* html 
+{
+    height: 100%;
+} */
+body
+{
+    min-height: 100vh;
+    padding: 0;
+}
+/* body 
+{
+    height: 100vh;
+    padding: 0;
+} */
+
 p {
     font-size: 1em;
     line-height: 1.6em;
@@ -233,7 +248,7 @@ section
 
 .container
 {
-    margin-top: 0.3em;
+    /* margin-top: 0.3em; */
     border-bottom-width: 3px;
 
     top: 0;
@@ -271,7 +286,7 @@ section
 
 .scrolled
 {
-    height: 50px;
+    height: 70px;
 }
 
 .scrolled .mobile-menu,.scrolled #menu-div-id,.scrolled #close-div-id
@@ -968,7 +983,7 @@ nav
     body
     {
         font-size: 0.9em;
-        margin:0.5em 0em 1em 0em;
+        /* margin:0.5em 0em 1em 0em; */
     }
 
     .navbar
