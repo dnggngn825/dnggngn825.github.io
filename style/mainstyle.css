@@ -1,16 +1,58 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro&family=Open+Sans&family=Quicksand:wght@500&display=swap');
 :root {
     background-color: white;
-    --primary-color: #6d6d6d;
+    --primary-color: #585858;
 }
 
-.navbar,.body-2,body
+.navbar,.body-2,body,.title,.company
 {
-    font-family: 'Maven Pro';
     font-size: 1.2em;
     margin:0 auto 0 auto;
     background-color: rgba(255, 255, 255, 0.014);
+    -webkit-font-feature-settings:"kern", "liga", "pnum";
+    -moz-font-feature-settings:"kern", "liga", "pnum";
+    -ms-font-feature-settings:"kern", "liga", "pnum";
+    font-feature-settings:"kern", "liga", "pnum";
+    -webkit-font-smoothing:antialiased;
+    color:#28373b;
+    font-family:"Lato";
+    font-weight:400;
+    font-style:normal;
+}
+
+.course,h3
+{
+    font-size: 1.2em;
+    margin:0 auto 0 auto;
+    background-color: rgba(255, 255, 255, 0.014);
+    -webkit-font-feature-settings:"kern", "liga", "pnum";
+    -moz-font-feature-settings:"kern", "liga", "pnum";
+    -ms-font-feature-settings:"kern", "liga", "pnum";
+    font-feature-settings:"kern", "liga", "pnum";
+    -webkit-font-smoothing:antialiased;
+    color:#28373b;
+    font-family:"Lato";
+    font-weight:400;
+    font-style:normal;
+}
+
+.project-title, h2,h4
+{
+    -webkit-font-feature-settings:"kern", "liga", "pnum";
+    -moz-font-feature-settings:"kern", "liga", "pnum";
+    -ms-font-feature-settings:"kern", "liga", "pnum";
+    font-feature-settings:"kern", "liga", "pnum";
+    -webkit-font-smoothing:antialiased;
+    color:#2b2b2b;
+    font-family:"Lato";
+    font-weight:500;
+    font-style:normal;
+}
+
+.company,.mark
+{
+    margin-top: 1.5em;
 }
 
 
@@ -52,7 +94,7 @@ p,a
 
 h3,h1,h4,h5,span
 {
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
 }
 
 h2
@@ -106,7 +148,7 @@ h2
 
 .self-text-div p
 {
-    margin-top: auto;
+
     margin-bottom: auto;
     display: block;
 }
@@ -168,12 +210,44 @@ section
     /* width: 100%; */
     background-color: #ffffffdc;
     /* border-radius: 1em; */
-    height: 50px;
+    height: 0px;
     position: absolute;
     left: 0;
     right: 0;
+}
 
-  }
+.navbar .mobile-menu, #menu-div-id, #close-div-id
+{
+    color: whitesmoke;
+}
+
+.menu-btn
+{
+    background-color: rgba(245, 245, 245, 0.075);
+}
+
+.about-image
+{
+    display: block;
+    position: relative;
+    top: 0;
+}
+
+.scrolled
+{
+    height: 50px;
+}
+
+.scrolled .mobile-menu,.scrolled #menu-div-id,.scrolled #close-div-id
+{
+    color:var(--primary-color)
+}
+
+.scrolled .menu-btn
+{
+    background-color: rgba(245, 245, 245, 0.76);
+    border-color: #555555d8;
+}
 
 nav
 {
@@ -301,24 +375,41 @@ nav
 }
 
 
-.underline
+.underline, .anbout-nav a
 {
     position:relative;
     text-decoration:none;
     display:inline-block;
 }
-.underline:after 
+.underline:after, .about-nav a:after
 {
     display:block;
     content: '';
-    border-bottom: solid 2px #555555d8;  
+    border-bottom: solid 2px whitesmoke;  
     transform: scaleX(0);  
     transition: transform 400ms ease-in-out;
     transform-origin:100% 50%
 }
-    .underline:hover:after { 
+
+.scrolled .underline::after
+{
+    border-bottom:solid 2px #555555d8;
+}
+
+.about-nav a:after
+{
+    border-bottom: solid 2px rgb(218, 255, 255);  
+}
+
+.underline:hover:after, .about-nav a:hover:after
+{ 
     transform: scaleX(1);
     transform-origin:0 50%;
+}
+
+.underline:hover, .about-nav a:hover
+{
+    font-weight: bold;
 }
 
 /* ------- About style ---------- */
@@ -392,6 +483,11 @@ nav
     display: flex;
 }
 
+.project-item-div .proficiency-col
+{
+    max-width: 120px;
+}
+
 .proficiency-col
 {
     display: inline-block;
@@ -457,6 +553,12 @@ nav
 {
     padding: 0.3em;
     font-size: 1.1em;
+    margin: 0 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .projects-container ul
@@ -470,16 +572,28 @@ nav
     margin: 0.8em 0;
 }
 
+.project-skill-div
+{
+    position: absolute;
+    bottom: 0;
+    padding: 1em 0em;
+}
+.project-skill-div .proficiency-col
+{
+    border-color: #e7e7e7;
+}
+
 .projects-container .project-item-div
 {
     content: '';
     background-color: rgba(51, 51, 51, 0.356);
     /* width: 100%; */
-    height: 400px;
+    height: 500px;
     border-style: solid;
     border-color: #ccccccd8;
     margin: 0.25em 0.25em;
     border-radius: 0.8rem;
+    position: relative;
 }
 
 .projects-container .project-item-div:hover
@@ -520,13 +634,24 @@ nav
     }
 
     .left-col,.right-col
-{
-    text-align: justify;
-    width: 48%;
-    /* display: flex; */
-}
+    {
+        text-align: justify;
+        width: 48%;
+        /* display: flex; */
+    }
+
+    .project-skill-div .left-col
+    {
+        width: 100%;
+    }
 
     .underline::after
+    {
+        border-bottom: solid 2px whitesmoke;
+        
+    }
+
+    .scrolled .underline::after
     {
         border-bottom: solid 2px var(--primary-color);
         
@@ -679,6 +804,7 @@ nav
     {
         /* width: 47%; */
         margin: 2em 0;
+        height: 350px;
     }
 
 
@@ -706,14 +832,15 @@ nav
         text-align: right;
         position: relative;
         padding-right: 1em;
-        background-color: #fafafaf0;
+        /* background-color: #fafafaf0; */
+        background-color: rgba(245, 245, 245, 0.151);
         border-radius: 0.3em 0.2em 0.3em 0.3em;
         box-shadow: 0 5px 10px 0 #0000004f;
         z-index: 9999;
         font-size: 1.2em;
         margin-top: 1em;
         border-style: solid;
-        border-color: #555555d8;
+        border-color:whitesmoke;
         border-width: 0.15em;
     }
 
@@ -761,6 +888,12 @@ nav
         right: 0;
         left: 0;
         width: 100%;
+    }
+
+    .about-self-img
+    {
+        width: 230px;
+        height: 230px;
     }
 }
 
