@@ -72,6 +72,38 @@ h2
     font-family: 'Maven Pro';
 }
 
+.about-self-img
+{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 1em auto;
+    border-radius: 8%;
+    filter: saturate(70%);
+}
+
+.self-text-div
+{
+    display: block;
+    margin: 1em 1em;
+    position: relative;
+}
+
+.self-text-div p
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+.self-img-div
+{
+    /* justify-content: space-evenly; */
+    /* margin: 0 auto; */
+}
+
 ul
 {
     list-style-type:  none;
@@ -81,10 +113,15 @@ ul
 
 .about-text-div
 {
+    
     text-align: justify;
     padding: 0 1em;
-    border-radius: 1rem;
-    box-shadow: 0 3px 40px 0 #c7c7c74f;
+    border-radius: 0.5rem;
+    background-color: #c7c7c74f;
+    box-shadow: 0 3px 40px 0 #d6d6d64f;
+    position: relative;
+    overflow: hidden;
+    
 }
 
 section
@@ -350,8 +387,8 @@ nav
 
 .edu-container div,.exp-container div
 {
-    background-color: rgba(214, 214, 214, 0.041);
-    box-shadow: 0 3px 40px 0 #c7c7c74f;
+    background-color: rgba(182, 182, 182, 0.103);
+    /* box-shadow: 0 3px 40px 0 #c7c7c74f; */
     border-radius: 0.8rem;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -421,6 +458,12 @@ nav
         justify-content: space-between;
         width: 100%;
         /* background-color: #ffffffdc; */
+    }
+
+    .about-text-div
+    {
+        display: flex;
+        justify-content: space-evenly;
     }
 
     .underline::after
