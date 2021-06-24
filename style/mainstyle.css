@@ -931,7 +931,7 @@ nav
         top: 0;
         width: 100%;
         z-index: 999;
-        height: 50px;
+        /* height: 50px; */
     }
 
     .desktop-nav .menu-list
@@ -946,7 +946,7 @@ nav
         padding-bottom: 0;
     }
 
-    .menu-btn
+    /* .menu-btn
     {
         float: right;
         width: 150px;
@@ -959,7 +959,7 @@ nav
         border-radius: 0.3em 0.2em 0.3em 0.3em;
         box-shadow: 0 5px 10px 0 #0000004f;
         z-index: 9999;
-    }
+    } */
 
     .education-section .container
     {
