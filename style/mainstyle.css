@@ -622,6 +622,114 @@ nav
     right: 0;
 }
 
+#chessbot .img-holder
+{
+    background-image: linear-gradient(to bottom right,
+            rgba(141, 141, 141, 0.884)
+            ,rgba(78, 78, 78, 0.603)
+            ,rgba(168, 168, 168, 0.284))
+            , url(../image/thumbnail-chess-bot.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height:100%;
+    transition: all 0.5s;
+    /* z-index: 999; */
+    /* background-color: #cccccc; */
+    /* z-index: 2; */
+}
+
+.img-scale
+{
+    transform: scale(1.05);
+}
+
+#asc .img-holder
+{
+    background-image: linear-gradient(to bottom right,
+            rgba(85, 85, 85, 0.884)
+            ,rgba(78, 78, 78, 0.603)
+            ,rgba(168, 168, 168, 0.284))
+            , url(../image/thumbnail-asc.jpg);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+#p-web .img-holder
+{
+    background-image: linear-gradient(to bottom left,
+            rgba(53, 53, 53, 0.842)
+            ,rgba(78, 78, 78, 0.342)
+            ,rgba(53, 53, 53, 0.678))
+            , url(../image/thumbnail-personal-web.jpg);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.project-item-div
+{
+    overflow: hidden;
+}
+
+/* .img-holder:hover
+{
+    transform: scale(1.05);
+} */
+
+.chessbot h4
+,.chessbot .project-skill-div
+,.chessbot .proficiency-col
+,#asc h4
+,#asc .project-skill-div
+,#asc .proficiency-col
+,#p-web h4
+,#p-web .project-skill-div
+,#p-web .proficiency-col
+{
+    color: white;
+    font-weight: 500;
+}
+
+.chessbot .proficiency-col
+,#asc .proficiency-col
+,#p-web .proficiency-col
+{
+    background-color: rgba(51, 51, 51, 0.61);
+    font-weight: 500;
+}
+
+.chessbot .project-title
+{
+    color: rgb(255, 234, 195);
+    font-weight: 600;
+}
+#asc .project-title
+{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+#p-web .project-title
+{
+    color: #57aa9f;
+    font-weight: 600;
+}
+
+
+.project-item-div li
+{
+    position: absolute;
+}
+
 .projects-container ul
 {
     width: 100%;
@@ -646,7 +754,7 @@ nav
 
 .projects-container .project-item-div
 {
-    content: '';
+    /* content: ''; */
     /* background-color: rgba(51, 51, 51, 0.356); */
     /* width: 100%; */
     height: 500px;
@@ -870,8 +978,13 @@ nav
     {
         /* width: 47%; */
         margin: 2em 0;
-        height: 350px;
+        height: 500px;
     }
+
+    /* .img-holder
+    {
+        height: 500px;
+    } */
 
 
     .body-2

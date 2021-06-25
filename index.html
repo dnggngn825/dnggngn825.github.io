@@ -305,7 +305,8 @@
                     </ul> -->
                     <ul>
                         <a href="https://github.com/dnggngn825/TheAutonomousRobot">
-                            <div class="project-item-div">
+                            <div class="project-item-div" id="asc">
+                                <div class="img-holder"></div>
                                 <li>
                                     <h4>2021</h4>
                                     <h3 class="project-title">
@@ -322,8 +323,12 @@
                             
                         </a>
                         <a href="https://github.com/dnggngn825/The-Chess-Bot">
-                            <div class="project-item-div">
-                                <li>
+                            <div class="project-item-div chessbot" id="chessbot">
+
+                                <!-- <img class="thumbnail" src="image/thumbnail-chess-bot.jpg" alt="thumbnail-chess-bot"> -->
+
+                                <div class="img-holder"></div>
+                                <li class="li">
                                     <h4>2021</h4>
                                     <h3 class="project-title">
                                         The Chessbot - 4 DoFs Robot Arm
@@ -338,6 +343,7 @@
                                         </div>
                                     </div>
                                 </li>
+                                
                             </div>
                         </a>
                     </ul>
@@ -348,7 +354,7 @@
                                 <li>
                                     <h4>2020 - 2021</h4>
                                     <h3 class="project-title">
-                                        The Autonomous Steering System - Captone
+                                        The Autonomous Steering System - Captone (in progress)
                                     </h3>
                                     <div class="project-skill-div">
                                         Skill
@@ -366,7 +372,8 @@
                         </a>
                         
                         <a href="https://github.com/dnggngn825/dnggngn825.github.io">
-                            <div class="project-item-div">
+                            <div class="project-item-div" id="p-web">
+                                <div class="img-holder"></div>
                                 <li>
                                     <h4>2021</h4>
                                     <h3 class="project-title">
@@ -431,14 +438,15 @@
                 </div>
             </section>
     
-            <section class="activities" id="activities">
+            <!-- ---------------- Activity ----------------- -->
+            <!-- <section class="activities" id="activities">
                 <h2>ACTIVITIES</h2>
                 <div class="container">
                     <ul>
     
                     </ul>
                 </div>
-            </section>
+            </section> -->
     
             <section class="footer" id="contact">
                 <footer>
@@ -448,11 +456,16 @@
                     </div>
                     <div class="footer-right-col">
                         <ul class="contact-links">
-                            <li>E: <a href="mailto:h.danggnguyen@gmail.com" style="color: black;font-size: smaller;">h.danggnguyen@gmail.com</a></li>
-                            <li>P: <span style="color: black;font-size: smaller;">+61 432 581 587</span></li>
+                            <!-- <li>E: <a href="mailto:h.danggnguyen@gmail.com" style="color: black;font-size: smaller;">h.danggnguyen@gmail.com</a></li>
+                            <li>P: <span style="color: black;font-size: smaller;">+61 432 581 587</span></li> -->
                             <li>
-                                <div>
-
+                                <div class="social-contact"
+                                style="margin: 1em 0;display: flex;width: 12%;
+                                position: relative; justify-content: space-between;">
+                                    <a href="tel:+61432581587" id="gh" ><i style="font-size: 25px;" class="fas fa-phone"></i></a>
+                                    <a href="mailto:h.danggnguyen@gmail.com" id="gh" ><i style="font-size: 25px;" class="fa fa-envelope"></i></a>
+                                    <a href="https://github.com/dnggngn825" id="gh" ><i style="font-size: 25px;" class="fa fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/dang-nguyen-89a563170/" id="lk"><i style="font-size: 25px;" class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -521,6 +534,59 @@
                 var $nav = $(".navbar");
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
             });
+        </script>
+        <script>
+            $("#asc.project-item-div li").hover(
+                function() { 
+                    // $(this).css({
+                    //     'transform':'scale(1.05)'
+                    // });
+
+
+                    $("#asc").children(".img-holder").css(
+                        {
+                            'transform':'scale(1.05)'
+                        }
+                    );
+                }
+            );
+
+            $("#asc.project-item-div li").mouseout(
+                function() {
+                    console.log(false);
+                    $("#asc").children(".img-holder").css(
+                    {
+                            'transform':'scale(1)'
+                        }
+                    );
+                }
+            );
+
+            $(".chessbot.project-item-div li").hover(
+                function() { 
+                    // $(this).css({
+                    //     'transform':'scale(1.05)'
+                    // });
+
+
+                    $(".chessbot").children(".img-holder").css(
+                        {
+                            'transform':'scale(1.05)'
+                        }
+                    );
+                }
+            );
+
+            $(".chessbot.project-item-div li").mouseout(
+                function() {
+                    console.log(false);
+                    $(".chessbot").children(".img-holder").css(
+                    {
+                            'transform':'scale(1)'
+                        }
+                    );
+                }
+            );
         </script>
 
     
