@@ -263,7 +263,7 @@ section
     /* width: 100%; */
     background-color: #ffffff00;
     /* border-radius: 1em; */
-    height: 70px;
+    height: 65px;
     position: absolute;
     left: 0;
     right: 0;
@@ -286,7 +286,7 @@ section
 
 .scrolled
 {
-    height: 70px;
+    height: 65px;
     background-color: #ffffffdc;
     border-bottom-color: #d2d2d282;
     border-bottom-style: solid ;
@@ -908,6 +908,7 @@ nav
         border-style: solid;
         border-color:whitesmoke;
         border-width: 0.15em;
+        padding-left: 1em;
     }
 
     /* .menu-btn a
