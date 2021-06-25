@@ -587,6 +587,31 @@
                     );
                 }
             );
+            $("#p-web.project-item-div li").hover(
+                function() { 
+                    // $(this).css({
+                    //     'transform':'scale(1.05)'
+                    // });
+
+
+                    $("#p-web").children(".img-holder").css(
+                        {
+                            'transform':'scale(1.05)'
+                        }
+                    );
+                }
+            );
+
+            $("#p-web.project-item-div li").mouseout(
+                function() {
+                    console.log(false);
+                    $("#p-web").children(".img-holder").css(
+                    {
+                            'transform':'scale(1)'
+                        }
+                    );
+                }
+            );
         </script>
 
     
