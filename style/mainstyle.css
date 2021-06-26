@@ -242,12 +242,12 @@ section
     
 }
 
-#enve:hover
+.fa-envelope:hover
 {
     color: rgb(145, 123, 3);
 }
 
-#call:hover
+.fa-phone:hover
 {
     color: rgb(88, 180, 129);
 }
@@ -356,7 +356,7 @@ nav
 .end-page
 {
     margin-left: 1em;
-    margin-top: 5em;
+    margin-top: 6em;
 }
 
 .end-page p
@@ -683,6 +683,7 @@ nav
     margin-left: auto;
     margin-right: auto;
     z-index: 555;
+    max-width: 150px;
 }
 
 #asc .img-holder
