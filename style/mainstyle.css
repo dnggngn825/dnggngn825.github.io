@@ -635,6 +635,12 @@ nav
     right: 0;
 }
 
+.clicked
+{
+    display: none;
+    position: relative;
+}
+
 #chessbot .img-holder
 {
     background-image: linear-gradient(to bottom right,
@@ -656,6 +662,27 @@ nav
 .img-scale
 {
     transform: scale(1.05);
+}
+
+.sum-background
+{
+    height: 100%;
+    background-color: #000000d4;
+}
+
+.readmore .left-col
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.readmore .proficiency-col
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 555;
 }
 
 #asc .img-holder
@@ -733,7 +760,7 @@ nav
 
 #p-web .project-title
 {
-    color: #57aa9f;
+    color: #22fadd;
     font-weight: 600;
 }
 
@@ -769,7 +796,7 @@ nav
 {
     /* content: ''; */
     /* background-color: rgba(51, 51, 51, 0.356); */
-    /* width: 100%; */
+    width: 100%;
     height: 500px;
     border-style: solid;
     border-color: #ccccccd8;
@@ -999,7 +1026,7 @@ nav
 
     .projects-container .project-item-div
     {
-        /* width: 47%; */
+        width: 100%;
         margin: 2em 0;
         height: 500px;
     }
@@ -1100,7 +1127,7 @@ nav
     }
 }
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 415px)
 {   
     .about .container
     {
