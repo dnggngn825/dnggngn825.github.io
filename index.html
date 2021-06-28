@@ -75,6 +75,15 @@
         </style> -->
     </head>
     <body>
+
+        <div class="loader-wrapper">
+            <!-- <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <div class="inner-circle"></div>
+            </div> -->
+            <div class="spinner">
+                <div class="inner"></div>
+            </div>
+        </div>
         
         <div class="navbar">
             <div class="container">
@@ -672,6 +681,15 @@
             //         'display':'none'
             //     });
             // });
+        </script>
+
+        <script>
+            let loader = document.querySelector(".loader-wrapper");
+
+            window.addEventListener('load', function () {
+                // loader.classList.toggle('fade');
+                loader.style.display = 'none';
+        });
         </script>
 
 
