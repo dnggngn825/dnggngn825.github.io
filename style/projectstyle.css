@@ -1,6 +1,6 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
+/* @import '../node_modules/bootstrap/scss/bootstrap';
 
-@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables'; */
 
 
 .title {
@@ -27,4 +27,9 @@ a
 p
 {
   color: rgb(32, 32, 32);
+}
+
+#navbar
+{
+  background-color: whitesmoke;
 }
