@@ -15,9 +15,10 @@
         <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
         <link rel="stylesheet" href="style/projectstyle.css">
         <!-- jQuery library -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+     
         <div class="container-xl">
             <div class="container">
 
@@ -398,9 +399,19 @@
             </div>
         </div>
 
+        <div class="loader-wrapper"></div>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+        <script>
+            let loader = document.querySelector(".loader-wrapper");
+            
+            window.addEventListener('load', function () {
+                loader.classList.toggle('fade');
+                // loader.style.display = 'none';
+            });
+        </script>
     </body>
 </html>
 
