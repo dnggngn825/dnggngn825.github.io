@@ -25,15 +25,25 @@
                 <nav 
                     id="navbar" 
                     class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
-                        <ul class="nav nav-fill">
-                                <li class="nav-item">
+                        <ul class="nav nav-fill" style="width: 100%;">
+                            <div class="col-12 col-md-6">
+                                <li class="nav-item " id="home-nav-item">
                                     <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link flex-sm-fill active">
-                                        Next project: The Chess-bot
-                                    </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <li class="nav-item" id="projects-nav-item">
+                                    <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
+                                    <div class="projects-items noDisplay" id="projects-drop-down">
+                                        <a href="Chessbot.html" class="nav-link flex-sm-fill active">
+                                            Next project: The Chess-bot
+                                        </a>
+                                        <a  class="nav-link flex-sm-fill active">
+                                            <p>Next project: The Autonomous Steering System</p>
+                                        </a>
+                                    </div>
                                 </li>
+                            </div>
                         </ul>
                 </nav>
 
@@ -76,6 +86,7 @@
                             <li>
                                 <a href="#design">Design Procedure</a>
                                 <ul>
+                                    <li><a href="#warehouse-layout">Warehouse Layout</a></li>
                                     <li><a href="#path-planning">Path Planning</a></li>
                                     <li><a href="#traj-track">Tracjectory Tracking</a></li>
                                     <li><a href="#ros-archi">ROS Architecture</a></li>
@@ -175,10 +186,10 @@
                 </div>
 
                 <!-- Tool section -->
-                <div class="row">
+                <div class="row" id="tool">
                     <h4 class="display-6">Tool</h4>
                     <div class="container">
-                        <h4 class="display-7">
+                        <h4 class="display-7" id="eng-concepts">
                             Engineering Concepts
                         </h4>
                         <p class="">
@@ -226,7 +237,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="hardware">
                             <h4 class="display-8">Hardware</h4>
                             <ul>
                                 <div class="row">
@@ -246,7 +257,7 @@
                                 </div>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="software">
                             <h4 class="display-8">Software</h4>
                             <ul>
                                 <div class="row">
@@ -419,6 +430,8 @@
                 loader.style.display = 'none';
             });
         </script>
+
+        <script src="chessbot.js"></script>
     </body>
 </html>
 

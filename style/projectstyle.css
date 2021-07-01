@@ -10,6 +10,12 @@
 html
 {
   font-size: 1.3rem;
+  scroll-behavior: smooth;
+}
+
+.noDisplay
+{
+  display: none;
 }
 
 a
@@ -37,6 +43,7 @@ p
 .nav-link
 {
   color: rgb(45, 72, 124) ;
+  cursor: pointer;
 }
 
 .loader-wrapper
@@ -89,4 +96,20 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
   }
 }
 
+@media only screen and (min-width: 768px) {
+      .projects-items
+      {
+        justify-content: left;
+        text-align: left;
+      }
 
+      #projects-nav-item
+      {
+        text-align: left;
+      }
+
+      #home-nav-item
+      {
+        text-align: right;
+      }
+}
