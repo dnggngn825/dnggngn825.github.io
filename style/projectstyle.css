@@ -9,7 +9,7 @@
 
 html
 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   scroll-behavior: smooth;
 }
 
@@ -133,5 +133,11 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
       #icon
       {
         font-size: 20px;
+      }
+
+      html
+      {
+        font-size: 1.3rem;
+        scroll-behavior: smooth;
       }
 }

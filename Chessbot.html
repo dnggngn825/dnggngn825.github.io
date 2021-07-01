@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="container">
 
                 <nav 
@@ -80,8 +80,7 @@
                                 <a href="#design">Design Procedure</a>
                                 <ul>
                                     <li><a href="#workspace">Workspace Determination</a></li>
-                                    <li><a href="#FK">Forward Kinematics</a></li>
-                                    <li><a href="#IK">Inverse Kinematics</a></li>
+                                    <li><a href="#kinematic">Forward & Inverse Kinematics</a></li>
                                     <li><a href="#vel">Task space velocity and torque wrench</a></li>
                                     <li><a href="#trajtrack">Trajectory Generation</a></li>
                                 </ul>
@@ -321,38 +320,32 @@
                                 <img src="image/chessbot/workspace-reachable.jpg" alt="result-workspace">
                             </div>
                         </div>
-                        <div class="col" id="FK">
-                            <h4 class="display-7">Forward Kinematics</h4>
-
-                            <p></p>
-                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
-                                <!-- <img class="img-fluid img-thumbnail rounded " src="image/setup-pp.jpg" alt="set up"> -->
-                            </div>
-                            <p></p>
-                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
-                                <!-- <img class="img-fluid img-thumbnail rounded " src="image/example-pp.jpg" alt="compare"> -->
-                            </div>
-                        </div>
-                        <div class="col" id="IK">
-                            <h4 class="display-7">Inverse Kinematics</h4>
+                        <div class="col" id="kinematic">
+                            <h4 class="display-7">Forward & Inverse Kinematics</h4>
 
                             <p>
-                                
+                                We constructed the Denavit-Hartenberg table and obtained the transformation matrix for the 
+                                end-effector. While, for Inverse Kinematics, we solved for joint displacements Q given a 
+                                position of the end-effector in the inertial frame. Note that, for Inverse Kinematics, it
+                                is important to obtain all possible sets of answer and evaluate them. Using Forward Kinematics
+                                we can visualize different configurations of the arm in the 3D space. From there, we make sure 
+                                that we got the correct expression for 'elbow up' configuration (like Case 2).
                             </p>
-
-                            <div class="m-2 p-5">
-                                <!-- <img class="img-fluid img-thumbnail rounded " src="image/trajtrack.jpg" alt="trajectory tracking"> -->
+                            <div class="mt-5 mb-5 p-3 pb-0" style="display: flex;justify-content:center;align-content: center;">
+                                <img src="image/chessbot/ik-result.jpg" alt="Inverse Kinematics result">
                             </div>
-
-
-                            <p>
-                                
-                            </p>
+                            <div class="mb-5 p-3 pt-0" style="display: flex;justify-content:center;align-content: center;">
+                                <img src="image/chessbot/corner-visual.jpg" alt="Inverse Kinematics result">
+                            </div>
                         </div>
+
+                        
+
                         <div class="col" id="vel">
-                            <h4 class="display-7">Task space velocity and torque wrench</h4>
+                            <h4 class="display-7">Task space velocity & torque wrench</h4>
                             <p></p>
                         </div>
+
                         <div class="col" id="trajtrack">
                             <h4 class="display-7">Trajectory Generation</h4>
                             <p></p>
