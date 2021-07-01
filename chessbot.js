@@ -1,3 +1,4 @@
+
 {
     function projectsClick() {
         $("#projects-drop-down").toggleClass("noDisplay")
@@ -21,5 +22,11 @@
     {
         imageBlock[i].classList.add("img-fluid", "shadow-sm", "img-thumbnail", "rounded-3")
     }
-    
 }
+
+// {
+//     // const navbar = document.getElementsByTagName('nav')
+//     if (window.pageYOffset == 0){
+//         document.getElementsByTagName('nav')[0].style.backgroundColor = "white !important"
+//     }
+// }
