@@ -83,6 +83,7 @@
                                     <li><a href="#FK">Forward Kinematics</a></li>
                                     <li><a href="#IK">Inverse Kinematics</a></li>
                                     <li><a href="#vel">Task space velocity and torque wrench</a></li>
+                                    <li><a href="#trajtrack">Trajectory Generation</a></li>
                                 </ul>
                             </li>
                             <li><a href="#video">Video Presentation</a></li>
@@ -271,37 +272,64 @@
                 <div class="row" id="design">
                     <h4 class="display-6">Design Procedure</h4>
                     <div class="col">
-                        <div class="m-5" style="display: flex;justify-content:center;align-content: center;">
-                            <img class="img-fluid img-thumbnail rounded " src="image/chessbot/cad-model.jpg" alt="cad-model">
+                        <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                            <img src="image/chessbot/cad-model.jpg" alt="cad-model">
                         </div>
                     </div>
                     <div class="container">
                         <div class="col" id="workspace">
                             <h4 class="display-7">Workspace Determination</h4>
 
+                            <p>The schematic of the manipulator is shown in the following figure</p>
                             <p>Before starting to design the chess-bot, we need to make some assumptions regards to the 
                                 mechanical design of the system:
                             </p>
-                            
-                            <p>The schematic of the manipulator is shown in the following figure</p>
+                            <ol>
+                                <li>The "zero" position of the robot arm is as shown in the following schematic</li>
+                                <li>Each joint has only one degree-of-freedom</li>
+                                <li>For this particular application, "elbow up" configuration is chosen</li>
+                                <li>Link d2 and d3 have the same length</li>
+                            </ol>
 
-                            <div class="m-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img class="img-fluid img-thumbnail rounded " src="image/chessbot/schematic.jpg" alt="schematic of the robot">
+                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                <img src="image/chessbot/schematic.jpg" alt="schematic of the robot">
                             </div>
 
-                            <div class="m-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img class="img-fluid img-thumbnail rounded " src="image/chessbot/workspace-side-view-top-view.jpg" alt="schematic of the robot">
+                            <p>
+                                From the figure, we know that there are 4 main links connecting all the joints of the 
+                                arm. Hence, it is necessary to determine the range at which each of them will fall into
+                                 to ensure that the arm can cover its workspace. The workspace of the robot should include 
+                                 every point on the chessboard and the capture pool located on the side (not shown). Rather than 
+                                 considering every point, we only considered the two critical points on the board, the furthest point
+                                 and the closest point (shown in the figure). With basic geometry, we can easily get the maximum and 
+                                 minimum length for the links. We chose the link length to be at the middle value of the range
+                                to compensate for uncertainties in the mechanical fabrication and motor encoders (those motors are cheap &#128521).
+                            </p>
+                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                <img src="image/chessbot/workspace-side-view-top-view.jpg" alt="schematic of the robot">
+                            </div>
+
+                            <p>
+                                After obtaining the link length, we moved on to determine the joint displacement range
+                                at which the motors are going to rotate. From there we looped through each set of values
+                                of the four and plot the position of the end-effector in the 2D space (top-view and side-view)
+                                at different height (along z axis) using MATLAB. Observing the chessboard (blue color) being fully covered
+                                in the black and red shaded region, we know that our dimensions are good for now.
+                            </p>
+
+                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                <img src="image/chessbot/workspace-reachable.jpg" alt="result-workspace">
                             </div>
                         </div>
                         <div class="col" id="FK">
                             <h4 class="display-7">Forward Kinematics</h4>
 
                             <p></p>
-                            <div class="m-5 p-3" style="display: flex;justify-content:center;align-content: center;">
+                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
                                 <!-- <img class="img-fluid img-thumbnail rounded " src="image/setup-pp.jpg" alt="set up"> -->
                             </div>
                             <p></p>
-                            <div class="m-5 p-3" style="display: flex;justify-content:center;align-content: center;">
+                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
                                 <!-- <img class="img-fluid img-thumbnail rounded " src="image/example-pp.jpg" alt="compare"> -->
                             </div>
                         </div>
@@ -323,6 +351,10 @@
                         </div>
                         <div class="col" id="vel">
                             <h4 class="display-7">Task space velocity and torque wrench</h4>
+                            <p></p>
+                        </div>
+                        <div class="col" id="trajtrack">
+                            <h4 class="display-7">Trajectory Generation</h4>
                             <p></p>
                         </div>
                         

@@ -13,3 +13,13 @@
         }
     })
 }
+
+// edit style for img
+{
+    const imageBlock = document.getElementsByTagName('img')
+    for (let i= 0; i< imageBlock.length;i++)
+    {
+        imageBlock[i].classList.add("img-fluid", "shadow-sm", "img-thumbnail", "rounded-3")
+    }
+    
+}
