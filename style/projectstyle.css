@@ -18,9 +18,37 @@ html
   display: none;
 }
 
+
+.projects-items
+{
+  justify-content: left;
+  text-align: left;
+}
+
+#projects-nav-item
+{
+  text-align: left;
+}
+
+#home-nav-item
+{
+  text-align: right;
+}
+
+#iframe-div
+{
+  display: flex;
+}
+
+#icon
+{
+  margin: 0 1em;
+  font-size: 30px;
+}
+
 a
 {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: rgb(38, 51, 78);
 }
 
@@ -86,6 +114,11 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
   margin: auto;
 }
 
+#contact
+{
+  background-color: whitesmoke;
+}
+
 
 @keyframes load {
   0%{
@@ -96,20 +129,9 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
   }
 }
 
-@media only screen and (min-width: 768px) {
-      .projects-items
+@media only screen and (max-width: 576px) {
+      #icon
       {
-        justify-content: left;
-        text-align: left;
-      }
-
-      #projects-nav-item
-      {
-        text-align: left;
-      }
-
-      #home-nav-item
-      {
-        text-align: right;
+        font-size: 20px;
       }
 }

@@ -696,7 +696,7 @@ nav
             rgba(141, 141, 141, 0.884)
             ,rgba(78, 78, 78, 0.603)
             ,rgba(168, 168, 168, 0.284))
-            , url(../image/thumbnail-chess-bot.jpg);
+            , url(../image/thumbnail/thumbnail-chess-bot.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -741,7 +741,7 @@ nav
             rgba(85, 85, 85, 0.884)
             ,rgba(78, 78, 78, 0.603)
             ,rgba(168, 168, 168, 0.284))
-            , url(../image/thumbnail-asc.jpg);
+            , url(../image/thumbnail/thumbnail-asc.jpg);
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -756,7 +756,7 @@ nav
             rgba(53, 53, 53, 0.842)
             ,rgba(78, 78, 78, 0.342)
             ,rgba(53, 53, 53, 0.678))
-            , url(../image/thumbnail-personal-web.jpg);
+            , url(../image/thumbnail/thumbnail-personal-web.jpg);
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: cover;

@@ -19,17 +19,17 @@
                     id="navbar" 
                     class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
                         <ul class="nav nav-fill" style="width: 100%;">
-                            <div class="col-12 col-md-6">
+                            <div class="col-6 col-md-6">
                                 <li class="nav-item " id="home-nav-item">
                                     <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
                                 </li>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-6 col-md-6">
                                 <li class="nav-item" id="projects-nav-item">
                                     <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
                                     <div class="projects-items noDisplay" id="projects-drop-down">
                                         <a href="Projects.html" class="nav-link flex-sm-fill active">
-                                            Previous project: The Autonomous Warehouse Robot
+                                            Next project: The Autonomous Warehouse Robot
                                         </a>
                                         <a  class="nav-link flex-sm-fill active">
                                             <p>Next project: The Autonomous Steering System</p>
@@ -270,14 +270,19 @@
                 <!-- Design procedure -->
                 <div class="row" id="design">
                     <h4 class="display-6">Design Procedure</h4>
+                    <div class="col">
+                        <div class="m-5" style="display: flex;justify-content:center;align-content: center;">
+                            <img class="img-fluid img-thumbnail rounded " src="image/chessbot/cad-model.jpg" alt="cad-model">
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="col" id="workspace">
                             <h4 class="display-7">Workspace Determination</h4>
 
-                            <p></p>
+                            <p>The manipulator can be simplified to the following schematic</p>
 
                             <div class="m-5" style="display: flex;justify-content:center;align-content: center;">
-                                <!-- <img class="img-fluid img-thumbnail rounded " src="image/warehouselayout.jpg" alt="warehouse-layout"> -->
+                                <img class="img-fluid img-thumbnail rounded " src="image/chessbot/schematic.jpg" alt="schematic of the robot">
                             </div>
                         </div>
                         <div class="col" id="FK">
@@ -319,12 +324,8 @@
                 <div class="row" id="video">
                     <h4 class="display-6">Video Presentation</h4>
                     <p></p>
-                    <div class="row align-content-center">
-                        <div class="col-8 mx-auto align-content-center embed-responsive embed-responsive-4by3">
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <!-- <iframe height="315" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hXdCUFKoFOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                    <div id="iframe-div" class="ratio ratio-16x9 col-8 mx-auto justify-content-center align-content-center embed-responsive embed-responsive-4by3">
+                        <iframe src="https://www.youtube.com/embed/hXdCUFKoFOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -335,6 +336,21 @@
                             Stay tuned for more<br>Thanks for reading!
                         </h5>
                     </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row-12 pt-5 pb-5 mt-5 align-content-center justify-content-center" id="contact">
+            <div class="col d-flex justify-content-center align-content-center">
+                <p class="mb-5" style="display: block;width: max-content;"><i class="far fa-copyright"></i> 2021 Dang Nguyen</p>
+            </div>
+            <div class="col m-auto flex-column justify-content-between">
+                <div class="m-auto" style="width: max-content;">
+                    <a href="tel:+61432581587" id="call" ><i " class="fas fa-phone" id="icon"></i></a>
+                    <a href="mailto:h.danggnguyen@gmail.com" id="enve" ><i " class="fa fa-envelope" id="icon"></i></a>
+                    <a href="https://github.com/dnggngn825" id="gh" ><i " class="fa fa-github" id="icon"></i></a>
+                    <a href="https://www.linkedin.com/in/dang-nguyen-89a563170/" id="lk"><i " class="fab fa-linkedin-in" id="icon"></i></a>
                 </div>
             </div>
         </div>
@@ -361,5 +377,7 @@
         </script>
 
         <script src="chessbot.js"></script>
+        <script src="https://kit.fontawesome.com/f93d56c715.js" crossorigin="anonymous"></script>
+
     </body>
 </html>
