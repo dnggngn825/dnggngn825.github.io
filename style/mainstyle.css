@@ -134,10 +134,14 @@ h2
     font-family: 'Maven Pro';
 }
 
+.main-content{
+    display: none;
+}
+
 .loader-wrapper
 {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   display: flex;
   justify-content: center;

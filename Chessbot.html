@@ -12,378 +12,380 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
-        <div class="container-lg">
-            <div class="container">
-
-                <nav 
-                    id="navbar" 
-                    class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
-                        <ul class="nav nav-fill" style="width: 100%;">
-                            <div class="col-6 col-md-6">
-                                <li class="nav-item " id="home-nav-item">
-                                    <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
-                                </li>
-                            </div>
-                            <div class="col-6 col-md-6">
-                                <li class="nav-item" id="projects-nav-item">
-                                    <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
-                                    <div class="projects-items noDisplay" id="projects-drop-down">
-                                        <a href="Projects.html" class="nav-link flex-sm-fill active">
-                                            Next project: The Autonomous Warehouse Robot
-                                        </a>
-                                        <a  class="nav-link flex-sm-fill active">
-                                            <p>Next project: The Autonomous Steering System</p>
-                                        </a>
-                                    </div>
-                                </li>
-                            </div>
-                        </ul>
-                </nav>
-
-
-                <!-- Title section -->
-                <div class="row my-5 py-5">
-                    <div class="col">
-                        <h2 
-                            class="text-center display-6" 
-                            id="title">
-                            The Chess-bot
-                        </h2>
-                    </div>
-                </div>
-
-                <!-- Table of content section -->
-                <div class="row">
-                    <div class="container">
-                        <h4 class="display-5">
-                            Table of Contents
-                        </h4>
-                        <ul class="shadow-sm p-4 mb-5 bg-white rounded">
-                            <li>
-                                <a href="#overview">Overview</a>
-                            </li>
-                            <li>
-                                <a href="#contributor">Contributor</a>
-                            </li>
-                            <li>
-                                <a href="#source-code">Source Code</a>
-                            </li>
-                            <li>
-                                <a href="#tool">Tool</a>
-                                <ul>
-                                    <!-- <li><a href="#eng-concepts">Engineering concepts</a></li> -->
-                                    <li><a href="#software">Software</a></li>
-                                    <li><a href="#hardware">Hardware</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#design">Design Procedure</a>
-                                <ul>
-                                    <li><a href="#workspace">Workspace Determination</a></li>
-                                    <li><a href="#kinematic">Forward & Inverse Kinematics</a></li>
-                                    <li><a href="#vel">Task space velocity and torque wrench</a></li>
-                                    <li><a href="#trajtrack">Trajectory Generation</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#video">Video Presentation</a></li>
-                            
-
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Overview section -->
-                <div class="row">
-                    <div class="container" id="overview">
-                        <h4 class="display-6">
-                            Overview
-                        </h4>
-                    </div>
-                    <p class="">
-                        This is a semester-long project as part of the subject <span style="font-weight: bold;">
-                            <a href="https://handbook.unimelb.edu.au/subjects/mcen90028">MCEN90028</a> - Robotics Systems</span>, coordinated by
-                        Prof Denny Oetomo. 
-                        The project focuses on the design of a serial manipulator for carrying out tasks. Specifically for this project,
-                        the manipulator needs to be able to (#1) pick and drop off a chess piece on the board as requested. Moreover, it also allows
-                         user to (#2) freely move to whichever position on the board as he/she wants or along a 
-                         pre-defined path on the board such as knight's move, bishop's move, etc.
-                    </p>
-                </div>
-
-                <!-- Contributor and source code -->
-                <div class="row">
-                    <!-- Contributor section -->
-                    <div class="col-md-6">
-                        <div class="col" id="contributor">
-                            <h4 class="display-7">
-                                Contributor
-                            </h4>
-                        </div>
-                        <div class="col">
-                            <ul class="list-unstyled list">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            Hai Dang Nguyen
+        <div class="main-content">
+            <div class="container-lg">
+                <div class="container">
+    
+                    <nav 
+                        id="navbar" 
+                        class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
+                            <ul class="nav nav-fill" style="width: 100%;">
+                                <div class="col-6 col-md-6">
+                                    <li class="nav-item " id="home-nav-item">
+                                        <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
+                                    </li>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <li class="nav-item" id="projects-nav-item">
+                                        <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
+                                        <div class="projects-items noDisplay" id="projects-drop-down">
+                                            <a href="Projects.html" class="nav-link flex-sm-fill active">
+                                                Next project: The Autonomous Warehouse Robot
+                                            </a>
+                                            <a  class="nav-link flex-sm-fill active">
+                                                <p>Next project: The Autonomous Steering System</p>
+                                            </a>
                                         </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <a href="mailto:hain4@student.unimelb.edu.au">Email</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            Say Ee See
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <a href="mailto:says@student.unimelb.edu.au">Email</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            BhargavRam Chilukuri
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <!-- <a href="mailto:@student.unimelb.edu.au">@student.unimelb.edu.au</a> -->
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </div>
                             </ul>
-                        </div>
-                        
-                    </div>
-
-                    <!-- Source code section -->
-                    <div class="col-md-6">
-                        <div class="col" id="source-code">
-                            <h4 class="display-7">
-                                Source Code
-                            </h4>
-                        </div>
+                    </nav>
+    
+    
+                    <!-- Title section -->
+                    <div class="row my-5 py-5">
                         <div class="col">
-                            <div class="col">
-                                <a href="https://github.com/dnggngn825/The-Chess-Bot">Github</a>
-                            </div>
-                            <div class="col">
-                                <p class="text-justify">
-                                    The project mainly focuses on design a serial manipulator 
-                                    to pick and drop a chess piece on the board from scratch 
-                                    with given tool kit. In order to achieve the objectives of the project, we tried to 
-                                    achieve different sub-goals over the course through 
-                                    Assignment 1 to 5.
-                                </p>
-                            </div>
+                            <h2 
+                                class="text-center display-6" 
+                                id="title">
+                                The Chess-bot
+                            </h2>
                         </div>
                     </div>
-                </div>
-
-                <!-- Tool section -->
-                <div class="row" id="tool">
-                    <h4 class="display-6">Tool</h4>
-                    <!-- <div class="container">
-                        <h4 class="display-7">
-                            Engineering Concepts
-                        </h4>
-                        <p class="">
-                        Successful completion of the project will require the team to apply 
-                        different engineering concepts and analysis tools from the prerequisite 
-                        subjects:
-                            <ul class="list-unstyled">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Embedded System Design:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Finite, extended, and hierarchical state machine, modelling cyber-physical 
-                                                systems; scheduling, multi-tasking and interfacing to the analogue world. 
-                                                Having a state machine diagram will give a high-level capture of the system 
-                                                architecture.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Control System:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Modelling, linearization, proportional, integral and derivative (PID) control.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Signal Processing:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Design and implementation of digital filters, sensor fusion. 
-                                                This will take an important role in processing the raw data/signals from the sensors, 
-                                                accurately capture the robot’s motion and poses.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </p>
-                    </div> -->
-
+    
+                    <!-- Table of content section -->
                     <div class="row">
+                        <div class="container">
+                            <h4 class="display-5">
+                                Table of Contents
+                            </h4>
+                            <ul class="shadow-sm p-4 mb-5 bg-white rounded">
+                                <li>
+                                    <a href="#overview">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#contributor">Contributor</a>
+                                </li>
+                                <li>
+                                    <a href="#source-code">Source Code</a>
+                                </li>
+                                <li>
+                                    <a href="#tool">Tool</a>
+                                    <ul>
+                                        <!-- <li><a href="#eng-concepts">Engineering concepts</a></li> -->
+                                        <li><a href="#software">Software</a></li>
+                                        <li><a href="#hardware">Hardware</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#design">Design Procedure</a>
+                                    <ul>
+                                        <li><a href="#workspace">Workspace Determination</a></li>
+                                        <li><a href="#kinematic">Forward & Inverse Kinematics</a></li>
+                                        <li><a href="#vel">Task space velocity and torque wrench</a></li>
+                                        <li><a href="#trajtrack">Trajectory Generation</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#video">Video Presentation</a></li>
+                                
+    
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- Overview section -->
+                    <div class="row">
+                        <div class="container" id="overview">
+                            <h4 class="display-6">
+                                Overview
+                            </h4>
+                        </div>
+                        <p class="">
+                            This is a semester-long project as part of the subject <span style="font-weight: bold;">
+                                <a href="https://handbook.unimelb.edu.au/subjects/mcen90028">MCEN90028</a> - Robotics Systems</span>, coordinated by
+                            Prof Denny Oetomo. 
+                            The project focuses on the design of a serial manipulator for carrying out tasks. Specifically for this project,
+                            the manipulator needs to be able to (#1) pick and drop off a chess piece on the board as requested. Moreover, it also allows
+                             user to (#2) freely move to whichever position on the board as he/she wants or along a 
+                             pre-defined path on the board such as knight's move, bishop's move, etc.
+                        </p>
+                    </div>
+    
+                    <!-- Contributor and source code -->
+                    <div class="row">
+                        <!-- Contributor section -->
                         <div class="col-md-6">
-                            <h4 class="display-8" id="hardware">Hardware</h4>
-                            <ul>
-                                <div class="row">
-                                    <div class="col-6 col-md-6">
-                                        <li>Arduino Mega</li>
-                                        <li>FE-URT-1 Serial to UART Board</li>
-                                        <li>FeeTech SCS15 Servo Motors</li>
-                                    </div>
-                                    <div class="col-6 col-md-6">
-                                        <li>FeeTech SCS009 Servo Motors</li>
-                                        <li>Power Supply</li>
-                                    </div>
+                            <div class="col" id="contributor">
+                                <h4 class="display-7">
+                                    Contributor
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <ul class="list-unstyled list">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                Hai Dang Nguyen
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <a href="mailto:hain4@student.unimelb.edu.au">Email</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                Say Ee See
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <a href="mailto:says@student.unimelb.edu.au">Email</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                BhargavRam Chilukuri
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <!-- <a href="mailto:@student.unimelb.edu.au">@student.unimelb.edu.au</a> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+    
+                        <!-- Source code section -->
+                        <div class="col-md-6">
+                            <div class="col" id="source-code">
+                                <h4 class="display-7">
+                                    Source Code
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <a href="https://github.com/dnggngn825/The-Chess-Bot">Github</a>
                                 </div>
-                            </ul>
-                        </div>
-                        <div class="col-md-6" id="software">
-                            <h4 class="display-8">Software</h4>
-                            <ul>
-                                <div class="row">
-                                    <div class="col-6 col-md-6">
-                                        <li>MATLAB</li>
-                                        <li>Simulink</li>
-                                        <li>Git</li>
-                                    </div>
-                                    <div class="col-6 col-md-6">
-                                        <li>Fusion 360</li>
-                                        <li>Arduino</li>
-                                    </div>
+                                <div class="col">
+                                    <p class="text-justify">
+                                        The project mainly focuses on design a serial manipulator 
+                                        to pick and drop a chess piece on the board from scratch 
+                                        with given tool kit. In order to achieve the objectives of the project, we tried to 
+                                        achieve different sub-goals over the course through 
+                                        Assignment 1 to 5.
+                                    </p>
                                 </div>
-                            </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Design procedure -->
-                <div class="row" id="design">
-                    <h4 class="display-6">Design Procedure</h4>
-                    <div class="col">
-                        <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
-                            <img src="image/chessbot/cad-model.jpg" alt="cad-model">
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="col" id="workspace">
-                            <h4 class="display-7">Workspace Determination</h4>
-
-                            <p>The schematic of the manipulator is shown in the following figure</p>
-                            <p>Before starting to design the chess-bot, we need to make some assumptions regards to the 
-                                mechanical design of the system:
+    
+                    <!-- Tool section -->
+                    <div class="row" id="tool">
+                        <h4 class="display-6">Tool</h4>
+                        <!-- <div class="container">
+                            <h4 class="display-7">
+                                Engineering Concepts
+                            </h4>
+                            <p class="">
+                            Successful completion of the project will require the team to apply 
+                            different engineering concepts and analysis tools from the prerequisite 
+                            subjects:
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Embedded System Design:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Finite, extended, and hierarchical state machine, modelling cyber-physical 
+                                                    systems; scheduling, multi-tasking and interfacing to the analogue world. 
+                                                    Having a state machine diagram will give a high-level capture of the system 
+                                                    architecture.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Control System:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Modelling, linearization, proportional, integral and derivative (PID) control.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Signal Processing:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Design and implementation of digital filters, sensor fusion. 
+                                                    This will take an important role in processing the raw data/signals from the sensors, 
+                                                    accurately capture the robot’s motion and poses.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </p>
-                            <ol>
-                                <li>The "zero" position of the robot arm is as shown in the following schematic</li>
-                                <li>Each joint has only one degree-of-freedom</li>
-                                <li>For this particular application, "elbow up" configuration is chosen</li>
-                                <li>Link d2 and d3 have the same length</li>
-                            </ol>
-
+                        </div> -->
+    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="display-8" id="hardware">Hardware</h4>
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <li>Arduino Mega</li>
+                                            <li>FE-URT-1 Serial to UART Board</li>
+                                            <li>FeeTech SCS15 Servo Motors</li>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <li>FeeTech SCS009 Servo Motors</li>
+                                            <li>Power Supply</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="col-md-6" id="software">
+                                <h4 class="display-8">Software</h4>
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <li>MATLAB</li>
+                                            <li>Simulink</li>
+                                            <li>Git</li>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <li>Fusion 360</li>
+                                            <li>Arduino</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Design procedure -->
+                    <div class="row" id="design">
+                        <h4 class="display-6">Design Procedure</h4>
+                        <div class="col">
                             <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img src="image/chessbot/schematic.jpg" alt="schematic of the robot">
-                            </div>
-
-                            <p>
-                                From the figure, we know that there are 4 main links connecting all the joints of the 
-                                arm. Hence, it is necessary to determine the range at which each of them will fall into
-                                 to ensure that the arm can cover its workspace. The workspace of the robot should include 
-                                 every point on the chessboard and the capture pool located on the side (not shown). Rather than 
-                                 considering every point, we only considered the two critical points on the board, the furthest point
-                                 and the closest point (shown in the figure). With basic geometry, we can easily get the maximum and 
-                                 minimum length for the links. We chose the link length to be at the middle value of the range
-                                to compensate for uncertainties in the mechanical fabrication and motor encoders (those motors are cheap &#128521).
-                            </p>
-                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img src="image/chessbot/workspace-side-view-top-view.jpg" alt="schematic of the robot">
-                            </div>
-
-                            <p>
-                                After obtaining the link length, we moved on to determine the joint displacement range
-                                at which the motors are going to rotate. From there we looped through each set of values
-                                of the four and plot the position of the end-effector in the 2D space (top-view and side-view)
-                                at different height (along z axis) using MATLAB. Observing the chessboard (blue color) being fully covered
-                                in the black and red shaded region, we know that our dimensions are good for now.
-                            </p>
-
-                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img src="image/chessbot/workspace-reachable.jpg" alt="result-workspace">
+                                <img src="image/chessbot/cad-model.jpg" alt="cad-model">
                             </div>
                         </div>
-                        <div class="col" id="kinematic">
-                            <h4 class="display-7">Forward & Inverse Kinematics</h4>
-
-                            <p>
-                                We constructed the Denavit-Hartenberg table and obtained the transformation matrix for the 
-                                end-effector. While, for Inverse Kinematics, we solved for joint displacements Q given a 
-                                position of the end-effector in the inertial frame. Note that, for Inverse Kinematics, it
-                                is important to obtain all possible sets of answer and evaluate them. Using Forward Kinematics
-                                we can visualize different configurations of the arm in the 3D space. From there, we make sure 
-                                that we got the correct expression for 'elbow up' configuration (like Case 2).
-                            </p>
-                            <div class="mt-5 mb-5 p-3 pb-0" style="display: flex;justify-content:center;align-content: center;">
-                                <img src="image/chessbot/ik-result.jpg" alt="Inverse Kinematics result">
+                        <div class="container">
+                            <div class="col" id="workspace">
+                                <h4 class="display-7">Workspace Determination</h4>
+    
+                                <p>The schematic of the manipulator is shown in the following figure</p>
+                                <p>Before starting to design the chess-bot, we need to make some assumptions regards to the 
+                                    mechanical design of the system:
+                                </p>
+                                <ol>
+                                    <li>The "zero" position of the robot arm is as shown in the following schematic</li>
+                                    <li>Each joint has only one degree-of-freedom</li>
+                                    <li>For this particular application, "elbow up" configuration is chosen</li>
+                                    <li>Link d2 and d3 have the same length</li>
+                                </ol>
+    
+                                <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/schematic.jpg" alt="schematic of the robot">
+                                </div>
+    
+                                <p>
+                                    From the figure, we know that there are 4 main links connecting all the joints of the 
+                                    arm. Hence, it is necessary to determine the range at which each of them will fall into
+                                     to ensure that the arm can cover its workspace. The workspace of the robot should include 
+                                     every point on the chessboard and the capture pool located on the side (not shown). Rather than 
+                                     considering every point, we only considered the two critical points on the board, the furthest point
+                                     and the closest point (shown in the figure). With basic geometry, we can easily get the maximum and 
+                                     minimum length for the links. We chose the link length to be at the middle value of the range
+                                    to compensate for uncertainties in the mechanical fabrication and motor encoders (those motors are cheap &#128521).
+                                </p>
+                                <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/workspace-side-view-top-view.jpg" alt="schematic of the robot">
+                                </div>
+    
+                                <p>
+                                    After obtaining the link length, we moved on to determine the joint displacement range
+                                    at which the motors are going to rotate. From there we looped through each set of values
+                                    of the four and plot the position of the end-effector in the 2D space (top-view and side-view)
+                                    at different height (along z axis) using MATLAB. Observing the chessboard (blue color) being fully covered
+                                    in the black and red shaded region, we know that our dimensions are good for now.
+                                </p>
+    
+                                <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/workspace-reachable.jpg" alt="result-workspace">
+                                </div>
                             </div>
-                            <div class="mb-5 p-3 pt-0" style="display: flex;justify-content:center;align-content: center;">
-                                <img src="image/chessbot/corner-visual.jpg" alt="Inverse Kinematics result">
+                            <div class="col" id="kinematic">
+                                <h4 class="display-7">Forward & Inverse Kinematics</h4>
+    
+                                <p>
+                                    We constructed the Denavit-Hartenberg table and obtained the transformation matrix for the 
+                                    end-effector. While, for Inverse Kinematics, we solved for joint displacements Q given a 
+                                    position of the end-effector in the inertial frame. Note that, for Inverse Kinematics, it
+                                    is important to obtain all possible sets of answer and evaluate them. Using Forward Kinematics
+                                    we can visualize different configurations of the arm in the 3D space. From there, we make sure 
+                                    that we got the correct expression for 'elbow up' configuration (like Case 2).
+                                </p>
+                                <div class="mt-5 mb-5 p-3 pb-0" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/ik-result.jpg" alt="Inverse Kinematics result">
+                                </div>
+                                <div class="mb-5 p-3 pt-0" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/corner-visual.jpg" alt="Inverse Kinematics result">
+                                </div>
                             </div>
+    
+                            
+    
+                            <div class="col" id="vel">
+                                <h4 class="display-7">Task space velocity & torque wrench</h4>
+                                <p></p>
+                            </div>
+    
+                            <div class="col" id="trajtrack">
+                                <h4 class="display-7">Trajectory Generation</h4>
+                                <p></p>
+                            </div>
+                            
                         </div>
-
-                        
-
-                        <div class="col" id="vel">
-                            <h4 class="display-7">Task space velocity & torque wrench</h4>
-                            <p></p>
-                        </div>
-
-                        <div class="col" id="trajtrack">
-                            <h4 class="display-7">Trajectory Generation</h4>
-                            <p></p>
-                        </div>
-                        
                     </div>
-                </div>
-
-                <div class="row" id="video">
-                    <h4 class="display-6">Video Presentation</h4>
-                    <p></p>
-                    <div id="iframe-div" class="ratio ratio-16x9 col-8 mx-auto justify-content-center align-content-center embed-responsive embed-responsive-4by3">
-                        <iframe src="https://www.youtube.com/embed/hXdCUFKoFOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                    <div class="row" id="video">
+                        <h4 class="display-6">Video Presentation</h4>
+                        <p></p>
+                        <div id="iframe-div" class="ratio ratio-16x9 col-8 mx-auto justify-content-center align-content-center embed-responsive embed-responsive-4by3">
+                            <iframe src="https://www.youtube.com/embed/hXdCUFKoFOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-
-                <!-- transit page -->
-                <div class="row mt-5">
-                    <div class="col">
-                        <h5 class = "text-center">
-                            Stay tuned for more<br>Thanks for reading!
-                        </h5>
+    
+                    <!-- transit page -->
+                    <div class="row mt-5">
+                        <div class="col">
+                            <h5 class = "text-center">
+                                Stay tuned for more<br>Thanks for reading!
+                            </h5>
+                        </div>
                     </div>
+    
                 </div>
-
             </div>
-        </div>
-
-        <div class="row-12 pt-5 pb-5 mt-5 align-content-center justify-content-center" id="contact">
-            <div class="col d-flex justify-content-center align-content-center">
-                <p class="mb-5" style="display: block;width: max-content;"><i class="far fa-copyright"></i> 2021 Dang Nguyen</p>
-            </div>
-            <div class="col m-auto flex-column justify-content-between">
-                <div class="m-auto" style="width: max-content;">
-                    <a href="tel:+61432581587" id="call" ><i " class="fas fa-phone" id="icon"></i></a>
-                    <a href="mailto:h.danggnguyen@gmail.com" id="enve" ><i " class="fa fa-envelope" id="icon"></i></a>
-                    <a href="https://github.com/dnggngn825" id="gh" ><i " class="fa fa-github" id="icon"></i></a>
-                    <a href="https://www.linkedin.com/in/dang-nguyen-89a563170/" id="lk"><i " class="fab fa-linkedin-in" id="icon"></i></a>
+    
+            <div class="row-12 pt-5 pb-5 mt-5 align-content-center justify-content-center" id="contact">
+                <div class="col d-flex justify-content-center align-content-center">
+                    <p class="mb-5" style="display: block;width: max-content;"><i class="far fa-copyright"></i> 2021 Dang Nguyen</p>
+                </div>
+                <div class="col m-auto flex-column justify-content-between">
+                    <div class="m-auto" style="width: max-content;">
+                        <a href="tel:+61432581587" id="call" ><i " class="fas fa-phone" id="icon"></i></a>
+                        <a href="mailto:h.danggnguyen@gmail.com" id="enve" ><i " class="fa fa-envelope" id="icon"></i></a>
+                        <a href="https://github.com/dnggngn825" id="gh" ><i " class="fa fa-github" id="icon"></i></a>
+                        <a href="https://www.linkedin.com/in/dang-nguyen-89a563170/" id="lk"><i " class="fab fa-linkedin-in" id="icon"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -400,14 +402,7 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <script>
-            let loader = document.querySelector(".loader-wrapper");
-            
-            window.addEventListener('load', function () {
-                // loader.classList.toggle('fade');
-                loader.style.display = 'none';
-            });
-        </script>
+        <script src="loading-page.js"></script>
 
         <script src="chessbot.js"></script>
         <script src="https://kit.fontawesome.com/f93d56c715.js" crossorigin="anonymous"></script>

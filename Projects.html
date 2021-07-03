@@ -19,390 +19,392 @@
     </head>
     <body>
      
-        <div class="container-xl">
-            <div class="container">
-
-                <nav 
-                    id="navbar" 
-                    class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
-                        <ul class="nav nav-fill" style="width: 100%;">
-                            <div class="col-6 col-md-6">
-                                <li class="nav-item " id="home-nav-item">
-                                    <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
-                                </li>
-                            </div>
-                            <div class="col-6 col-md-6">
-                                <li class="nav-item" id="projects-nav-item">
-                                    <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
-                                    <div class="projects-items noDisplay" id="projects-drop-down">
-                                        <a href="Chessbot.html" class="nav-link flex-sm-fill active">
-                                            Next project: The Chess-bot
-                                        </a>
-                                        <a  class="nav-link flex-sm-fill active">
-                                            <p>Next project: The Autonomous Steering System</p>
-                                        </a>
-                                    </div>
-                                </li>
-                            </div>
-                        </ul>
-                </nav>
-
-
-                <!-- Title section -->
-                <div class="row my-5 py-5">
-                    <div class="col">
-                        <h2 
-                            class="text-center display-6" 
-                            id="title">
-                            The Autonomous Warehouse Robot
-                        </h2>
-                    </div>
-                </div>
-
-                <!-- Table of content section -->
-                <div class="row">
-                    <div class="container">
-                        <h4 class="display-5">
-                            Table of Contents
-                        </h4>
-                        <ul class="shadow-sm p-4 mb-5 bg-white rounded">
-                            <li>
-                                <a href="#overview">Overview</a>
-                            </li>
-                            <li>
-                                <a href="#contributor">Contributor</a>
-                            </li>
-                            <li>
-                                <a href="#source-code">Source Code</a>
-                            </li>
-                            <li>
-                                <a href="#tool">Tool</a>
-                                <ul>
-                                    <li><a href="#eng-concepts">Engineering concepts</a></li>
-                                    <li><a href="#software">Software</a></li>
-                                    <li><a href="#hardware">Hardware</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#design">Design Procedure</a>
-                                <ul>
-                                    <li><a href="#warehouse-layout">Warehouse Layout</a></li>
-                                    <li><a href="#path-planning">Path Planning</a></li>
-                                    <li><a href="#traj-track">Tracjectory Tracking</a></li>
-                                    <li><a href="#ros-archi">ROS Architecture</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#video">Video Presentation</a></li>
-                            
-
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Overview section -->
-                <div class="row">
-                    <div class="container" id="overview">
-                        <h4 class="display-6">
-                            Overview
-                        </h4>
-                    </div>
-                    <p class="">
-                        This is a semester-long project as part of the subject <span style="font-weight: bold;">
-                            <a href="https://handbook.unimelb.edu.au/subjects/elen90090">ELEN90090</a> - Autonomous System Clinic</span>, coordinated by
-                        Dr Paul Beuchat. 
-                        The project focuses on control and software design, based on the given robot platform. 
-                        The robot prototype will then operate in <a href="#warehouse-layout">a small-scale warehouse</a> of no obstacles, automatically maneuvering 
-                        between a dispenser and a receptacle to sequentially perform pick and drop-off tasks.
-                    </p>
-                </div>
-
-                <!-- Contributor and source code -->
-                <div class="row">
-                    <!-- Contributor section -->
-                    <div class="col-md-6">
-                        <div class="col" id="contributor">
-                            <h4 class="display-7">
-                                Contributor
-                            </h4>
-                        </div>
+        <div class="main-content">
+            <div class="container-xl">
+                <div class="container">
+    
+                    <nav 
+                        id="navbar" 
+                        class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-2 justify-content-center">
+                            <ul class="nav nav-fill" style="width: 100%;">
+                                <div class="col-6 col-md-6">
+                                    <li class="nav-item " id="home-nav-item">
+                                        <a href="index.html" class="nav-link flex-sm-fill active">Home</a>
+                                    </li>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <li class="nav-item" id="projects-nav-item">
+                                        <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
+                                        <div class="projects-items noDisplay" id="projects-drop-down">
+                                            <a href="Chessbot.html" class="nav-link flex-sm-fill active">
+                                                Next project: The Chess-bot
+                                            </a>
+                                            <a  class="nav-link flex-sm-fill active">
+                                                <p>Next project: The Autonomous Steering System</p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                    </nav>
+    
+    
+                    <!-- Title section -->
+                    <div class="row my-5 py-5">
                         <div class="col">
-                            <ul class="list-unstyled list">
+                            <h2 
+                                class="text-center display-6" 
+                                id="title">
+                                The Autonomous Warehouse Robot
+                            </h2>
+                        </div>
+                    </div>
+    
+                    <!-- Table of content section -->
+                    <div class="row">
+                        <div class="container">
+                            <h4 class="display-5">
+                                Table of Contents
+                            </h4>
+                            <ul class="shadow-sm p-4 mb-5 bg-white rounded">
                                 <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            Hai Dang Nguyen
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <a href="mailto:hain4@student.unimelb.edu.au">Email</a>
-                                        </div>
-                                    </div>
+                                    <a href="#overview">Overview</a>
                                 </li>
                                 <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            Hoang Viet Pham
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <a href="mailto:hoangp2@student.unimelb.edu.au">Email</a>
-                                        </div>
-                                    </div>
+                                    <a href="#contributor">Contributor</a>
                                 </li>
                                 <li>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-lg-6">
-                                            Quang Trung Le
-                                        </div>
-                                        <div class="col-sm-12 col-lg-6">
-                                            <a href="mailto:quangtrungl@student.unimelb.edu.au">Email</a>
-                                        </div>
-                                    </div>
+                                    <a href="#source-code">Source Code</a>
                                 </li>
+                                <li>
+                                    <a href="#tool">Tool</a>
+                                    <ul>
+                                        <li><a href="#eng-concepts">Engineering concepts</a></li>
+                                        <li><a href="#software">Software</a></li>
+                                        <li><a href="#hardware">Hardware</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#design">Design Procedure</a>
+                                    <ul>
+                                        <li><a href="#warehouse-layout">Warehouse Layout</a></li>
+                                        <li><a href="#path-planning">Path Planning</a></li>
+                                        <li><a href="#traj-track">Tracjectory Tracking</a></li>
+                                        <li><a href="#ros-archi">ROS Architecture</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#video">Video Presentation</a></li>
+                                
+    
                             </ul>
                         </div>
-                        
                     </div>
-
-                    <!-- Source code section -->
-                    <div class="col-md-6">
-                        <div class="col" id="source-code">
-                            <h4 class="display-7">
-                                Source Code
+    
+                    <!-- Overview section -->
+                    <div class="row">
+                        <div class="container" id="overview">
+                            <h4 class="display-6">
+                                Overview
                             </h4>
                         </div>
-                        <div class="col">
-                            <div class="col">
-                                <a href="https://github.com/dnggngn825/TheAutonomousRobot">Github</a>
-                            </div>
-                            <div class="col">
-                                <p class="text-justify">
-                                    This project is written in C++ and Python as 
-                                    multiple ROS (Robotics Operation System) nodes, developed to run on the NVIDIA Jetson Xavier. 
-                                    The repository currently also includes code which has been run on the NVIDIA Jetson Xavier, 
-                                    and using desktop or laptop Ubuntu installations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tool section -->
-                <div class="row" id="tool">
-                    <h4 class="display-6">Tool</h4>
-                    <div class="container">
-                        <h4 class="display-7" id="eng-concepts">
-                            Engineering Concepts
-                        </h4>
                         <p class="">
-                        Successful completion of the project will require the team to apply 
-                        different engineering concepts and analysis tools from the prerequisite 
-                        subjects:
-                            <ul class="list-unstyled">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Embedded System Design:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Finite, extended, and hierarchical state machine, modelling cyber-physical 
-                                                systems; scheduling, multi-tasking and interfacing to the analogue world. 
-                                                Having a state machine diagram will give a high-level capture of the system 
-                                                architecture.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Control System:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Modelling, linearization, proportional, integral and derivative (PID) control.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-3"><span style="font-weight: bold;">Signal Processing:</span></div>
-                                        <div class="col-md-9">
-                                            <p>
-                                                Design and implementation of digital filters, sensor fusion. 
-                                                This will take an important role in processing the raw data/signals from the sensors, 
-                                                accurately capture the robot’s motion and poses.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            This is a semester-long project as part of the subject <span style="font-weight: bold;">
+                                <a href="https://handbook.unimelb.edu.au/subjects/elen90090">ELEN90090</a> - Autonomous System Clinic</span>, coordinated by
+                            Dr Paul Beuchat. 
+                            The project focuses on control and software design, based on the given robot platform. 
+                            The robot prototype will then operate in <a href="#warehouse-layout">a small-scale warehouse</a> of no obstacles, automatically maneuvering 
+                            between a dispenser and a receptacle to sequentially perform pick and drop-off tasks.
                         </p>
                     </div>
-
+    
+                    <!-- Contributor and source code -->
                     <div class="row">
-                        <div class="col-md-6" id="hardware">
-                            <h4 class="display-8">Hardware</h4>
-                            <ul>
-                                <div class="row">
-                                    <div class="col-6 col-md-6">
-                                        <li>Main Computer</li>
-                                        <li>Distance Sensor</li>
-                                        <li>Proximity Sensor</li>
-                                        <li>Camera</li>
-                                        <li>Power Supply</li>
-                                    </div>
-                                    <div class="col-6 col-md-6">
-                                        <li>Wheel Motors</li>
-                                        <li>Wheel Encoders</li>
-                                        <li>Wheel Controller</li>
-                                        <li>Servo Motor</li>
-                                    </div>
+                        <!-- Contributor section -->
+                        <div class="col-md-6">
+                            <div class="col" id="contributor">
+                                <h4 class="display-7">
+                                    Contributor
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <ul class="list-unstyled list">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                Hai Dang Nguyen
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <a href="mailto:hain4@student.unimelb.edu.au">Email</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                Hoang Viet Pham
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <a href="mailto:hoangp2@student.unimelb.edu.au">Email</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                Quang Trung Le
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                <a href="mailto:quangtrungl@student.unimelb.edu.au">Email</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+    
+                        <!-- Source code section -->
+                        <div class="col-md-6">
+                            <div class="col" id="source-code">
+                                <h4 class="display-7">
+                                    Source Code
+                                </h4>
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <a href="https://github.com/dnggngn825/TheAutonomousRobot">Github</a>
                                 </div>
-                            </ul>
-                        </div>
-                        <div class="col-md-6" id="software">
-                            <h4 class="display-8">Software</h4>
-                            <ul>
-                                <div class="row">
-                                    <div class="col-6 col-md-6">
-                                        <li>Ubuntu</li>
-                                        <li>Robotics Operation System (ROS)</li>
-                                    </div>
-                                    <div class="col-6 col-md-6">
-                                        <li>MATLAB</li>
-                                        <li>Simulink</li>
-                                        <li>Git</li>
-                                    </div>
+                                <div class="col">
+                                    <p class="text-justify">
+                                        This project is written in C++ and Python as 
+                                        multiple ROS (Robotics Operation System) nodes, developed to run on the NVIDIA Jetson Xavier. 
+                                        The repository currently also includes code which has been run on the NVIDIA Jetson Xavier, 
+                                        and using desktop or laptop Ubuntu installations.
+                                    </p>
                                 </div>
-                            </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Design procedure -->
-                <div class="row" id="design">
-                    <h4 class="display-6">Design Procedure</h4>
-                    <div class="container">
-                        <div class="col" id="warehouse-layout">
-                            <h4 class="display-7">Warehouse Layout</h4>
-
-                            <p>For one cycle the robot needs to perform, there consists of three paths, transit, delivery and return.
-                                The robot is designed to received the user command as an array of 2-digit numbers. For each
-                                element in the array, the former digit indicates the label dispenser and the latter indicates the
-                                receptacle label. The robot will then process each cycle, firstly by importing the three paths from
-                                its database, then process through each path in sequence shown in the FSM of Figure. It will
-                                automatically move to the next cycle once it finishes.</p>
-
-                            <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
-                                <img class="img-fluid img-thumbnail rounded " src="image/amr/warehouselayout.jpg" alt="warehouse-layout">
-                            </div>
-                        </div>
-                        <div class="col" id="path-planning">
-                            <h4 class="display-7">Path Planning</h4>
-
-                            <p class="">To navigate autonomously, the robot must be able to generate a geometric path between any two
-                                locations within the warehouse. A path-planning algorithm was developed, using MATLAB.
-                                The have been several path planning algorithm we have looked into, such as Greedy, Djikstra, etc.
-                                A* algorithm which is an extension of Djikstra's graph traversal algorithm was chosen to be implemented.</p>
-                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
-                                <img class="img-fluid img-thumbnail rounded " src="image/amr/setup-pp.jpg" alt="set up">
-                            </div>
-                            <p></p>
-                            <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
-                                <img class="img-fluid img-thumbnail rounded " src="image/amr/example-pp.jpg" alt="compare">
-                            </div>
-                        </div>
-                        <div class="col" id="traj-track">
-                            <h4 class="display-7">Trajectory Tracking</h4>
-
-                            <p>
-                                In the following figure, the main program of the robot is designed as a loop of subsystems to 
-                                perform a specific task. The task determination process takes the object and robot’s 
-                                pose data as an input to make decision on the next task to be performed. 
-                                This process will also take user command as an initial request or interrupt action 
-                                needed in emergency circumstances.
-                            </p>
-
-                            <div class="m-2 p-5">
-                                <img class="img-fluid img-thumbnail rounded " src="image/amr/trajtrack.jpg" alt="trajectory tracking">
-                            </div>
-
-
-                            <p>
-                                Having identified the task, warehouse layout and its pose in space,
-                                the robot will then plan the path to perform it. Knowing that the path
-                                is presented in different shapes, one strategy to control the robot 
-                                following a determined path is to partition it to a list of shorter 
-                                trajectories in straight lines with associated coordinates in the 
-                                inertial frame that the robot needs to reach. These reference trajectories
-                                are then fed into the motion control block which is responsible for 
-                                controlling the speed of two wheels. Signals from these wheels are read
-                                by the encoder in sensing system. Moreover, different sensors will also
-                                be used to capture the data of the robot in the driving environment which 
-                                is used for feedback to the motion control. This is a part of the localization
-                                process so that the robot can identify itself in the space and adjust its
-                                motion accordingly.
+    
+                    <!-- Tool section -->
+                    <div class="row" id="tool">
+                        <h4 class="display-6">Tool</h4>
+                        <div class="container">
+                            <h4 class="display-7" id="eng-concepts">
+                                Engineering Concepts
+                            </h4>
+                            <p class="">
+                            Successful completion of the project will require the team to apply 
+                            different engineering concepts and analysis tools from the prerequisite 
+                            subjects:
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Embedded System Design:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Finite, extended, and hierarchical state machine, modelling cyber-physical 
+                                                    systems; scheduling, multi-tasking and interfacing to the analogue world. 
+                                                    Having a state machine diagram will give a high-level capture of the system 
+                                                    architecture.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Control System:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Modelling, linearization, proportional, integral and derivative (PID) control.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-3"><span style="font-weight: bold;">Signal Processing:</span></div>
+                                            <div class="col-md-9">
+                                                <p>
+                                                    Design and implementation of digital filters, sensor fusion. 
+                                                    This will take an important role in processing the raw data/signals from the sensors, 
+                                                    accurately capture the robot’s motion and poses.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </p>
                         </div>
-                        <div class="col" id="ros-archi">
-                            <h4 class="display-7">ROS architecture</h4>
-                            <p>
-                                <a href="ros.org">Robotics Operating System</a> (ROS) framework was used to develop 
-                                the system architecture for the robot. 
-                                Visual Studio Code (VS Code) was used as the main
-                                Integrated Development Environment for programming. 
-                                For software development, C++ and Python are the
-                                two main programming languages used in this project.
-                            </p>
-                            <p>
-                                ROS can be run on Linux platform, for Windows laptop, we can to run it through Ubuntu. 
-                                With ROS, the software pipeline was implemented on the main computer of the robot that is responsible
-                                for communicate with other electrical/electronics components. The software architecture was build
-                                based on the system-level diagram representing the relation between different blocks, shown in the previous 
-                                section. Each of the node in ROS takes on one crital function of the robot. It can be either motion planning,
-                                trajectory tracking or data fusion, etc, can they communicated with each other via different dedicated topics.
-                            </p>
+    
+                        <div class="row">
+                            <div class="col-md-6" id="hardware">
+                                <h4 class="display-8">Hardware</h4>
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <li>Main Computer</li>
+                                            <li>Distance Sensor</li>
+                                            <li>Proximity Sensor</li>
+                                            <li>Camera</li>
+                                            <li>Power Supply</li>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <li>Wheel Motors</li>
+                                            <li>Wheel Encoders</li>
+                                            <li>Wheel Controller</li>
+                                            <li>Servo Motor</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="col-md-6" id="software">
+                                <h4 class="display-8">Software</h4>
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-6 col-md-6">
+                                            <li>Ubuntu</li>
+                                            <li>Robotics Operation System (ROS)</li>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <li>MATLAB</li>
+                                            <li>Simulink</li>
+                                            <li>Git</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
-                        
                     </div>
-                </div>
-
-                <div class="row" id="video">
-                    <h4 class="display-6">Video Presentation</h4>
-                    <p>
-                        Our video presentation will focus on delivering the key insights 
-                        for future master’s students who may consider taking this subject.
-                         As a student who is considering taking this subject, we assume that
-                          the student has been successfully enrolled into Master of 
-                          Engineering course with major in Electrical or Mechatronics. 
-                          Therefore, we assume that the student’s engineering domain
-                           knowledge will include analog and digital electronics concepts
-                            (ELEN30014 or ELEN30009), basic understanding of system modelling
-                             (MCEN30020) with some hands-on experience in mechanical design 
-                             and manufacturing (MCEN30021). Having graduated from Bachelor
-                              of Science, the student has basic knowledge in programming 
-                              and data structure, especially in C and Python, which are the 
-                              key fundamentals to help them develop further with C++ and
-                               using ROS. In terms of hardware familiarity, the students 
-                               are expected to get basic knowledge with Arduino framework 
-                               (ELEN30013 and MCEN30019) as well as FPGA in ELEN30014.
-                    </p>
-                    <p>
-                        From the video, we think the students who are interested
-                         in getting hands-on experience will take the practicality 
-                         of the subject into consideration. While other students may
-                          understand how knowledge from previous subjects can be
-                           applied into these kinds of projects. 
-                    </p>
-                    <div id="iframe-div" class="ratio ratio-16x9 col-8 mx-auto align-content-center embed-responsive embed-responsive-4by3">
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <iframe height="315" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                    <!-- Design procedure -->
+                    <div class="row" id="design">
+                        <h4 class="display-6">Design Procedure</h4>
+                        <div class="container">
+                            <div class="col" id="warehouse-layout">
+                                <h4 class="display-7">Warehouse Layout</h4>
+    
+                                <p>For one cycle the robot needs to perform, there consists of three paths, transit, delivery and return.
+                                    The robot is designed to received the user command as an array of 2-digit numbers. For each
+                                    element in the array, the former digit indicates the label dispenser and the latter indicates the
+                                    receptacle label. The robot will then process each cycle, firstly by importing the three paths from
+                                    its database, then process through each path in sequence shown in the FSM of Figure. It will
+                                    automatically move to the next cycle once it finishes.</p>
+    
+                                <div class="mt-5 mb-5" style="display: flex;justify-content:center;align-content: center;">
+                                    <img class="img-fluid img-thumbnail rounded " src="image/amr/warehouselayout.jpg" alt="warehouse-layout">
+                                </div>
+                            </div>
+                            <div class="col" id="path-planning">
+                                <h4 class="display-7">Path Planning</h4>
+    
+                                <p class="">To navigate autonomously, the robot must be able to generate a geometric path between any two
+                                    locations within the warehouse. A path-planning algorithm was developed, using MATLAB.
+                                    The have been several path planning algorithm we have looked into, such as Greedy, Djikstra, etc.
+                                    A* algorithm which is an extension of Djikstra's graph traversal algorithm was chosen to be implemented.</p>
+                                <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
+                                    <img class="img-fluid img-thumbnail rounded " src="image/amr/setup-pp.jpg" alt="set up">
+                                </div>
+                                <p></p>
+                                <div class="mt-5 mb-5 p-3" style="display: flex;justify-content:center;align-content: center;">
+                                    <img class="img-fluid img-thumbnail rounded " src="image/amr/example-pp.jpg" alt="compare">
+                                </div>
+                            </div>
+                            <div class="col" id="traj-track">
+                                <h4 class="display-7">Trajectory Tracking</h4>
+    
+                                <p>
+                                    In the following figure, the main program of the robot is designed as a loop of subsystems to 
+                                    perform a specific task. The task determination process takes the object and robot’s 
+                                    pose data as an input to make decision on the next task to be performed. 
+                                    This process will also take user command as an initial request or interrupt action 
+                                    needed in emergency circumstances.
+                                </p>
+    
+                                <div class="m-2 p-5">
+                                    <img class="img-fluid img-thumbnail rounded " src="image/amr/trajtrack.jpg" alt="trajectory tracking">
+                                </div>
+    
+    
+                                <p>
+                                    Having identified the task, warehouse layout and its pose in space,
+                                    the robot will then plan the path to perform it. Knowing that the path
+                                    is presented in different shapes, one strategy to control the robot 
+                                    following a determined path is to partition it to a list of shorter 
+                                    trajectories in straight lines with associated coordinates in the 
+                                    inertial frame that the robot needs to reach. These reference trajectories
+                                    are then fed into the motion control block which is responsible for 
+                                    controlling the speed of two wheels. Signals from these wheels are read
+                                    by the encoder in sensing system. Moreover, different sensors will also
+                                    be used to capture the data of the robot in the driving environment which 
+                                    is used for feedback to the motion control. This is a part of the localization
+                                    process so that the robot can identify itself in the space and adjust its
+                                    motion accordingly.
+                                </p>
+                            </div>
+                            <div class="col" id="ros-archi">
+                                <h4 class="display-7">ROS architecture</h4>
+                                <p>
+                                    <a href="ros.org">Robotics Operating System</a> (ROS) framework was used to develop 
+                                    the system architecture for the robot. 
+                                    Visual Studio Code (VS Code) was used as the main
+                                    Integrated Development Environment for programming. 
+                                    For software development, C++ and Python are the
+                                    two main programming languages used in this project.
+                                </p>
+                                <p>
+                                    ROS can be run on Linux platform, for Windows laptop, we can to run it through Ubuntu. 
+                                    With ROS, the software pipeline was implemented on the main computer of the robot that is responsible
+                                    for communicate with other electrical/electronics components. The software architecture was build
+                                    based on the system-level diagram representing the relation between different blocks, shown in the previous 
+                                    section. Each of the node in ROS takes on one crital function of the robot. It can be either motion planning,
+                                    trajectory tracking or data fusion, etc, can they communicated with each other via different dedicated topics.
+                                </p>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
-
-                <!-- transit page -->
-                <div class="row mt-5">
-                    <div class="col">
-                        <h5 class = "text-center">
-                            Stay tuned for more<br>Thanks for reading!
-                        </h5>
+    
+                    <div class="row" id="video">
+                        <h4 class="display-6">Video Presentation</h4>
+                        <p>
+                            Our video presentation will focus on delivering the key insights 
+                            for future master’s students who may consider taking this subject.
+                             As a student who is considering taking this subject, we assume that
+                              the student has been successfully enrolled into Master of 
+                              Engineering course with major in Electrical or Mechatronics. 
+                              Therefore, we assume that the student’s engineering domain
+                               knowledge will include analog and digital electronics concepts
+                                (ELEN30014 or ELEN30009), basic understanding of system modelling
+                                 (MCEN30020) with some hands-on experience in mechanical design 
+                                 and manufacturing (MCEN30021). Having graduated from Bachelor
+                                  of Science, the student has basic knowledge in programming 
+                                  and data structure, especially in C and Python, which are the 
+                                  key fundamentals to help them develop further with C++ and
+                                   using ROS. In terms of hardware familiarity, the students 
+                                   are expected to get basic knowledge with Arduino framework 
+                                   (ELEN30013 and MCEN30019) as well as FPGA in ELEN30014.
+                        </p>
+                        <p>
+                            From the video, we think the students who are interested
+                             in getting hands-on experience will take the practicality 
+                             of the subject into consideration. While other students may
+                              understand how knowledge from previous subjects can be
+                               applied into these kinds of projects. 
+                        </p>
+                        <div id="iframe-div" class="ratio ratio-16x9 col-8 mx-auto align-content-center embed-responsive embed-responsive-4by3">
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe height="315" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/sfTwIrL2xUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+    
+                    <!-- transit page -->
+                    <div class="row mt-5">
+                        <div class="col">
+                            <h5 class = "text-center">
+                                Stay tuned for more<br>Thanks for reading!
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -434,13 +436,8 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
-        <script>
-            let loader = document.querySelector(".loader-wrapper");
+        <script src="loading-page.js">
             
-            window.addEventListener('load', function () {
-                // loader.classList.toggle('fade');
-                loader.style.display = 'none';
-            });
         </script>
 
         <script src="chessbot.js"></script>

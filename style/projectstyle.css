@@ -46,6 +46,10 @@ html
   font-size: 30px;
 }
 
+.main-content{
+  display: none;
+}
+
 a
 {
   /* text-decoration: underline; */
