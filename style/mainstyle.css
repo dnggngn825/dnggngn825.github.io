@@ -198,7 +198,7 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
     border-radius: 8%;
     filter: saturate(70%);
     border-color: #ccccccd8;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     box-shadow: 0 0 5px 0 rgba(6, 32, 28, 0.281);
 }
@@ -314,7 +314,7 @@ section
 {
     /* margin-top: 0.3em; */
     border-bottom-width: 3px;
-
+    
     top: 0;
 }
 
@@ -508,7 +508,7 @@ nav
 {
     display:block;
     content: '';
-    border-bottom: solid 2px whitesmoke;  
+    border-bottom: solid 1px whitesmoke;  
     transform: scaleX(0);  
     transition: transform 400ms ease-in-out;
     transform-origin:100% 50%
@@ -516,12 +516,12 @@ nav
 
 .scrolled .underline::after
 {
-    border-bottom:solid 2px #555555d8;
+    border-bottom:solid 1px #555555d8;
 }
 
 .about-nav a:after
 {
-    border-bottom: solid 2px rgb(218, 255, 255);  
+    border-bottom: solid 1px rgb(218, 255, 255);  
 }
 
 .underline:hover:after, .about-nav a:hover:after
@@ -625,7 +625,7 @@ nav
     max-width: 100px; 
     text-overflow: hidden;
     color: #2c2c2c;
-    border-width: 0.15em;
+    border-width: 0.05em;
     box-shadow: 0 0 2px 0 #28373b;
     overflow: hidden;
 }
@@ -655,9 +655,10 @@ nav
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-style: solid;
-    border-color: #ccccccd8;
+    border-color: #888888d8;
     margin: 0.5em 0.5em;
     padding-right: 1rem;
+    border-width: 0.1rem;
 }
 
 
@@ -853,10 +854,11 @@ nav
     width: 100%;
     height: 500px;
     border-style: solid;
-    border-color: #ccccccd8;
+    border-color: #7e7e7ed8;
     margin: 0.25em 0.25em;
     border-radius: 0.8rem;
     position: relative;
+    border-width: 0.1rem;
 }
 
 .projects-container .project-item-div:hover
@@ -911,13 +913,13 @@ nav
 
     .underline::after
     {
-        border-bottom: solid 2px whitesmoke;
+        border-bottom: solid 1px whitesmoke;
         
     }
 
     .scrolled .underline::after
     {
-        border-bottom: solid 2px var(--primary-color);
+        border-bottom: solid 1px var(--primary-color);
         
     }
 
@@ -1126,7 +1128,7 @@ nav
         margin-top: 1em;
         border-style: solid;
         border-color:whitesmoke;
-        border-width: 0.15em;
+        border-width: 0.1rem;
         padding-left: 1em;
     }
 
