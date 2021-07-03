@@ -252,8 +252,9 @@ ul
     position: relative;
     overflow: hidden;
     border-style: solid;
-    border-color: #d6d6d6ab;
+    border-color: #7a7a7aab;
     padding-bottom: 1em;
+    border-width: 0.1rem;
 }
 
 section
