@@ -101,7 +101,7 @@ p
   -o-transition: max-height 0.1s ease-in-out;
 }
 .slidedown {            
-  max-height: 100px ;                    
+  max-height: 180px ;                    
 }
 
 .spinner

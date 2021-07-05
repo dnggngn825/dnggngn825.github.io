@@ -8,6 +8,30 @@
 }
 
 {
+    function Mouseover() {
+        // $("#projects-drop-down").toggleClass("noDisplay")
+        const dropDown = document.querySelector('#projects-drop-down')
+        if (!dropDown.classList.contains("slidedown"))
+        {
+            $("#projects-drop-down").addClass("slidedown");
+            $("#projects-drop-down").removeClass("slideup");
+        }
+    }
+}
+
+{
+    // function Mouseout() {
+    //     // $("#projects-drop-down").toggleClass("noDisplay")
+    //     const dropDown = document.querySelector('#projects-drop-down')
+    //     if (dropDown.classList.contains("slidedown"))
+    //     {
+    //         $("#projects-drop-down").removeClass("slidedown");
+    //         $("#projects-drop-down").addClass("slideup");
+    //     }
+    // }
+}
+
+{
     window.addEventListener("scroll", () => {
         const dropDown = document.querySelector('#projects-drop-down')
         if (!dropDown.classList.contains('slideup'))
