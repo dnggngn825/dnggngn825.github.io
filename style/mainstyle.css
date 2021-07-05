@@ -319,6 +319,19 @@ section
     top: 0;
 }
 
+.show-on-scroll
+{
+  opacity: 0;
+  transition: opacity .5s .05s ease-out;
+  will-change: opacity;
+}
+
+.is-visible
+{
+  opacity: 1;
+}
+
+
 
 /* -------- Nav bar style------------- */
 .navbar {

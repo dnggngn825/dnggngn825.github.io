@@ -157,3 +157,16 @@ background: linear-gradient(341deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 10
         scroll-behavior: smooth;
       }
 }
+
+
+.show-on-scroll
+{
+  opacity: 0;
+  transition: opacity .5s 0.05s ease-out;
+  will-change: opacity;
+}
+
+.is-visible
+{
+  opacity: 1;
+}
