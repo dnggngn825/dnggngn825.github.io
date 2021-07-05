@@ -1,16 +1,18 @@
 
 {
     function projectsClick() {
-        $("#projects-drop-down").toggleClass("noDisplay")
+        // $("#projects-drop-down").toggleClass("noDisplay")
+        $("#projects-drop-down").toggleClass("slidedown slideup");
+
     }
 }
 
 {
     window.addEventListener("scroll", () => {
         const dropDown = document.querySelector('#projects-drop-down')
-        if (!dropDown.classList.contains('noDisplay'))
+        if (!dropDown.classList.contains('slideup'))
         {
-            $("#projects-drop-down").toggleClass("noDisplay")
+            $("#projects-drop-down").toggleClass("slidedown slideup")
         }
     })
 }

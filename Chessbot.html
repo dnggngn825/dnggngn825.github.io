@@ -32,7 +32,7 @@
                                 <div class="col-6 col-md-6">
                                     <li class="nav-item" id="projects-nav-item">
                                         <a class="nav-link flex-sm-fill active" onclick="projectsClick()">Projects</a>
-                                        <div class="projects-items noDisplay" id="projects-drop-down">
+                                        <div class="projects-items slideup" id="projects-drop-down">
                                             <a href="Projects.html" class="nav-link flex-sm-fill active">
                                                 Next project: The Autonomous Warehouse Robot
                                             </a>
@@ -371,8 +371,58 @@
                                 </p>
                                 <h5 class="display-7">Translational Motion</h5>
                                 <p>
-                                    
+                                    First of all, we will look at the use of polynomials to 
+                                    describe the trajectory of a variable \( x(t) \). Consider a 
+                                    cubic polynomial:
+                                    \[ x(t) = a_3t^3+a_2t^2+a_1t+a_0 \label{x} \]
+                                    \[ \dot{x}(t) = 3a_3t^2 + 2a_2t+a_1 \]
+                                    From here we can use the known variables of initial and final displacement
+                                    and velocity to solve for the coefficients.
                                 </p>
+                                <h5 class="display-7">Determine sets of coefficients for multiple segments</h5>
+                                <p>
+                                    The trajectory generation equation presented in the previous part 
+                                    can be applied to describe a linear trajectory in 3D space. However, 
+                                    as the chessboard has multiple chess pieces located on it, the 
+                                    trajectory of the end-effector should be designed such that the 
+                                    picked chess piece will not collide with any of the chess pieces 
+                                    remained on the board. To do so, we will include 2 via points into 
+                                    the trajectory, these via points take the role as checkpoints the 
+                                    end-effector needs to reach during moving towards the final pose. 
+                                    In order to make sure it can clear other pieces in the way, we 
+                                    assign 2 via points, one that is located 100mm upwards in \( z_0 \) 
+                                    axis from the initial pose whereas the other one locates 100mm upwards 
+                                    in \( z_0 \) axis from the final pose.
+                                    <br><br>
+                                    Therefore, the trajectory will be separated into 3 different segments, 
+                                    each of which have 4 sets of polynomial coefficients to perform the move. 
+                                    In order to implement this in MATLAB, we have combined the 2 via points 
+                                    into an array called 'points' where the initial and final pose 
+                                    will locate at the first and end indices of the array. Then, we will 
+                                    loop through the array and take a pair of poses and treat them as 
+                                    initial and final pose and solve for the 4 sets of polynomial coefficients. 
+                                    Each pair of poses represents each segment in the trajectory, 
+                                    giving \( N \) points, we always have \( (N-1) \) segments, 
+                                    total we will have \( (N-1)*4 \) sets of polynomial coefficients. 
+                                    In addition to that, the amount of time going through each segment 
+                                    of the end-effector is assumed to be proportional to the ratio of 
+                                    the distance of that segment over the overall distance of the trajectory. 
+                                    The reasons behind this is to make sure the acceleration on 
+                                    the end-effector will not go beyond a certain threshold value, 
+                                    which can result in the chesspiece to be dropped off along the trajectory. 
+                                    Having to spend a small amount of time on a long distance will 
+                                    require the motor to provide much more effort to accelerate to a 
+                                    desirable velocity to reach to the final pose in time. Moreover, 
+                                    this is also to minimize the control error in the motor, 
+                                    preventing the chess piece from being dropped off at the incorrect square.
+                                </p>
+                                <h5 class="display-7">Result</h5>
+                                <div class="mb-5 p-3 pt-0" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/sideview-traj.jpg" alt="Trajectory generation result">
+                                </div>
+                                <div class="mb-5 p-3 pt-0" style="display: flex;justify-content:center;align-content: center;">
+                                    <img src="image/chessbot/result-traj.jpg" alt="Trajectory generation result">
+                                </div>
                             </div>
                             
                         </div>
