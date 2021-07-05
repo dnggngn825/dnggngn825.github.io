@@ -10,6 +10,10 @@
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Library for Math notation -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
     <body>
         <div class="main-content">
@@ -82,7 +86,7 @@
                                     <ul>
                                         <li><a href="#workspace">Workspace Determination</a></li>
                                         <li><a href="#kinematic">Forward & Inverse Kinematics</a></li>
-                                        <li><a href="#vel">Task space velocity and torque wrench</a></li>
+                                        <!-- <li><a href="#vel">Task space velocity and torque wrench</a></li> -->
                                         <li><a href="#trajtrack">Trajectory Generation</a></li>
                                     </ul>
                                 </li>
@@ -342,14 +346,33 @@
     
                             
     
-                            <div class="col" id="vel">
+                            <!-- <div class="col" id="vel">
                                 <h4 class="display-7">Task space velocity & torque wrench</h4>
-                                <p></p>
-                            </div>
+                                <p>
+                                    The translational \(\vec{v}_E\) and angular velocity \(\vec{\omega}_E\) of the end-effector
+                                     can be obtained using superposition as shown in the following equations such that velocities 
+                                     generated due to movement of joint \(i\) \({i=1,2,3,4}\) will be added up in vector form, expressed 
+                                     in the inertial frame.
+                                     \[^0\vec{v}_E = ^0\vec{v}_1 + ^0\vec{v}_2 + ^0\vec{v}_3 + ^0\vec{v}_4\]
+                                     \[^0\vec{\omega}_E = ^0\vec{\omega}_1 + ^0\vec{\omega}_2 + ^0\vec{\omega}_3 + ^0\vec{\omega}_4\]
+                                </p>
+                            </div> -->
     
                             <div class="col" id="trajtrack">
                                 <h4 class="display-7">Trajectory Generation</h4>
-                                <p></p>
+                                <p>
+                                    The structure of trajectory generation task will be conducted in sequence. 
+                                    We will derive an algorithm to generate the coefficients of a cubic polynomial that 
+                                    describe the movement of the end-effector with respect to time given \( (x_i, x_f, \dot{x}_i, \dot{x}_f) \) 
+                                    as initial pose, final pose, initial velocity, final velocity respectively. Since the robot arm is 
+                                    in 3D space, there will 3 different sets of coefficients associated with \( x,y,z \) to 
+                                    present poses of the end-effector at a given time. In addition to that, the orientation 
+                                    displacement of the robot arm will also be generated.
+                                </p>
+                                <h5 class="display-7">Translational Motion</h5>
+                                <p>
+                                    
+                                </p>
                             </div>
                             
                         </div>
