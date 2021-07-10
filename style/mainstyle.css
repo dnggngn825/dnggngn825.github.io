@@ -331,6 +331,10 @@ section
   opacity: 1;
 }
 
+.main-content{
+    display: none;
+  }
+
 
 
 /* -------- Nav bar style------------- */
