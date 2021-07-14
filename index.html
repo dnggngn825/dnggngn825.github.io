@@ -433,7 +433,9 @@
     
                             
                             <div class="project-item-div" id="p-web">
-                                <div class="img-holder"></div>
+                                <div class="img-holder">
+                                    <div class="sum-background clicked"></div>
+                                </div>
                                 <li>
                                     <h4>2021</h4>
                                     <h3 class="project-title">
@@ -451,13 +453,42 @@
                                         </div>
                                     </div>
                                 </li>
+
+                                <!-- Display the summary of the project -->
+                                <li id="sum-chessbot" class="clicked" style="text-align: justify;justify-content: center; ">
+                                    <h4 style="color: white;font-weight: 400; line-height: 20pt;">
+                                        My first personal website which I am working on while also self-learning HTML, 
+                                        CSS and Javascript. This is where I showcase my work and skill sets not only in 
+                                        Mechatronics but also in Front-End Web Development.
+                                    </h4>
+    
+                                    <div style="display: flex; justify-content: center; margin-left: auto;margin-right: auto;">
+                                        <!-- <a class="readmore" href="Chessbot.html">
+                                            <div class="left-col" style="width: 100%;">
+                                                <div class="proficiency-col">Read more</div>
+                                            </div>
+                                        </a> -->
+                                        <a class="readmore" href="https://github.com/dnggngn825/personal-website">
+                                            <div class="left-col" style="width: 100%;">
+                                                <div class="proficiency-col">Source Code</div>
+                                            </div>
+                                        </a>
+                                    </div>
+    
+                                    
+                                </li>
                             </div>
                             
                         </ul>
     
                         <ul class=" show-on-scroll is-visible">
                             
-                            <div class="project-item-div">
+                            <div class="project-item-div prosarm" id="prosarm">
+
+                                <div class="img-holder">
+                                    <div class="sum-background clicked"></div>
+                                </div>
+
                                 <li>
                                     <h4>2018</h4>
                                     <h3 class="project-title">
@@ -471,9 +502,25 @@
                                         </div>
                                     </div>
                                 </li>
+
+                                <!-- Display the summary of the project -->
+                                <li id="sum-chessbot" class="clicked" style="text-align: justify;justify-content: center; ">
+                                    <h4 style="color: white;font-weight: 400; line-height: 20pt;">
+                                        This project is for Colombian charity eNABLE, during which I managed 
+                                        to process EMG sensor signals with programmed Arduino to control the DC servo motors, 
+                                        responsible for performing various gestures, resulted in an affordable lightweight 
+                                        prosthetic arm prototype. 
+                                    </h4>  
+                                    
+                                </li>
                             </div>
                             
-                            <div class="project-item-div">
+                            <div class="project-item-div dentalmir" id="dentalmir">
+
+                                <div class="img-holder">
+                                    <div class="sum-background clicked"></div>
+                                </div>
+
                                 <li>
                                     <h4>2017</h4>
                                     <h3 class="project-title">
@@ -483,11 +530,18 @@
                                         Skill
                                         <div class="left-col">
                                             <div class="proficiency-col">Fusion 360</div>
-                                            <!-- <div class="proficiency-col">CSS</div> -->
-                                            <!-- <div class="proficiency-col"></div>
-                                            <div class="proficiency-col"></div> -->
                                         </div>
                                     </div>
+                                </li>
+
+                                <!-- Display the summary of the project -->
+                                <li id="sum-chessbot" class="clicked" style="text-align: justify;justify-content: center; ">
+                                    <h4 style="color: white;font-weight: 400; line-height: 20pt;">
+                                        Was a key player in the design and modelling the new affordable 
+                                        innovated 3D printed dental mirror and pitch in front of a panel of experts,
+                                         resulted in a runner-up place in 3D Printing Hackathon.
+                                    </h4>  
+                                    
                                 </li>
                             </div>
                         </ul>
@@ -538,26 +592,26 @@
         </div>
 
         <script>
-        const mobileBtn = document.getElementById('menu-div-id')
+            const mobileBtn = document.getElementById('menu-div-id')
             nav = document.querySelector('.menu-list')
             mobileBtnExit = document.getElementById('close-div-id');
             menuBtn = document.querySelector('.menu-div');
             closeBtn = document.querySelector('.close-div');
 
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-            nav.classList.remove('menu-list');
-            menuBtn.classList.add('show-menu');
-            closeBtn.classList.remove('show-menu');
-            
-        })
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+                nav.classList.remove('menu-list');
+                menuBtn.classList.add('show-menu');
+                closeBtn.classList.remove('show-menu');
+                
+            })
 
-        mobileBtnExit.addEventListener('click', () => {
-            nav.classList.add('menu-list');
-            nav.classList.remove('menu-btn');
-            closeBtn.classList.add('show-menu');
-            menuBtn.classList.remove('show-menu');
-        })
+            mobileBtnExit.addEventListener('click', () => {
+                nav.classList.add('menu-list');
+                nav.classList.remove('menu-btn');
+                closeBtn.classList.add('show-menu');
+                menuBtn.classList.remove('show-menu');
+            })
         </script>
 
         <script>
@@ -598,11 +652,6 @@
         <script>
             $("#asc.project-item-div li").hover(
                 function() { 
-                    // $(this).css({
-                    //     'transform':'scale(1.05)'
-                    // });
-
-
                     $("#asc").children(".img-holder").css(
                         {
                             'transform':'scale(1.05)'
@@ -623,11 +672,6 @@
 
             $(".chessbot.project-item-div li").hover(
                 function() { 
-                    // $(this).css({
-                    //     'transform':'scale(1.05)'
-                    // });
-
-
                     $(".chessbot").children(".img-holder").css(
                         {
                             'transform':'scale(1.05)'
@@ -645,6 +689,27 @@
                     );
                 }
             );
+
+            $("#prosarm.project-item-div li").hover(
+                function() { 
+                    $("#prosarm").children(".img-holder").css(
+                        {
+                            'transform':'scale(1.05)'
+                        }
+                    );
+                }
+            );
+
+            $("#prosarm.project-item-div li").mouseout(
+                function() {
+                    $("#prosarm").children(".img-holder").css(
+                    {
+                            'transform':'scale(1)'
+                        }
+                    );
+                }
+            );
+
             $("#p-web.project-item-div li").hover(
                 function() { 
                     // $(this).css({
@@ -671,6 +736,32 @@
                 }
             );
 
+            $("#dentalmir.project-item-div li").hover(
+                function() { 
+                    // $(this).css({
+                    //     'transform':'scale(1.05)'
+                    // });
+
+
+                    $("#dentalmir").children(".img-holder").css(
+                        {
+                            'transform':'scale(1.05)'
+                        }
+                    );
+                }
+            );
+
+            $("#dentalmir.project-item-div li").mouseout(
+                function() {
+                    console.log(false);
+                    $("#dentalmir").children(".img-holder").css(
+                    {
+                            'transform':'scale(1)'
+                        }
+                    );
+                }
+            );
+
         </script>
 
         <script>
@@ -687,14 +778,21 @@
                 $('#chessbot .sum-background').toggleClass('clicked');
                 console.log(title);
             });
-
-            // $('.clicked').on('click', function(event) {
-            //     title.classList.remove('clicked');
-            //     console.log(title);
-            //     $('.clicked').css({
-            //         'display':'none'
-            //     });
-            // });
+            $('#prosarm').on('click', function(event) {
+                $('#prosarm li').toggleClass('clicked');
+                $('#prosarm .sum-background').toggleClass('clicked');
+                console.log(title);
+            });
+            $('#p-web').on('click', function(event) {
+                $('#p-web li').toggleClass('clicked');
+                $('#p-web .sum-background').toggleClass('clicked');
+                console.log(title);
+            });
+            $('#dentalmir').on('click', function(event) {
+                $('#dentalmir li').toggleClass('clicked');
+                $('#dentalmir .sum-background').toggleClass('clicked');
+                console.log(title);
+            });
         </script>
 
         <script src="loading-page.js"></script>
