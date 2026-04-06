@@ -16,7 +16,7 @@ export const experiences: ExperienceEntry[] = [
       'Progressed to owning and designing a type-generator package — a core TypeScript utility enabling product teams to migrate from a low-code portal platform to fully coded implementations with end-to-end type safety.',
       'Took initiative on architectural and implementation decisions independently, presenting solutions to the team lead for review — moving from directed work to self-directed design within the first two years.',
       'Built and maintained YAML-based portal workflow configurations and typed Vue 3 utilities, enabling product teams to define UI sequences using shared, type-safe APIs rather than bespoke implementations.',
-      'Contributed to an internal developer runner script that replaced multiple manual setup steps with a single unified dashboard — saving each developer 1+ hour previously spent on setup.',
+      'Contributed to an internal developer runner script that replaced multiple manual setup steps with a single unified dashboard — saving each developer 1+ hour previously spent on setup; extended the script with a local MCP server integration to surface GitHub Copilot assistance directly within VS Code.',
       'Appointed to fix and improve a legacy translation pipeline integrated into an in-house CI/CD system — resolved inconsistent behaviour across repositories and now co-owns the pipeline in production.',
       'Onboarded new team members and reviewed code from junior engineers, sharing platform knowledge and upholding code quality standards.',
     ],
