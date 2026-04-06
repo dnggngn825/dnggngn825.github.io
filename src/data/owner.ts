@@ -6,8 +6,8 @@ export const owner = {
   linkedin: 'https://www.linkedin.com/in/dang-nguyen-89a563170/',
   location: 'Melbourne, VIC, AU',
   bio: [
-    'I am a Master of Engineering (Mechatronics) graduate from the University of Melbourne with more than 1 year of combined experience in mechanical design and software development, gained through projects and internships in robotics and autonomous systems.',
-    'I consider myself a forever student — eager to build on my academic foundation in Mechatronics while continuously upskilling in Computer Science through online courses and self-directed projects.',
-    'My current focus spans robotics systems, autonomous vehicles, and web development. I am seeking opportunities to kick-start my career in Robotics and Software Development.',
+    'Software Engineer with 3+ years at WiseTech Global building and maintaining platform-level frontend infrastructure for CargoWise — a global logistics platform used across 170+ countries.',
+    'Working within the Developer Experience (DEX) team, I progressed from resolving bugs to owning packages and driving technical decisions, delivering shared TypeScript tooling and CI/CD improvements adopted by 645+ engineers across 41 product teams.',
+    'I hold a Master of Engineering (Mechatronics) from the University of Melbourne and have a background spanning embedded systems, robotics, and modern web development.',
   ],
 } as const

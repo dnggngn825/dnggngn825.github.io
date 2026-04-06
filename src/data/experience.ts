@@ -8,6 +8,20 @@ export interface ExperienceEntry {
 
 export const experiences: ExperienceEntry[] = [
   {
+    period:  'Aug 2021 – Present',
+    title:   'Software Engineer',
+    company: 'WiseTech Global',
+    bullets: [
+      'Joined as a junior engineer resolving bugs and integration issues across an internal TypeScript/Vue 3 frontend framework published to an internal npm registry and consumed by 645+ developers across 41 CargoWise product teams.',
+      'Progressed to owning and designing a type-generator package — a core TypeScript utility enabling product teams to migrate from a low-code portal platform to fully coded implementations with end-to-end type safety.',
+      'Took initiative on architectural and implementation decisions independently, presenting solutions to the team lead for review — moving from directed work to self-directed design within the first two years.',
+      'Built and maintained YAML-based portal workflow configurations and typed Vue 3 utilities, enabling product teams to define UI sequences using shared, type-safe APIs rather than bespoke implementations.',
+      'Contributed to an internal developer runner script that replaced multiple manual setup steps with a single unified dashboard — saving each developer 1+ hour previously spent on setup.',
+      'Appointed to fix and improve a legacy translation pipeline integrated into an in-house CI/CD system — resolved inconsistent behaviour across repositories and now co-owns the pipeline in production.',
+      'Onboarded new team members and reviewed code from junior engineers, sharing platform knowledge and upholding code quality standards.',
+    ],
+  },
+  {
     period:  '1/2021 – 12/2021',
     title:   'Autonomous Steering Engineer',
     company: 'Melbourne University Racing Motorsports',
@@ -18,14 +32,13 @@ export const experiences: ExperienceEntry[] = [
     ],
   },
   {
-    period:  '11/2020 – 3/2021',
-    title:   'IoT Product Developer Officer',
+    period:  'Dec 2020 – Mar 2021',
+    title:   'IoT Product Development Intern',
     company: 'AquaTerra',
     type:    'Internship',
     bullets: [
-      'Developed IoT firmware and software solutions for agricultural sensor deployment.',
-      'Collaborated with cross-functional teams to integrate hardware and software subsystems.',
-      'Contributed to prototyping and testing of embedded systems in field conditions.',
+      'Developed embedded software in C++ for IoT sensor prototypes and conducted end-to-end hardware/software testing for field deployment environments.',
+      'Produced engineering documentation including assembly documents and Bills of Materials (BOM), and maintained inventory systems to support prototype production.',
     ],
   },
 ]

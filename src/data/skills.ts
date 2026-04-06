@@ -6,18 +6,23 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: 'Proficiency',
+    category: 'Primary',
     icon:     'code',
-    items:    ['C', 'C++', 'Python', 'Java', 'ROS', 'MATLAB', 'Simulink', 'OOP'],
+    items:    ['TypeScript', 'JavaScript (ES6+)', 'Vue 3', 'Node.js'],
   },
   {
-    category: 'Familiar',
+    category: 'Backend & Platform',
     icon:     'layers',
-    items:    ['CSS', 'JavaScript', 'C#', 'UX/UI', 'MS Office', 'ANSYS'],
+    items:    ['.NET Framework', 'C#', 'RESTful APIs', 'Entity Framework'],
   },
   {
-    category: 'Tools',
+    category: 'Testing & Tooling',
     icon:     'construction',
-    items:    ['Git', 'LaTeX', 'Fusion 360', 'Arduino', 'Ubuntu/Linux', 'NVIDIA Jetson'],
+    items:    ['Vitest', 'Jest', 'Jasmine', 'NUnit', 'ESLint', 'Git', 'CI/CD'],
+  },
+  {
+    category: 'Other (Academic)',
+    icon:     'school',
+    items:    ['Python', 'C/C++', 'Java', 'SQL', 'ROS', 'MATLAB', 'Simulink'],
   },
 ]
