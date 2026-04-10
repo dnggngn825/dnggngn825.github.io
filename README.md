@@ -9,4 +9,3 @@ Link: https://dnggngn825.github.io/
 - **Vite** — build tool and dev server
 - **Tailwind CSS** — utility-first CSS styling
 - **React Router** — client-side routing
-- **Netlify** — hosting and CI/CD deployment
