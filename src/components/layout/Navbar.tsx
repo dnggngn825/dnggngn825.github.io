@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { owner } from '../../data/owner'
+import { ThemeToggle } from '../ui/ThemeToggle'
 
 const navLinks = [
   { label: 'About',      href: '#about' },
@@ -94,27 +95,22 @@ export function Navbar() {
               </Link>
             )
           ))}
-          <button
-            onClick={() => setIsDarkMode(prev => !prev)}
-            className="flex items-center justify-center w-10 h-10 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-colors duration-200"
-            aria-label="Toggle theme"
-          >
-            <span className="material-symbols-outlined text-base">
-              {isDarkMode ? 'wb_sunny' : 'dark_mode'}
-            </span>
-          </button>
+          <ThemeToggle isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(prev => !prev)} />
         </div>
 
-        {/* Hamburger */}
-        <button
-          className="md:hidden text-primary"
-          onClick={() => setMenuOpen(v => !v)}
-          aria-label="Toggle menu"
-        >
+        {/* Mobile right controls */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(prev => !prev)} />
+          <button
+            className="text-primary"
+            onClick={() => setMenuOpen(v => !v)}
+            aria-label="Toggle menu"
+          >
           <span className="material-symbols-outlined">
             {menuOpen ? 'close' : 'menu'}
           </span>
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
