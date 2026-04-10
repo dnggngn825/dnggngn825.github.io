@@ -57,7 +57,7 @@ export function About() {
               <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
               {skillGroups.map(group => (
                 <div key={group.category} className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20">
-                  <p className="text-on-surface text-sm font-semibold w-28 shrink-0">{group.category}</p>
+                  <p className="text-on-surface text-sm font-semibold w-36 shrink-0">{group.category}</p>
                   <p className="text-secondary text-sm">{group.items.join(' · ')}</p>
                 </div>
               ))}

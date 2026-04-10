@@ -21,7 +21,12 @@ export const skillGroups: SkillGroup[] = [
     items:    ['Vitest', 'Jest', 'Jasmine', 'NUnit', 'ESLint', 'Git', 'CI/CD'],
   },
   {
-    category: 'Other (Academic)',
+    category: 'Methodologies',
+    icon:     'school',
+    items:    ['Agile', 'OOP', 'CI/CD'],
+  },
+  {
+    category: 'Other',
     icon:     'school',
     items:    ['Python', 'C/C++', 'Java', 'SQL', 'ROS', 'MATLAB', 'Simulink'],
   },

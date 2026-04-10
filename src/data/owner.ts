@@ -6,8 +6,6 @@ export const owner = {
   linkedin: 'https://www.linkedin.com/in/dang-nguyen-89a563170/',
   location: 'Melbourne, VIC, AU',
   bio: [
-    'Software Engineer with 3+ years at WiseTech Global building and maintaining platform-level frontend infrastructure for CargoWise — a global logistics platform used across 170+ countries.',
-    'Working within the Developer Experience (DEX) team, I progressed from resolving bugs to owning packages and driving technical decisions, delivering shared TypeScript tooling and CI/CD improvements adopted by 645+ engineers across 41 product teams.',
-    'I hold a Master of Engineering (Mechatronics) from the University of Melbourne and have a background spanning embedded systems, robotics, and modern web development.',
+    "Software Engineer with a Master's in Mechatronics and 3+ years at WiseTech Global building and maintaining platform-level tools for CargoWise — including a type-generator package and a translation pipeline used across 41 product teams. Background in embedded systems and IoT hardware from an internship building sensor prototypes and university robotics projects. Drawn to roles where software connects directly with physical systems.",
   ],
 } as const

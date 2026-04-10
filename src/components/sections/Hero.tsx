@@ -30,17 +30,17 @@ export function Hero() {
           {owner.name}.
         </h1>
         <h2
-          className="text-secondary text-3xl md:text-5xl font-bold tracking-tight opacity-80 animate-fade-up"
+          className="text-secondary text-2xl md:text-4xl font-bold tracking-tight opacity-80 animate-fade-up"
           style={{ animationDelay: '200ms' }}
         >
-          Software Engineer
+          Software Engineer @ WiseTech Global
         </h2>
-        <p
+        {/* <p
           className="text-secondary max-w-xl leading-relaxed pt-4 animate-fade-up"
           style={{ animationDelay: '300ms' }}
         >
           {owner.bio[0]}
-        </p>
+        </p> */}
         <div
           className="flex flex-wrap gap-4 pt-8 animate-fade-up"
           style={{ animationDelay: '400ms' }}

@@ -12,13 +12,13 @@ export const experiences: ExperienceEntry[] = [
     title:   'Software Engineer',
     company: 'WiseTech Global',
     bullets: [
-      'Joined as a junior engineer resolving bugs and integration issues across an internal TypeScript/Vue 3 frontend framework published to an internal npm registry and consumed by 645+ developers across 41 CargoWise product teams.',
-      'Progressed to owning and designing a type-generator package — a core TypeScript utility enabling product teams to migrate from a low-code portal platform to fully coded implementations with end-to-end type safety.',
-      'Took initiative on architectural and implementation decisions independently, presenting solutions to the team lead for review — moving from directed work to self-directed design within the first two years.',
-      'Built and maintained YAML-based portal workflow configurations and typed Vue 3 utilities, enabling product teams to define UI sequences using shared, type-safe APIs rather than bespoke implementations.',
-      'Contributed to an internal developer runner script that replaced multiple manual setup steps with a single unified dashboard — saving each developer 1+ hour previously spent on setup; extended the script with a local MCP server integration to surface GitHub Copilot assistance directly within VS Code.',
-      'Appointed to fix and improve a legacy translation pipeline integrated into an in-house CI/CD system — resolved inconsistent behaviour across repositories and now co-owns the pipeline in production.',
-      'Onboarded new team members and reviewed code from junior engineers, sharing platform knowledge and upholding code quality standards.',
+      'Built and maintained a type-generator package used by 645+ developers across 41 product teams, and helped business teams migrate from YAML-based form-flows to fully coded implementations using TypeScript and Vue 3, debugging issues to make sure the transition was smooth.',
+      'Fixed bugs and built new features in Platform Builder, a desktop tool used by product and business teams across CargoWise to build and configure web portal applications — working across the Vue 3 frontend and C#/.NET backend, covering areas like UI layouts, form-flows, and business rules.',
+      'Maintained a legacy translation pipeline integrated into an in-house CI/CD system, added support for extracting translatable strings defined in Vue files, and worked closely with the translation team to ensure it runs smoothly across repositories.',
+      'Helped build an internal setup script that replaced several manual steps with a single dashboard, saving developers an hour or more each, and built new features for an internal MCP server that surfaces GitHub Copilot suggestions directly in VS Code.',
+      'Reviewed code from junior engineers, provided feedback, and mentored them on platform knowledge and best practices.',
+      'Developed a solid understanding of engineering best practices including Agile, design patterns, and test-driven development through day-to-day work on the team.',
+      'Took ownership of features end-to-end — from scoping and design through to implementation, testing, and release — with growing autonomy and reduced oversight over time.',
     ],
   },
   {
@@ -37,8 +37,8 @@ export const experiences: ExperienceEntry[] = [
     company: 'AquaTerra',
     type:    'Internship',
     bullets: [
-      'Developed embedded software in C++ for IoT sensor prototypes and conducted end-to-end hardware/software testing for field deployment environments.',
-      'Produced engineering documentation including assembly documents and Bills of Materials (BOM), and maintained inventory systems to support prototype production.',
+      'Wrote embedded C++ firmware for IoT soil and water sensor prototypes designed for outdoor field deployment.',
+      'Ran end-to-end hardware and software tests to verify sensors were ready for field deployment, and wrote assembly guides, Bills of Materials, and managed component inventory to support prototype production.',
     ],
   },
 ]

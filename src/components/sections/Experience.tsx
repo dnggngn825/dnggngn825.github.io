@@ -46,7 +46,7 @@ export function Experience() {
               <span className="text-gradient font-bold">@ {exp.company}</span>
             </div>
             <p className="text-secondary text-sm font-mono">{exp.period}</p>
-            <ul className="text-secondary space-y-3 pt-4 max-w-2xl">
+            <ul className="text-secondary space-y-3 pt-4 max-w-4xl">
               {exp.bullets.map(bullet => (
                 <li key={bullet} className="flex gap-3">
                   <span className="material-symbols-outlined text-primary mt-0.5 shrink-0" style={{ fontSize: '1rem' }}>
