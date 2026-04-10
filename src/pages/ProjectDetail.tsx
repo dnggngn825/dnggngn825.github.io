@@ -7,23 +7,10 @@ import { YouTubeEmbed } from '../components/ui/YouTubeEmbed'
 import { AnimatedSection } from '../components/ui/AnimatedSection'
 import { GitHubIcon } from '../components/ui/GitHubIcon'
 import { Lightbox } from '../components/ui/Lightbox'
+import { Context as MathJaxContext, Node as MathJaxNode } from 'react-mathjax2'
 
-// Dynamically import MathJax only when needed
-let MathJaxProvider: React.ComponentType<{ children: React.ReactNode }> | undefined
-let MathJaxNode:    React.ComponentType<{ formula: string; inline?: boolean }> | undefined
-
-try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const mjax = require('react-mathjax2') as {
-    Context: React.ComponentType<{ input: string; children: React.ReactNode }>
-    Node:    React.ComponentType<{ formula: string; inline?: boolean }>
-  }
-  // react-mathjax2 uses Context + Node
-  MathJaxProvider = ({ children }) => <mjax.Context input="tex">{children}</mjax.Context>
-  MathJaxNode = mjax.Node
-} catch {
-  // MathJax unavailable — degrade gracefully
-}
+const MathJaxProvider: React.ComponentType<{ children: React.ReactNode }> =
+  ({ children }) => <MathJaxContext input="tex">{children}</MathJaxContext>
 
 function MathOrText({ text, isMath }: { text: string; isMath?: boolean }) {
   if (isMath && MathJaxNode) {
