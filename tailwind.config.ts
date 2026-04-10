@@ -5,30 +5,29 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      // Dark mode theme palette
       colors: {
-        bg:       '#000000',
-        primary:  '#f8fafc',
-        secondary:'#a1a1aa',
-        surface:  {
-          DEFAULT:  '#111827',
-          low:      '#0f172a',
-          lowest:   '#000000',
-          high:     '#1f2937',
-          highest:  '#111827',
-          bright:   '#27272a',
-          dim:      '#020617',
+        bg:       'rgb(var(--color-bg) / <alpha-value>)',
+        primary:  'rgb(var(--color-primary) / <alpha-value>)',
+        secondary:'rgb(var(--color-secondary) / <alpha-value>)',
+        surface: {
+          DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+          low:     'rgb(var(--color-surface-low) / <alpha-value>)',
+          lowest:  'rgb(var(--color-surface-lowest) / <alpha-value>)',
+          high:    'rgb(var(--color-surface-high) / <alpha-value>)',
+          highest: 'rgb(var(--color-surface-highest) / <alpha-value>)',
+          bright:  'rgb(var(--color-surface-bright) / <alpha-value>)',
+          dim:     'rgb(var(--color-surface-dim) / <alpha-value>)',
         },
-        'on-surface':  '#f8fafc',
-        'on-primary':  '#0f172a',
-        outline:       '#374151',
-        'outline-variant': '#27272a',
-        muted:         '#71717a',
+        'on-surface':      'rgb(var(--color-on-surface) / <alpha-value>)',
+        'on-primary':      'rgb(var(--color-on-primary) / <alpha-value>)',
+        outline:           'rgb(var(--color-outline) / <alpha-value>)',
+        'outline-variant': 'rgb(var(--color-outline-variant) / <alpha-value>)',
+        muted:             'rgb(var(--color-muted) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans:    ['Inter', 'sans-serif'],
         display: ['Space Grotesk', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        mono:    ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       borderRadius: {
         DEFAULT: '1rem',
@@ -61,8 +60,8 @@ export default {
         shimmer:         'shimmer 1.5s infinite',
       },
       backgroundImage: {
-        shimmer: 'linear-gradient(90deg, #111827 25%, #0f172a 50%, #111827 75%)',
-        'gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #9333ea 50%, #f43f5e 100%)',
+        shimmer:           'linear-gradient(90deg, rgb(var(--color-surface)) 25%, rgb(var(--color-surface-low)) 50%, rgb(var(--color-surface)) 75%)',
+        'gradient-primary':'linear-gradient(135deg, #6366f1 0%, #9333ea 50%, #f43f5e 100%)',
       },
       backgroundSize: {
         shimmer: '200% 100%',

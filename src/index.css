@@ -5,120 +5,80 @@
 @tailwind utilities;
 
 @layer base {
-  /* Dark mode theme */
+  :root {
+    /* Color channels (R G B) — used as rgb(var(--color-x) / alpha) */
+    --color-bg:               0 0 0;
+    --color-primary:          248 250 252;
+    --color-secondary:        161 161 170;
+    --color-surface:          17 24 39;
+    --color-surface-low:      15 23 42;
+    --color-surface-lowest:   0 0 0;
+    --color-surface-high:     31 41 55;
+    --color-surface-highest:  17 24 39;
+    --color-surface-bright:   39 39 42;
+    --color-surface-dim:      2 6 23;
+    --color-on-surface:       248 250 252;
+    --color-on-primary:       15 23 42;
+    --color-outline:          55 65 81;
+    --color-outline-variant:  39 39 42;
+    --color-muted:            113 113 122;
+
+    /* Non-color tokens */
+    --gradient-text:       linear-gradient(135deg, #ffffff 0%, #d4d4d8 50%, #a1a1aa 100%);
+    --section-divider-bg:  rgba(255, 255, 255, 0.18);
+    --cursor-dot-bg:       #ffffff;
+    --cursor-ring-border:  rgba(255, 255, 255, 0.35);
+  }
+
+  body.theme-light {
+    --color-bg:               248 250 252;
+    --color-primary:          15 23 42;
+    --color-secondary:        71 85 105;
+    --color-surface:          255 255 255;
+    --color-surface-low:      241 245 249;
+    --color-surface-lowest:   248 250 252;
+    --color-surface-high:     226 232 240;
+    --color-surface-highest:  226 232 240;
+    --color-surface-bright:   226 232 240;
+    --color-surface-dim:      248 250 252;
+    --color-on-surface:       15 23 42;
+    --color-on-primary:       248 250 252;
+    --color-outline:          203 213 225;
+    --color-outline-variant:  203 213 225;
+    --color-muted:            100 116 139;
+
+    --gradient-text:       linear-gradient(135deg, #0f172a 0%, #475569 50%, #64748b 100%);
+    --section-divider-bg:  rgba(15, 23, 42, 0.18);
+    --cursor-dot-bg:       #0f172a;
+    --cursor-ring-border:  rgba(15, 23, 42, 0.35);
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: #000000;
-    color: #a1a1aa;
+    background-color: rgb(var(--color-bg));
+    color: rgb(var(--color-secondary));
     font-family: 'Inter', sans-serif;
     cursor: none;
   }
 
-  body.theme-light {
-    background-color: #f8fafc;
-    color: #475569;
-  }
-
-  body.theme-light .bg-bg {
-    background-color: #ffffff !important;
-  }
-
-  body.theme-light .bg-surface {
-    background-color: #f8fafc !important;
-  }
-
-  body.theme-light .bg-surface-low {
-    background-color: #f1f5f9 !important;
-  }
-
-  body.theme-light .bg-surface-high,
-  body.theme-light .bg-surface-highest,
-  body.theme-light .bg-surface-bright {
-    background-color: #e2e8f0 !important;
-  }
-
-  body.theme-light .text-secondary {
-    color: #475569 !important;
-  }
-
-  body.theme-light .text-on-surface {
-    color: #0f172a !important;
-  }
-
-  body.theme-light .text-primary {
-    color: #0f172a !important;
-  }
-
-  body.theme-light .border-outline,
-  body.theme-light .border-outline-variant {
-    border-color: #cbd5e1 !important;
-  }
-
-  body.theme-light .border-primary {
-    border-color: #0f172a !important;
-  }
-
-  body.theme-light .text-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #475569 50%, #64748b 100%) !important;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text !important;
-  }
-
-  body.theme-light .bg-gradient-primary {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%) !important;
-  }
-
-  body.theme-light .icon-gradient {
-    background: linear-gradient(135deg, #0f172a 0%, #475569 50%, #64748b 100%) !important;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text !important;
-  }
-
-  body.theme-light .custom-cursor-dot {
-    background-color: #0f172a !important;
-  }
-
-  body.theme-light .custom-cursor-ring {
-    border-color: rgba(15, 23, 42, 0.35) !important;
-  }
-
   @media (hover: none) {
-    body {
-      cursor: auto;
-    }
+    body { cursor: auto; }
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #d4d4d8 50%, #a1a1aa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #71717a 100%);
-  }
-
-  .icon-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #d4d4d8 50%, #a1a1aa 100%);
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .section-divider {
-    background-color: rgba(255, 255, 255, 0.18);
-  }
-
-  body.theme-light .section-divider {
-    background-color: rgba(15, 23, 42, 0.18);
+    background-color: var(--section-divider-bg);
   }
 }
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { owner } from '../../data/owner'
 import { ThemeToggle } from '../ui/ThemeToggle'
+import { usePrefersDarkMode } from '../../hooks/usePrefersDarkMode'
 
 const navLinks = [
   { label: 'About',      href: '#about' },
@@ -17,13 +18,9 @@ function scrollToId(id: string) {
 export function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(() => window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const [isDarkMode, setIsDarkMode] = usePrefersDarkMode()
   const location = useLocation()
   const isHome = location.pathname === '/'
-
-  useEffect(() => {
-    document.body.classList.toggle('theme-light', !isDarkMode)
-  }, [isDarkMode])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -33,21 +30,6 @@ export function Navbar() {
 
   // Close menu on route change
   useEffect(() => { setMenuOpen(false) }, [location])
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // 2. Define a listener to handle changes
-    const handleChange = (event: any) => {
-      setIsDarkMode(event.matches);
-    };
-
-    // 3. Listen for changes in the system theme
-    mediaQuery.addEventListener('change', handleChange);
-
-    // 4. Cleanup listener on unmount
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
 
   function handleNavClick(href: string) {
     setMenuOpen(false)
