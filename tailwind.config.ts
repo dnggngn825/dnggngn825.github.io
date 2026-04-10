@@ -60,7 +60,7 @@ export default {
       },
       backgroundImage: {
         shimmer: 'linear-gradient(90deg, #222a3d 25%, #31394d 50%, #222a3d 75%)',
-        'gradient-primary': 'linear-gradient(135deg, #14b8a6 0%, #059669 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #94C9A9 0%, #b7e0c6 100%)',
       },
       backgroundSize: {
         shimmer: '200% 100%',

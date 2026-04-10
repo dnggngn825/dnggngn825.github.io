@@ -14,7 +14,7 @@ export function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 70% 50% at 20% 40%, rgba(20,184,166,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 70% 50% at 20% 40%, rgba(148,201,169,0.06) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -47,7 +47,7 @@ export function Hero() {
         >
           <button
             onClick={() => scrollToId('projects')}
-            className="bg-gradient-primary text-on-primary px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:scale-105 active:scale-95"
+            className="bg-gradient-primary text-on-primary px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(148,201,169,0.3)] hover:shadow-[0_0_30px_rgba(148,201,169,0.5)] hover:scale-105 active:scale-95"
           >
             View My Work
           </button>
