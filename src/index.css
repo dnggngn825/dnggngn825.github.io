@@ -23,18 +23,18 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #94C9A9 0%, #b7e0c6 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #059669 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #94C9A9 0%, #b7e0c6 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #059669 100%);
   }
 
   .icon-gradient {
-    background: linear-gradient(135deg, #94C9A9 0%, #b7e0c6 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #059669 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
