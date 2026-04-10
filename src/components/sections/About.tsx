@@ -4,6 +4,7 @@ import { skillGroups } from '../../data/skills'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { GitHubIcon } from '../ui/GitHubIcon'
 import profileImg from '../../assets/images/profile.jpg'
+import { LinkedInIcon } from '../ui/LinkedInIcon'
 
 export function About() {
   return (
@@ -45,7 +46,7 @@ export function About() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-primary hover:text-[#b7e0c6] transition-colors duration-200 text-sm font-medium"
               >
-                <span className="material-symbols-outlined text-base">link</span>
+                <LinkedInIcon className="w-4 h-4" />
                 LinkedIn
               </a>
             </div>

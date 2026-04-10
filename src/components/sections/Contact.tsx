@@ -1,6 +1,7 @@
 import { owner } from '../../data/owner'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { GitHubIcon } from '../ui/GitHubIcon'
+import { LinkedInIcon } from '../ui/LinkedInIcon'
 
 export function Contact() {
   return (
@@ -43,7 +44,7 @@ export function Contact() {
             aria-label="LinkedIn"
             className="text-secondary hover:text-primary transition-colors duration-200"
           >
-            <span className="material-symbols-outlined text-3xl">link</span>
+            <LinkedInIcon className="w-7 h-7" />
           </a>
           <a
             href={`mailto:${owner.email}`}
