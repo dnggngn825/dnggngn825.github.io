@@ -5,28 +5,30 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      // Dark mode theme palette
       colors: {
-        bg:       '#0b1326',
-        primary:  '#94C9A9',
-        secondary:'#b7c8e1',
+        bg:       '#000000',
+        primary:  '#f8fafc',
+        secondary:'#a1a1aa',
         surface:  {
-          DEFAULT:  '#171f33',
-          low:      '#131b2e',
-          lowest:   '#060e20',
-          high:     '#222a3d',
-          highest:  '#2d3449',
-          bright:   '#31394d',
-          dim:      '#0b1326',
+          DEFAULT:  '#111827',
+          low:      '#0f172a',
+          lowest:   '#000000',
+          high:     '#1f2937',
+          highest:  '#111827',
+          bright:   '#27272a',
+          dim:      '#020617',
         },
-        'on-surface':  '#dae2fd',
-        'on-primary':  '#052e16',
-        outline:       '#859490',
-        'outline-variant': '#3c4a46',
-        muted:         '#6b7fa3',
+        'on-surface':  '#f8fafc',
+        'on-primary':  '#0f172a',
+        outline:       '#374151',
+        'outline-variant': '#27272a',
+        muted:         '#71717a',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
+        display: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       borderRadius: {
         DEFAULT: '1rem',
@@ -59,8 +61,8 @@ export default {
         shimmer:         'shimmer 1.5s infinite',
       },
       backgroundImage: {
-        shimmer: 'linear-gradient(90deg, #222a3d 25%, #31394d 50%, #222a3d 75%)',
-        'gradient-primary': 'linear-gradient(135deg, #94C9A9 0%, #b7e0c6 100%)',
+        shimmer: 'linear-gradient(90deg, #111827 25%, #0f172a 50%, #111827 75%)',
+        'gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #9333ea 50%, #f43f5e 100%)',
       },
       backgroundSize: {
         shimmer: '200% 100%',

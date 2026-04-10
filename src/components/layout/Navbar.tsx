@@ -16,8 +16,13 @@ function scrollToId(id: string) {
 export function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
   const location = useLocation()
   const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    document.body.classList.toggle('theme-light', !isDarkMode)
+  }, [isDarkMode])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -39,7 +44,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg/80 backdrop-blur-md border-b border-surface-highest/40 shadow-[0_8px_32px_rgba(6,14,32,0.4)]'
+          ? `${isDarkMode ? 'bg-bg/50 border-surface-highest/40 shadow-[0_8px_32px_rgba(6,14,32,0.4)]' : 'bg-white/50 border-outline-variant/40 shadow-[0_8px_32px_rgba(15,23,42,0.08)]'} backdrop-blur-md border-b`
           : 'bg-transparent'
       }`}
     >
@@ -48,7 +53,7 @@ export function Navbar() {
         <Link
           to="/"
           onClick={() => isHome && window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-on-surface font-black tracking-tighter text-lg uppercase hover:text-primary transition-colors duration-200"
+          className="text-on-surface font-display font-black tracking-tighter text-lg uppercase hover:text-primary transition-colors duration-200"
         >
           {owner.name.toUpperCase()}
         </Link>
@@ -74,6 +79,15 @@ export function Navbar() {
               </Link>
             )
           ))}
+          <button
+            onClick={() => setIsDarkMode(prev => !prev)}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-outline text-secondary hover:border-primary hover:text-primary transition-colors duration-200"
+            aria-label="Toggle theme"
+          >
+            <span className="material-symbols-outlined text-base">
+              {isDarkMode ? 'wb_sunny' : 'dark_mode'}
+            </span>
+          </button>
         </div>
 
         {/* Hamburger */}
@@ -90,7 +104,7 @@ export function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-bg/95 backdrop-blur-md border-t border-surface-highest/40 px-6 py-4 flex flex-col gap-4">
+        <div className={`md:hidden ${isDarkMode ? 'bg-bg/95 border-t border-surface-highest/40' : 'bg-white/95 border-t border-outline-variant/40'} backdrop-blur-md px-6 py-4 flex flex-col gap-4`}>
           {navLinks.map(link => (
             isHome ? (
               <button

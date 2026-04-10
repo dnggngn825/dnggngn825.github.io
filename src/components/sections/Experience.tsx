@@ -12,7 +12,7 @@ export function Experience() {
         <div className="flex items-center gap-4 mb-16">
           <span className="text-gradient font-mono text-sm">02.</span>
           <h2 className="text-on-surface text-3xl font-bold tracking-tight">Experience</h2>
-          <div className="h-px bg-outline-variant/30 flex-grow" />
+          <div className="h-px section-divider flex-grow" />
         </div>
       </AnimatedSection>
 

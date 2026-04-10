@@ -15,7 +15,7 @@ export function About() {
             <div className="flex items-center gap-4">
               <span className="text-gradient font-mono text-sm">01.</span>
               <h2 className="text-on-surface text-3xl font-bold tracking-tight">About Me</h2>
-              <div className="h-px bg-outline-variant/30 flex-grow" />
+              <div className="h-px section-divider flex-grow" />
             </div>
           </AnimatedSection>
 

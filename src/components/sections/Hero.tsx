@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center pt-20 bg-bg overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-20 bg-bg text-secondary overflow-hidden"
     >
       {/* Subtle radial glow */}
       <div
@@ -20,40 +20,37 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 space-y-4">
+        {/* <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-low text-secondary text-[10px] font-mono uppercase tracking-widest rounded-full">
+          Available for hire
+        </div> */}
         <p className="font-mono text-sm tracking-[1.5px] uppercase text-gradient animate-fade-in">
           Hi, my name is
         </p>
         <h1
-          className="text-on-surface text-6xl md:text-8xl font-black tracking-tighter leading-tight animate-fade-up"
+          className="relative text-on-surface text-6xl md:text-8xl font-display font-black tracking-tighter leading-tight animate-fade-up"
           style={{ animationDelay: '100ms' }}
         >
           {owner.name}.
         </h1>
         <h2
-          className="text-secondary text-2xl md:text-4xl font-bold tracking-tight opacity-80 animate-fade-up"
+          className="text-secondary text-2xl md:text-4xl font-display font-bold tracking-tight opacity-80 animate-fade-up"
           style={{ animationDelay: '200ms' }}
         >
           Software Engineer @ WiseTech Global
         </h2>
-        {/* <p
-          className="text-secondary max-w-xl leading-relaxed pt-4 animate-fade-up"
-          style={{ animationDelay: '300ms' }}
-        >
-          {owner.bio[0]}
-        </p> */}
         <div
           className="flex flex-wrap gap-4 pt-8 animate-fade-up"
           style={{ animationDelay: '400ms' }}
         >
           <button
             onClick={() => scrollToId('projects')}
-            className="bg-gradient-primary text-on-primary px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(148,201,169,0.3)] hover:shadow-[0_0_30px_rgba(148,201,169,0.5)] hover:scale-105 active:scale-95"
+            className="bg-surface-highest text-on-surface px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.12)] hover:shadow-[0_0_30px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95"
           >
             View My Work
           </button>
           <button
             onClick={() => scrollToId('contact')}
-            className="border border-primary text-primary px-8 py-4 font-bold tracking-wide rounded-xl hover:bg-primary/10 transition-all duration-300 hover:scale-105 active:scale-95"
+            className="border border-outline text-secondary px-8 py-4 font-bold tracking-wide rounded-xl hover:bg-surface-high hover:text-on-surface transition-all duration-300 hover:scale-105 active:scale-95"
           >
             Contact Me
           </button>

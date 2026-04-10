@@ -35,12 +35,12 @@ export function CustomCursor() {
       <div
         ref={dotRef}
         style={{ display: 'none' }}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[10001] will-change-transform"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary pointer-events-none z-[10001] will-change-transform custom-cursor-dot"
       />
       <div
         ref={ringRef}
         style={{ display: 'none' }}
-        className="fixed top-0 left-0 w-6 h-6 rounded-full border border-primary/50 pointer-events-none z-[10000] will-change-transform"
+        className="fixed top-0 left-0 w-6 h-6 rounded-full border border-primary/50 pointer-events-none z-[10000] will-change-transform custom-cursor-ring"
       />
     </>
   )
