@@ -60,9 +60,13 @@ export function Navbar() {
           <Link
             to="/"
             onClick={() => isHome && window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-on-surface font-display font-black tracking-tighter text-lg uppercase hover:text-primary transition-colors duration-200"
+            className={`w-10 h-10 rounded-[6px] flex items-center justify-center font-display font-black text-base tracking-tight transition-colors duration-200 ${
+              isDarkMode
+                ? 'bg-primary text-bg hover:bg-primary/80'
+                : 'bg-on-surface text-bg hover:bg-on-surface/80'
+            }`}
           >
-            {owner.name.toUpperCase()}
+            {owner.name.split(' ').map(n => n[0]).join('')}
           </Link>
 
           {/* Desktop links */}

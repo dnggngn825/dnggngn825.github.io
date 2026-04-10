@@ -2,6 +2,7 @@ import thumbnailAmr      from '../assets/images/thumbnail-amr.jpg'
 import thumbnailChessbot from '../assets/images/thumbnail-chessbot.jpg'
 import thumbnailProsarm  from '../assets/images/thumbnail-prosarm.jpg'
 import thumbnailDental   from '../assets/images/thumbnail-dental.jpg'
+import thumbnailPersonal   from '../assets/images/thumbnail-personal-web.jpg'
 
 import amrWarehouse   from '../assets/images/amr/warehouselayout.jpg'
 import amrSetup       from '../assets/images/amr/setup-pp.jpg'
@@ -50,6 +51,34 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id:      'personal-website',
+    title:   'Personal Portfolio Website',
+    year:    '2021, 2026',
+    thumbnail: thumbnailPersonal,
+    tech:    ['React', 'TypeScript', 'Tailwind CSS', 'GitHub Actions', "Motion", 'Vite'],
+    summary: 'A personal portfolio website built with React and TypeScript, featuring a custom design system, smooth animations, and a responsive layout to showcase projects and experience.',
+    github:    'https://github.com/dnggngn825/dnggngn825.github.io',
+    contributors: [
+      { name: 'Danny Nguyen', email: 'h.danggnguyen@gmail.com' },
+    ],
+    goal: 'Design and develop a personal portfolio website from scratch to showcase my projects, experience, and skills, using modern web technologies and best practices.',
+    whatWasDone: [
+      'Designed a clean, modern UI with a custom color palette and typography.',
+      'Implemented responsive layouts for optimal viewing on desktop and mobile devices.',
+      'Added smooth animations and transitions using Framer Motion for enhanced user experience.',
+      'Organised content into sections (About, Experience, Projects, Contact) with clear navigation.',
+      'Deployed the site using Vite for fast build times and optimized performance.',
+    ],
+    improvements: [
+      'Add a blog section to share technical articles and insights.',
+      'Implement dark mode support for better accessibility and user preference.',
+      'Integrate analytics to track visitor interactions and improve content strategy.',
+      'Google lighthouse optimisations for even better performance scores.',
+      'Add internationalisation (i18n) support to reach a wider audience.',
+      'React server components for improved performance and SEO.',
+    ],
+  },
   {
     id:      'autonomous-warehouse-robot',
     title:   'Autonomous Warehouse Robot',

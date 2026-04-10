@@ -73,7 +73,7 @@ export default function ProjectDetail() {
             </span>
           )}
         </div>
-        <h1 className="text-on-surface text-4xl md:text-5xl font-black tracking-tight leading-tight">
+        <h1 className="text-on-surface font-display text-4xl md:text-5xl font-black tracking-tight leading-tight">
           {project.title}
         </h1>
         <div className="flex flex-wrap gap-2 pt-2">
