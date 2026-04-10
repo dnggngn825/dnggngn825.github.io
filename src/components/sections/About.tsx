@@ -5,6 +5,7 @@ import { AnimatedSection } from '../ui/AnimatedSection'
 import { GitHubIcon } from '../ui/GitHubIcon'
 import profileImg from '../../assets/images/profile.jpg'
 import { LinkedInIcon } from '../ui/LinkedInIcon'
+import { motion } from 'framer-motion'
 
 export function About() {
   return (
@@ -31,24 +32,26 @@ export function About() {
           {/* Links */}
           <AnimatedSection delay={200}>
             <div className="flex gap-6 pt-2">
-              <a
+              <motion.a
                 href={owner.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className="flex items-center gap-2 text-primary hover:text-[#b7e0c6] transition-colors duration-200 text-sm font-medium"
               >
-                <GitHubIcon className="w-4 h-4" />
-                GitHub
-              </a>
-              <a
+                <GitHubIcon className="w-5 h-5" />
+              </motion.a>
+              <motion.a
                 href={owner.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 300 }}
                 className="flex items-center gap-2 text-primary hover:text-[#b7e0c6] transition-colors duration-200 text-sm font-medium"
               >
-                <LinkedInIcon className="w-4 h-4" />
-                LinkedIn
-              </a>
+                <LinkedInIcon className="w-5 h-5" />
+              </motion.a>
             </div>
           </AnimatedSection>
 

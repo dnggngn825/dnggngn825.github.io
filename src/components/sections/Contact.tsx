@@ -2,6 +2,7 @@ import { owner } from '../../data/owner'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { GitHubIcon } from '../ui/GitHubIcon'
 import { LinkedInIcon } from '../ui/LinkedInIcon'
+import { motion } from "framer-motion";
 
 export function Contact() {
   return (
@@ -28,31 +29,33 @@ export function Contact() {
         </div>
 
         <div className="flex justify-center gap-8 pt-8">
-          <a
+          <motion.a
             href={owner.github}
             target="_blank"
+            whileHover={{ y: -2 }} // Subtle lift
+            transition={{ type: "spring", stiffness: 300 }}
             rel="noopener noreferrer"
-            aria-label="GitHub"
             className="text-secondary hover:text-primary transition-colors duration-200"
           >
-            <GitHubIcon className="w-7 h-7" />
-          </a>
-          <a
+            <GitHubIcon className="w-6 h-6" />
+          </motion.a>
+          <motion.a 
             href={owner.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            whileHover={{ y: -2 }} // Subtle lift
+            transition={{ type: "spring", stiffness: 300 }}
             className="text-secondary hover:text-primary transition-colors duration-200"
           >
-            <LinkedInIcon className="w-7 h-7" />
-          </a>
-          <a
+            <LinkedInIcon className="w-6 h-6" />
+          </motion.a>
+          <motion.a
             href={`mailto:${owner.email}`}
+            whileHover={{ y: -2 }} // Subtle lift
+            transition={{ type: "spring", stiffness: 300 }}
             aria-label="Email"
             className="text-secondary hover:text-primary transition-colors duration-200"
           >
-            <span className="material-symbols-outlined text-3xl">mail</span>
-          </a>
+            <span className="material-symbols-outlined text-2xl leading-none">mail</span>
+          </motion.a>
         </div>
       </AnimatedSection>
     </section>
