@@ -8,7 +8,7 @@ import amrWarehouse   from '../assets/images/amr/warehouselayout.avif'
 import amrSetup       from '../assets/images/amr/setup-pp.avif'
 import amrExample     from '../assets/images/amr/example-pp.avif'
 import amrTraj        from '../assets/images/amr/trajtrack.avif'
-import amrDiagram     from '../assets/images/amr/systems-level-diagram.jpeg'
+import amrDiagram     from '../assets/images/amr/systems-level-diagram.avif'
 
 import chessbotCad       from '../assets/images/chessbot/cad-model.avif'
 import chessbotSchematic from '../assets/images/chessbot/schematic.avif'
