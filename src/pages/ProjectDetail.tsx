@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
-import { projects } from '../data/projects'
+import { projects, ProjectStatus } from '../data/projects'
 import { TechTag } from '../components/ui/TechTag'
 import { LazyImage } from '../components/ui/LazyImage'
 import { YouTubeEmbed } from '../components/ui/YouTubeEmbed'
@@ -67,6 +67,15 @@ export default function ProjectDetail() {
       <AnimatedSection className="space-y-4">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="text-xs font-mono text-secondary bg-surface-low px-3 py-1 rounded-full">{project.year}</span>
+          <span
+            className={`text-xs font-medium px-3 py-1 rounded-full ${
+              project.status === ProjectStatus.InProgress
+                ? 'bg-yellow-400/15 text-yellow-400'
+                : 'bg-green-400/15 text-green-400'
+            }`}
+          >
+            {project.status}
+          </span>
           {project.contributors.length > 0 && (
             <span className="text-xs text-secondary/60">
               {project.contributors.length} contributor{project.contributors.length > 1 ? 's' : ''}

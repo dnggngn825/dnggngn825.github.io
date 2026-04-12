@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { projects } from '../../data/projects'
+import { projects, ProjectStatus } from '../../data/projects'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { TechTag } from '../ui/TechTag'
 import { LazyImage } from '../ui/LazyImage'
@@ -48,7 +48,18 @@ export function Projects() {
               <div className="p-6 space-y-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="text-xs text-secondary font-mono">{project.year}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-secondary font-mono">{project.year}</span>
+                      <span
+                        className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                          project.status === ProjectStatus.InProgress
+                            ? 'bg-yellow-400/15 text-yellow-400'
+                            : 'bg-green-400/15 text-green-400'
+                        }`}
+                      >
+                        {project.status}
+                      </span>
+                    </div>
                     <h3 className="text-on-surface text-xl font-bold group-hover:text-primary transition-colors mt-1">
                       {project.title}
                     </h3>
