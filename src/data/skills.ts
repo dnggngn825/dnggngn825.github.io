@@ -6,28 +6,33 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: 'Primary',
+    category: 'Languages',
     icon:     'code',
-    items:    ['TypeScript', 'JavaScript (ES6+)', 'Vue 3', 'Node.js'],
+    items:    ['TypeScript', 'JavaScript (ES6+)', 'C#', 'Python', 'Java', 'C/C++', 'SQL'],
   },
   {
-    category: 'Backend & Platform',
+    category: 'Frontend Frameworks & Libraries',
+    icon:     'web',
+    items:    ['React', 'Vue 3', 'Vite'],
+  },
+  {
+    category: 'Backend & Cloud',
     icon:     'layers',
-    items:    ['.NET Framework', 'C#', 'RESTful APIs', 'Entity Framework'],
+    items:    ['.NET Framework', 'Node.js', 'Entity Framework', 'AWS Amplify', 'DynamoDB', 'RESTful APIs', 'GraphQL'],
   },
   {
-    category: 'Testing & Tooling',
+    category: 'Testing',
+    icon:     'bug_report',
+    items:    ['Vitest', 'Jest', 'Jasmine', 'NUnit'],
+  },
+  {
+    category: 'DevOps & Tooling',
     icon:     'construction',
-    items:    ['Vitest', 'Jest', 'Jasmine', 'NUnit', 'ESLint', 'Git', 'CI/CD'],
+    items:    ['Git', 'CI/CD', 'ESLint'],
   },
   {
-    category: 'Methodologies',
-    icon:     'school',
-    items:    ['Agile', 'OOP', 'CI/CD'],
-  },
-  {
-    category: 'Other',
-    icon:     'school',
-    items:    ['Python', 'C/C++', 'Java', 'SQL', 'ROS', 'MATLAB', 'Simulink'],
+    category: 'Engineering',
+    icon:     'precision_manufacturing',
+    items:    ['ROS', 'MATLAB', 'Simulink'],
   },
 ]
