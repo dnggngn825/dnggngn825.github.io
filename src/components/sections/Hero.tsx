@@ -14,7 +14,8 @@ export function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 70% 50% at 20% 40%, rgba(148,201,169,0.06) 0%, transparent 70%)',
+          background:
+            "radial-gradient(ellipse 70% 50% at 20% 40%, rgba(148,201,169,0.06) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -28,28 +29,28 @@ export function Hero() {
         </p>
         <h1
           className="relative text-on-surface text-6xl md:text-8xl font-display font-black tracking-tighter leading-tight animate-fade-up"
-          style={{ animationDelay: '100ms' }}
+          style={{ animationDelay: "100ms" }}
         >
           {owner.name}.
         </h1>
         <h2
           className="text-secondary text-2xl md:text-4xl font-display font-bold tracking-tight opacity-80 animate-fade-up"
-          style={{ animationDelay: '200ms' }}
+          style={{ animationDelay: "200ms" }}
         >
           Software Engineer @ WiseTech Global
         </h2>
         <div
           className="flex flex-wrap gap-4 pt-8 animate-fade-up"
-          style={{ animationDelay: '400ms' }}
+          style={{ animationDelay: "400ms" }}
         >
           <button
-            onClick={() => scrollToId('projects')}
-            className="bg-surface-highest text-on-surface px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.12)] hover:shadow-[0_0_30px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95"
+            onClick={() => scrollToId("projects")}
+            className="border border-outline bg-surface-highest text-on-surface px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.12)] hover:shadow-[0_0_30px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95"
           >
             View My Work
           </button>
           <button
-            onClick={() => scrollToId('contact')}
+            onClick={() => scrollToId("contact")}
             className="border border-outline text-secondary px-8 py-4 font-bold tracking-wide rounded-xl hover:bg-surface-high hover:text-on-surface transition-all duration-300 hover:scale-105 active:scale-95"
           >
             Contact Me
@@ -57,5 +58,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

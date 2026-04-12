@@ -23,6 +23,10 @@
     --color-outline-variant:  39 39 42;
     --color-muted:            113 113 122;
 
+    /* Status pill colors (R G B) */
+    --color-status-progress:   250 204 21;
+    --color-status-complete:   74 222 128;
+
     /* Non-color tokens */
     --gradient-text:       linear-gradient(135deg, #ffffff 0%, #d4d4d8 50%, #a1a1aa 100%);
     --section-divider-bg:  rgba(255, 255, 255, 0.18);
@@ -33,7 +37,8 @@
   body.theme-light {
     --color-bg:               248 250 252;
     --color-primary:          15 23 42;
-    --color-secondary:        71 85 105;
+    /* --color-secondary:        71 85 105; */
+    --color-secondary:        95, 114, 140;
     --color-surface:          255 255 255;
     --color-surface-low:      241 245 249;
     --color-surface-lowest:   248 250 252;
@@ -46,6 +51,9 @@
     --color-outline:          203 213 225;
     --color-outline-variant:  203 213 225;
     --color-muted:            100 116 139;
+
+    --color-status-progress:   202 138 4;
+    --color-status-complete:   22 163 74;
 
     --gradient-text:       linear-gradient(135deg, #0f172a 0%, #475569 50%, #64748b 100%);
     --section-divider-bg:  rgba(15, 23, 42, 0.18);
@@ -79,6 +87,16 @@
 
   .section-divider {
     background-color: var(--section-divider-bg);
+  }
+
+  .status-in-progress {
+    background-color: rgb(var(--color-status-progress) / 0.15);
+    color: rgb(var(--color-status-progress));
+  }
+
+  .status-complete {
+    background-color: rgb(var(--color-status-complete) / 0.15);
+    color: rgb(var(--color-status-complete));
   }
 }
 

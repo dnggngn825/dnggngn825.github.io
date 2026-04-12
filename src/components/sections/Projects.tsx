@@ -22,7 +22,10 @@ export function Projects() {
         {projects.map((project, i) => (
           <div
             key={project.id}
-            onClick={() => navigate(`/projects/${project.id}`)}
+            onClick={() => {
+              sessionStorage.setItem('homeScrollY', String(window.scrollY))
+              navigate(`/projects/${project.id}`)
+            }}
             className="cursor-pointer"
           >
             <AnimatedSection
@@ -53,8 +56,8 @@ export function Projects() {
                       <span
                         className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                           project.status === ProjectStatus.InProgress
-                            ? 'bg-yellow-400/15 text-yellow-400'
-                            : 'bg-green-400/15 text-green-400'
+                            ? 'status-in-progress'
+                            : 'status-complete'
                         }`}
                       >
                         {project.status}
