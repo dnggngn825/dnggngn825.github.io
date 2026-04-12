@@ -9,7 +9,7 @@ export function TechTag({ label, size = 'sm' }: Props) {
     : 'px-2.5 py-0.5 text-xs'
 
   return (
-    <span className={`${sizeClass} bg-surface-highest text-primary rounded-full font-mono whitespace-nowrap`}>
+    <span className={`${sizeClass} bg-surface-tag text-primary border border-outline-variant/20 rounded-full font-mono whitespace-nowrap`}>
       {label}
     </span>
   )
