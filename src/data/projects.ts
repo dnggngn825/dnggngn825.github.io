@@ -19,6 +19,11 @@ import chessbotCorner    from '../assets/images/chessbot/corner-visual.avif'
 import chessbotSide      from '../assets/images/chessbot/sideview-traj.avif'
 import chessbotResult    from '../assets/images/chessbot/result-traj.avif'
 
+export enum ProjectStatus {
+  Finished   = 'Finished',
+  InProgress = 'In Progress',
+}
+
 export interface ProjectContributor {
   name:   string
   email?: string
@@ -34,6 +39,7 @@ export interface Project {
   id:           string
   title:        string
   year:         string
+  status:       ProjectStatus
   tech:         string[]
   summary:      string
   thumbnail?:   string
@@ -55,6 +61,7 @@ export const projects: Project[] = [
     id:      'personal-website',
     title:   'Personal Portfolio Website',
     year:    '2021, 2026',
+    status:  ProjectStatus.InProgress,
     thumbnail: thumbnailPersonal,
     tech:    ['React', 'TypeScript', 'Tailwind CSS', 'GitHub Actions', "Motion", 'Vite'],
     summary: 'A personal portfolio website built with React and TypeScript, featuring a custom design system, smooth animations, and a responsive layout to showcase projects and experience.',
@@ -83,6 +90,7 @@ export const projects: Project[] = [
     id:      'autonomous-warehouse-robot',
     title:   'Autonomous Warehouse Robot',
     year:    '2021',
+    status:  ProjectStatus.Finished,
     tech:    ['C++', 'Python', 'ROS', 'MATLAB', 'Simulink', 'Fusion 360'],
     summary: 'A mobile robot that autonomously navigates a small-scale warehouse, performing sequential pick-and-drop tasks between a dispenser and receptacle using A* path planning and PID motion control.',
     thumbnail: thumbnailAmr,
@@ -126,6 +134,7 @@ export const projects: Project[] = [
     id:      'chessbot',
     title:   'The Chessbot – 4 DoF Robot Arm',
     year:    '2021',
+    status:  ProjectStatus.Finished,
     tech:    ['MATLAB', 'Fusion 360', 'Arduino', 'LaTeX'],
     summary: 'A 4-DoF serial robot arm designed to pick and place chess pieces on a chessboard, implementing Forward/Inverse Kinematics via Denavit-Hartenberg tables, task-space velocity control, and cubic polynomial trajectory generation.',
     thumbnail: thumbnailChessbot,
@@ -186,6 +195,7 @@ export const projects: Project[] = [
     id:      'autonomous-steering',
     title:   'Autonomous Steering System',
     year:    '2020–2021',
+    status:  ProjectStatus.Finished,
     tech:    ['ANSYS', 'Fusion 360', 'CANopen', 'MATLAB', 'Simulink', 'ROS'],
     summary: 'Capstone project: design and implementation of an autonomous steering system for a Formula SAE vehicle, integrating CANopen motor control, structural FEA analysis, and simulation-based algorithm validation.',
     contributors: [
@@ -215,6 +225,7 @@ export const projects: Project[] = [
     id:      'prosthetic-arm',
     title:   'The Prosthetic Arm',
     year:    '2018',
+    status:  ProjectStatus.Finished,
     tech:    ['Arduino', 'Fusion 360'],
     summary: 'An affordable, lightweight prosthetic arm prototype built for Colombian charity eNABLE. EMG sensor signals are processed by an Arduino to control DC servo motors, enabling various hand gestures.',
     thumbnail: thumbnailProsarm,
@@ -244,6 +255,7 @@ export const projects: Project[] = [
     id:      'dental-mirror',
     title:   'The Dental Mirror – 3D Printing Hackathon',
     year:    '2017',
+    status:  ProjectStatus.Finished,
     tech:    ['Fusion 360'],
     summary: 'An affordable 3D-printed dental mirror redesign created during a hackathon. Achieved runner-up by addressing ergonomics, sterilisability, and cost barriers in existing dental instruments.',
     thumbnail: thumbnailDental,
