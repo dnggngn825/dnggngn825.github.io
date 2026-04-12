@@ -22,7 +22,10 @@ export function Projects() {
         {projects.map((project, i) => (
           <div
             key={project.id}
-            onClick={() => navigate(`/projects/${project.id}`)}
+            onClick={() => {
+              sessionStorage.setItem('homeScrollY', String(window.scrollY))
+              navigate(`/projects/${project.id}`)
+            }}
             className="cursor-pointer"
           >
             <AnimatedSection

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { projects, ProjectStatus } from '../data/projects'
 import { TechTag } from '../components/ui/TechTag'
@@ -48,6 +48,8 @@ export default function ProjectDetail() {
   const project = projects.find(p => p.id === id)
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null)
 
+  useEffect(() => { window.scrollTo(0, 0) }, [])
+
   if (!project) return <Navigate to="/" replace />
 
   const content = (
@@ -70,8 +72,8 @@ export default function ProjectDetail() {
           <span
             className={`text-xs font-medium px-3 py-1 rounded-full ${
               project.status === ProjectStatus.InProgress
-                ? 'bg-yellow-400/15 text-yellow-400'
-                : 'bg-green-400/15 text-green-400'
+                ? 'status-in-progress'
+                : 'status-complete'
             }`}
           >
             {project.status}

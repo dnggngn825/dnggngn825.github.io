@@ -37,7 +37,8 @@
   body.theme-light {
     --color-bg:               248 250 252;
     --color-primary:          15 23 42;
-    --color-secondary:        71 85 105;
+    /* --color-secondary:        71 85 105; */
+    --color-secondary:        95, 114, 140;
     --color-surface:          255 255 255;
     --color-surface-low:      241 245 249;
     --color-surface-lowest:   248 250 252;
