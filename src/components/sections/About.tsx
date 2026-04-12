@@ -55,37 +55,6 @@ export function About() {
             </div>
           </AnimatedSection>
 
-          {/* Technical Skills */}
-          <AnimatedSection delay={250}>
-            <div className="space-y-3 pt-4">
-              <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
-              {skillGroups.map(group => (
-                <div key={group.category} className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20">
-                  <p className="text-on-surface text-sm font-semibold w-36 shrink-0">{group.category}</p>
-                  <p className="text-secondary text-sm">{group.items.join(' · ')}</p>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
-
-          {/* Education */}
-          <AnimatedSection delay={350}>
-            <div className="space-y-3 pt-4">
-              <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Education</h3>
-              {education.map(edu => (
-                <div key={edu.degree} className="flex justify-between items-start gap-4 py-2 border-b border-outline-variant/20">
-                  <div>
-                    <p className="text-on-surface text-sm font-semibold">{edu.degree}</p>
-                    <p className="text-secondary text-xs">{edu.institution}</p>
-                  </div>
-                  <div className="text-right shrink-0">
-                    <p className="text-primary text-xs font-mono">WAM {edu.wam}</p>
-                    <p className="text-secondary text-xs">{edu.period}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
         </div>
 
         {/* Photo */}
@@ -99,6 +68,40 @@ export function About() {
               />
             </div>
             <div className="absolute -inset-4 border-2 border-primary/20 rounded-full -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 pointer-events-none" />
+          </div>
+        </AnimatedSection>
+
+        {/* Technical Skills — full width */}
+        <AnimatedSection delay={250} className="md:col-span-5">
+          <div className="space-y-3 pt-4">
+            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
+            <div className="grid md:grid-cols-2 gap-x-12">
+              {skillGroups.map(group => (
+                <div key={group.category} className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20">
+                  <p className="text-on-surface text-sm font-semibold w-44 shrink-0">{group.category}</p>
+                  <p className="text-secondary text-sm">{group.items.join(' · ')}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Education — full width */}
+        <AnimatedSection delay={350} className="md:col-span-5">
+          <div className="space-y-3 pt-4">
+            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Education</h3>
+            {education.map(edu => (
+              <div key={edu.degree} className="flex justify-between items-start gap-4 py-2 border-b border-outline-variant/20">
+                <div>
+                  <p className="text-on-surface text-sm font-semibold">{edu.degree}</p>
+                  <p className="text-secondary text-xs">{edu.institution}</p>
+                </div>
+                <div className="text-right shrink-0">
+                  <p className="text-primary text-xs font-mono">WAM {edu.wam}</p>
+                  <p className="text-secondary text-xs">{edu.period}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </AnimatedSection>
       </div>

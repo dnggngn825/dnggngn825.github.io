@@ -22,6 +22,11 @@
     --color-outline:          55 65 81;
     --color-outline-variant:  39 39 42;
     --color-muted:            113 113 122;
+    --color-surface-tag:      30 41 59;
+
+    /* Status pill colors (R G B) */
+    --color-status-progress:   250 204 21;
+    --color-status-complete:   74 222 128;
 
     /* Status pill colors (R G B) */
     --color-status-progress:   250 204 21;
@@ -51,6 +56,10 @@
     --color-outline:          203 213 225;
     --color-outline-variant:  203 213 225;
     --color-muted:            100 116 139;
+    --color-surface-tag:      226 232 240;
+
+    --color-status-progress:   202 138 4;
+    --color-status-complete:   22 163 74;
 
     --color-status-progress:   202 138 4;
     --color-status-complete:   22 163 74;

@@ -17,6 +17,7 @@ export default {
           highest: 'rgb(var(--color-surface-highest) / <alpha-value>)',
           bright:  'rgb(var(--color-surface-bright) / <alpha-value>)',
           dim:     'rgb(var(--color-surface-dim) / <alpha-value>)',
+          tag:     'rgb(var(--color-surface-tag) / <alpha-value>)',
         },
         'on-surface':      'rgb(var(--color-on-surface) / <alpha-value>)',
         'on-primary':      'rgb(var(--color-on-primary) / <alpha-value>)',
