@@ -18,20 +18,21 @@ export function Projects() {
         </div>
       </AnimatedSection>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((project, i) => (
-          <div
-            key={project.id}
-            onClick={() => {
-              sessionStorage.setItem('homeScrollY', String(window.scrollY))
-              navigate(`/projects/${project.id}`)
-            }}
-            className="cursor-pointer"
-          >
-            <AnimatedSection
-              delay={(i % 2) * 100}
-              className="group bg-surface text-on-surface rounded-xl border border-outline-variant/10 overflow-hidden hover:border-primary/30 hover:-translate-y-2 transition-all duration-300 h-full"
+      {/* Flashlight glow container — desktop only */}
+      <div className="md:rounded-xl md:border md:border-outline-variant/20 md:[background:var(--bg-container-glow)] md:pt-10 md:px-10 md:pb-6 grid md:grid-cols-2 gap-8 md:gap-10">
+          {projects.map((project, i) => (
+            <div
+              key={project.id}
+              onClick={() => {
+                sessionStorage.setItem('homeScrollY', String(window.scrollY))
+                navigate(`/projects/${project.id}`)
+              }}
+              className="group cursor-pointer"
             >
+              <AnimatedSection
+                delay={(i % 2) * 100}
+                className="bg-surface-card text-on-surface rounded-xl overflow-hidden h-full transition-all duration-300 hover:-translate-y-0.5 [box-shadow:var(--shadow-pill)] hover:[box-shadow:var(--shadow-pill-hover)]"
+              >
               {/* Thumbnail */}
               {project.thumbnail ? (
                 <div className="h-48 overflow-hidden">
@@ -102,9 +103,9 @@ export function Projects() {
                 </div>
               </div>
             </AnimatedSection>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
     </section>
   )
 }
