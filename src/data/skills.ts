@@ -18,7 +18,7 @@ export const skillGroups: SkillGroup[] = [
   {
     category: 'Backend & Cloud',
     icon:     'layers',
-    items:    ['.NET Framework', 'Node.js', 'Entity Framework', 'AWS Amplify', 'DynamoDB', 'RESTful APIs', 'GraphQL'],
+    items:    ['Node.js', 'ASP.NET Core', '.NET Framework', 'Entity Framework', 'RESTful APIs', 'GraphQL', 'AWS', 'AWS Amplify'],
   },
   {
     category: 'Testing',
@@ -28,7 +28,12 @@ export const skillGroups: SkillGroup[] = [
   {
     category: 'DevOps & Tooling',
     icon:     'construction',
-    items:    ['Git', 'CI/CD', 'ESLint'],
+    items:    ['Git', 'CI/CD', 'GitHub Actions', 'Docker', 'ESLint'],
+  },
+  {
+    category: 'Databases',
+    icon:     'storage',
+    items:    ['SQL Server', 'DynamoDB', 'PostgreSQL'],
   },
   {
     category: 'Engineering',

@@ -7,7 +7,7 @@ export const owner = {
   location: 'Melbourne, VIC, AU',
   bio: [
     "Software Engineer with a Master's in Mechatronics and 4+ years at WiseTech Global"
-    +" building and maintaining platform-level tools for CargoWise — working full-stack across"
+    +" building and maintaining platform-level tools for CargoWise in an Agile team — working full-stack across"
     +" Vue 3, TypeScript, C#, and .NET on Platform Builder (a low-code platform for building"
     +" CargoWise web portals), a configuration test framework, an internal frontend framework,"
     +" and a localization pipeline used across 41 product teams."
