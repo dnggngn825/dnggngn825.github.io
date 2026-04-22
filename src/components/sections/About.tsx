@@ -54,11 +54,14 @@ export function About() {
               </motion.a>
             </div>
           </AnimatedSection>
-
         </div>
 
         {/* Photo */}
-        <AnimatedSection className="md:col-span-2" animation="fade-in" delay={200}>
+        <AnimatedSection
+          className="md:col-span-2"
+          animation="fade-in"
+          delay={200}
+        >
           <div className="relative group max-w-xs mx-auto md:mx-0">
             <div className="aspect-square rounded-full overflow-hidden border-2 border-primary/30 p-2 grayscale hover:grayscale-0 transition-all duration-500">
               <img
@@ -74,12 +77,21 @@ export function About() {
         {/* Technical Skills — full width */}
         <AnimatedSection delay={250} className="md:col-span-5">
           <div className="space-y-3 pt-4">
-            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Technical Skills</h3>
+            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">
+              Technical Skills
+            </h3>
             <div className="grid md:grid-cols-2 gap-x-12">
-              {skillGroups.map(group => (
-                <div key={group.category} className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20">
-                  <p className="text-on-surface text-sm font-semibold w-44 shrink-0">{group.category}</p>
-                  <p className="text-secondary text-sm">{group.items.join(' · ')}</p>
+              {skillGroups.map((group) => (
+                <div
+                  key={group.category}
+                  className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20"
+                >
+                  <p className="text-on-surface text-sm font-semibold w-44 shrink-0">
+                    {group.category}
+                  </p>
+                  <p className="text-secondary text-sm">
+                    {group.items.join(" · ")}
+                  </p>
                 </div>
               ))}
             </div>
@@ -89,15 +101,24 @@ export function About() {
         {/* Education — full width */}
         <AnimatedSection delay={350} className="md:col-span-5">
           <div className="space-y-3 pt-4">
-            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">Education</h3>
-            {education.map(edu => (
-              <div key={edu.degree} className="flex justify-between items-start gap-4 py-2 border-b border-outline-variant/20">
+            <h3 className="text-on-surface text-sm font-bold uppercase tracking-widest">
+              Education
+            </h3>
+            {education.map((edu) => (
+              <div
+                key={edu.degree}
+                className="flex justify-between items-start gap-4 py-2 border-b border-outline-variant/20"
+              >
                 <div>
-                  <p className="text-on-surface text-sm font-semibold">{edu.degree}</p>
+                  <p className="text-on-surface text-sm font-semibold">
+                    {edu.degree}
+                  </p>
                   <p className="text-secondary text-xs">{edu.institution}</p>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className="text-primary text-xs font-mono">WAM {edu.wam}</p>
+                  <p className="text-primary text-xs font-mono">
+                    WAM {edu.wam}
+                  </p>
                   <p className="text-secondary text-xs">{edu.period}</p>
                 </div>
               </div>
@@ -106,5 +127,5 @@ export function About() {
         </AnimatedSection>
       </div>
     </section>
-  )
+  );
 }
