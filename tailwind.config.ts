@@ -18,6 +18,7 @@ export default {
           bright:  'rgb(var(--color-surface-bright) / <alpha-value>)',
           dim:     'rgb(var(--color-surface-dim) / <alpha-value>)',
           tag:     'rgb(var(--color-surface-tag) / <alpha-value>)',
+          card:    'rgb(var(--color-surface-card) / <alpha-value>)',
         },
         'on-surface':      'rgb(var(--color-on-surface) / <alpha-value>)',
         'on-primary':      'rgb(var(--color-on-primary) / <alpha-value>)',
