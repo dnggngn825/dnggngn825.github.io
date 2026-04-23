@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center pt-20 bg-bg text-secondary overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-20 pb-20 bg-bg text-secondary overflow-hidden"
     >
       {/* Subtle radial glow */}
       <div
@@ -45,13 +45,13 @@ export function Hero() {
         >
           <button
             onClick={() => scrollToId("projects")}
-            className="border border-outline bg-surface-highest text-on-surface px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.12)] hover:shadow-[0_0_30px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95"
+            className="w-full sm:w-auto border border-outline bg-surface-highest text-on-surface px-8 py-4 font-bold tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.12)] hover:shadow-[0_0_30px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95"
           >
             View My Work
           </button>
           <button
             onClick={() => scrollToId("contact")}
-            className="border border-outline text-secondary px-8 py-4 font-bold tracking-wide rounded-xl hover:bg-surface-high hover:text-on-surface transition-all duration-300 hover:scale-105 active:scale-95"
+            className="w-full sm:w-auto border border-outline text-secondary px-8 py-4 font-bold tracking-wide rounded-xl hover:bg-surface-high hover:text-on-surface transition-all duration-300 hover:scale-105 active:scale-95"
           >
             Contact Me
           </button>

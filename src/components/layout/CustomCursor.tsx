@@ -11,13 +11,16 @@ export function CustomCursor() {
     const ring = ringRef.current
     if (!dot || !ring) return
 
-    dot.style.display  = 'block'
-    ring.style.display = 'block'
-
     let rx = 0
     let ry = 0
+    let initialized = false
 
     function onMove(e: MouseEvent) {
+      if (!initialized) {
+        dot.style.display  = 'block'
+        ring.style.display = 'block'
+        initialized = true
+      }
       if (!dot || !ring) return
       const { clientX: x, clientY: y } = e
       dot.style.transform = `translate(${x - 4}px, ${y - 4}px)`

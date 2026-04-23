@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 export function About() {
   return (
-    <section id="about" className="py-32 max-w-7xl mx-auto px-6">
+    <section id="about" className="py-16 md:py-32 max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-5 gap-16 items-start">
         {/* Text */}
         <div className="md:col-span-3 space-y-8">
@@ -36,6 +36,7 @@ export function About() {
                 href={owner.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="flex items-center gap-2 text-primary hover:text-[#b7e0c6] transition-colors duration-200 text-sm font-medium"
@@ -43,9 +44,10 @@ export function About() {
                 <GitHubIcon className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href={owner.linkedin}
+                href="https://www.linkedin.com/in/dang-nguyen-89a563170/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="flex items-center gap-2 text-primary hover:text-[#b7e0c6] transition-colors duration-200 text-sm font-medium"
@@ -84,9 +86,9 @@ export function About() {
               {skillGroups.map((group) => (
                 <div
                   key={group.category}
-                  className="flex gap-4 items-baseline py-2 border-b border-outline-variant/20"
+                  className="flex flex-col sm:flex-row sm:gap-4 sm:items-baseline py-2 border-b border-outline-variant/20"
                 >
-                  <p className="text-on-surface text-sm font-semibold w-44 shrink-0">
+                  <p className="text-on-surface text-sm font-semibold sm:w-44 sm:shrink-0">
                     {group.category}
                   </p>
                   <p className="text-secondary text-sm">
