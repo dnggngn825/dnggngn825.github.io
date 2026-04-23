@@ -16,18 +16,12 @@ function scrollToId(id: string) {
 }
 
 export function Navbar() {
-  const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
   const [isDarkMode, setIsDarkMode] = usePrefersDarkMode()
-  const navRef = useRef<HTMLElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
   const location = useLocation()
   const isHome = location.pathname === '/'
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     if (!menuOpen) return
@@ -36,38 +30,95 @@ export function Navbar() {
     return () => window.removeEventListener('keydown', onKey)
   }, [menuOpen])
 
-  // Close menu on route change
-  useEffect(() => { setMenuOpen(false) }, [location])
-
-  // Lock scroll when menu is open
+  // Close menu on outside click
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (!menuOpen) return
+    const onPointer = (e: PointerEvent) => {
+      if (
+        menuRef.current && !menuRef.current.contains(e.target as Node) &&
+        buttonRef.current && !buttonRef.current.contains(e.target as Node)
+      ) {
+        setMenuOpen(false)
+      }
+    }
+    window.addEventListener('pointerdown', onPointer)
+    return () => window.removeEventListener('pointerdown', onPointer)
   }, [menuOpen])
+
+  useEffect(() => { setMenuOpen(false) }, [location])
 
   function handleNavClick(href: string) {
     setMenuOpen(false)
-    if (isHome) {
-      scrollToId(href.slice(1))
-    }
+    if (isHome) scrollToId(href.slice(1))
   }
 
+  const pillBase = 'bg-surface-card/40 border-outline-variant/50 [box-shadow:var(--shadow-pill)]'
+
   return (
-    <>
+    <div className="fixed top-0 inset-x-0 z-50 flex justify-center pt-4 px-4 md:px-6 pointer-events-none">
+      {/* Desktop floating pill */}
       <nav
-        ref={navRef}
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? `${isDarkMode ? 'bg-bg/50 border-surface-highest/40 shadow-[0_8px_32px_rgba(6,14,32,0.4)]' : 'bg-white/50 border-outline-variant/40 shadow-[0_8px_32px_rgba(15,23,42,0.08)]'} backdrop-blur-md border-b`
-            : 'bg-transparent'
-        }`}
+        className={`
+          hidden md:flex items-center gap-2 px-3 py-2
+          rounded-full border backdrop-blur-md
+          transition-all duration-300 pointer-events-auto
+          ${pillBase}
+        `}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Brand */}
+        <Link
+          to="/"
+          onClick={() => isHome && window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`w-8 h-8 rounded-full flex items-center justify-center font-display font-black text-xs tracking-tight transition-colors duration-200 flex-shrink-0 ${
+            isDarkMode
+              ? 'bg-primary text-bg hover:bg-primary/80'
+              : 'bg-on-surface text-bg hover:bg-on-surface/80'
+          }`}
+        >
+          {owner.name.split(' ').map(n => n[0]).join('')}
+        </Link>
+
+        {/* Divider */}
+        <span className={`w-px h-5 mx-1 ${isDarkMode ? 'bg-surface-highest/60' : 'bg-outline-variant/60'}`} />
+
+        {/* Nav links */}
+        {navLinks.map(link => (
+          isHome ? (
+            <button
+              key={link.label}
+              onClick={() => handleNavClick(link.href)}
+              className="text-secondary hover:text-primary transition-colors duration-200 text-sm font-medium tracking-tight cursor-pointer px-3 py-1.5 rounded-full hover:bg-surface-high/40"
+            >
+              {link.label}
+            </button>
+          ) : (
+            <Link
+              key={link.label}
+              to={`/${link.href}`}
+              className="text-secondary hover:text-primary transition-colors duration-200 text-sm font-medium tracking-tight px-3 py-1.5 rounded-full hover:bg-surface-high/40"
+            >
+              {link.label}
+            </Link>
+          )
+        ))}
+
+        {/* Divider */}
+        <span className={`w-px h-5 mx-1 ${isDarkMode ? 'bg-surface-highest/60' : 'bg-outline-variant/60'}`} />
+
+        <ThemeToggle isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(prev => !prev)} />
+      </nav>
+
+      {/* Mobile bar — single continuous box that expands when menu opens */}
+      <div
+        ref={menuRef}
+        className={`md:hidden w-full pointer-events-auto rounded-2xl border backdrop-blur-md transition-all duration-300 ${pillBase}`}
+      >
+        <nav className="flex items-center justify-between px-4 py-2.5">
           {/* Brand */}
           <Link
             to="/"
             onClick={() => isHome && window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className={`w-10 h-10 rounded-[6px] flex items-center justify-center font-display font-black text-base tracking-tight transition-colors duration-200 ${
+            className={`w-8 h-8 rounded-full flex items-center justify-center font-display font-black text-xs tracking-tight transition-colors duration-200 ${
               isDarkMode
                 ? 'bg-primary text-bg hover:bg-primary/80'
                 : 'bg-on-surface text-bg hover:bg-on-surface/80'
@@ -76,79 +127,54 @@ export function Navbar() {
             {owner.name.split(' ').map(n => n[0]).join('')}
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => (
-              isHome ? (
-                <button
-                  key={link.label}
-                  onClick={() => handleNavClick(link.href)}
-                  className="text-secondary hover:text-primary transition-colors duration-200 text-sm font-medium tracking-tight cursor-pointer"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <Link
-                  key={link.label}
-                  to={`/${link.href}`}
-                  className="text-secondary hover:text-primary transition-colors duration-200 text-sm font-medium tracking-tight"
-                >
-                  {link.label}
-                </Link>
-              )
-            ))}
-            <ThemeToggle isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(prev => !prev)} />
-          </div>
-
-          {/* Mobile right controls */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <ThemeToggle isDarkMode={isDarkMode} onToggle={() => setIsDarkMode(prev => !prev)} />
             <button
-              className="text-primary"
+              ref={buttonRef}
               onClick={() => setMenuOpen(v => !v)}
               aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200 ${
+                menuOpen
+                  ? isDarkMode ? 'bg-surface-high text-primary' : 'bg-surface-high/60 text-primary'
+                  : 'text-secondary hover:text-primary'
+              }`}
             >
-              <span className="material-symbols-outlined">
+              <span className="material-symbols-outlined text-[20px]">
                 {menuOpen ? 'close' : 'menu'}
               </span>
             </button>
           </div>
-        </div>
+        </nav>
 
-        {/* Mobile dropdown */}
+        {/* Dropdown — no gap, flows inside the same box */}
         {menuOpen && (
-          <div className={`md:hidden relative z-50 ${isDarkMode ? 'bg-bg/50 border-t border-surface-highest/40' : 'bg-white/50 border-t border-outline-variant/40'} backdrop-blur-md px-6 py-4 flex flex-col gap-4`}>
-            {navLinks.map(link => (
-              isHome ? (
-                <button
-                  key={link.label}
-                  onClick={() => handleNavClick(link.href)}
-                  className="text-secondary hover:text-primary transition-colors text-base font-medium text-left"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <Link
-                  key={link.label}
-                  to={`/${link.href}`}
-                  className="text-secondary hover:text-primary transition-colors text-base font-medium"
-                >
-                  {link.label}
-                </Link>
-              )
-            ))}
-          </div>
+          <>
+            <div className={`mx-4 h-px ${isDarkMode ? 'bg-surface-highest/50' : 'bg-outline-variant/50'}`} />
+            <div className="px-3 py-3 flex flex-col gap-1">
+              {navLinks.map(link => (
+                isHome ? (
+                  <button
+                    key={link.label}
+                    onClick={() => handleNavClick(link.href)}
+                    className="text-secondary hover:text-primary transition-colors text-sm font-medium text-left px-4 py-2.5 rounded-xl hover:bg-surface-high/40 w-full"
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={`/${link.href}`}
+                    className="text-secondary hover:text-primary transition-colors text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-surface-high/40 block"
+                  >
+                    {link.label}
+                  </Link>
+                )
+              ))}
+            </div>
+          </>
         )}
-      </nav>
-
-      {/* Backdrop overlay — outside <nav> to avoid backdrop-filter containing block issue */}
-      {menuOpen && (
-        <div
-          className="md:hidden fixed inset-x-0 bottom-0 z-40 backdrop-blur-sm bg-bg/20"
-          style={{ top: navRef.current?.offsetHeight ?? 0 }}
-          onClick={() => setMenuOpen(false)}
-        />
-      )}
-    </>
+      </div>
+    </div>
   )
 }
