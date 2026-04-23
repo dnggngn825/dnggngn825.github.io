@@ -13,6 +13,7 @@ A high-performance, responsive personal portfolio built with a focus on modern f
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) with a mobile-first approach
 - **Animations:** [Motion](https://motion.dev/) for fluid UI interactions
 - **Build Tool:** [Vite](https://vitejs.dev/) for lightning-fast HMR and optimized builds
+- **Asset CDN:** [Cloudflare R2](https://www.cloudflare.com/developer-platform/r2/) for zero-egress global image delivery
 - **Deployment:** [GitHub Pages](https://pages.github.com/) via Automated CI/CD
 
 ---

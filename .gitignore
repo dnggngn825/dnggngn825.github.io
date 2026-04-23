@@ -28,6 +28,11 @@ CODEBASE.md
 *.ntvs*
 *.njsproj
 *.sln
+
+# Screenshots and test artifacts
+screenshots/
+test-results/
+docs/playwright-ui-ux-guide.md
 *.sw?
 
 # OS

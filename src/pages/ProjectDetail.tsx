@@ -13,10 +13,19 @@ const MathJaxProvider: React.ComponentType<{ children: React.ReactNode }> =
   ({ children }) => <MathJaxContext input="tex">{children}</MathJaxContext>
 
 function MathOrText({ text, isMath }: { text: string; isMath?: boolean }) {
-  if (isMath && MathJaxNode) {
-    return <MathJaxNode formula={text} />
-  }
-  return <span>{text}</span>
+  if (!isMath) return <span>{text}</span>
+
+  // Split on \(...\) inline math delimiters — odd indices are formulas, even are plain text
+  const parts = text.split(/\\\((.*?)\\\)/s)
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 0
+          ? part ? <span key={i}>{part}</span> : null
+          : <MathJaxNode key={i} inline>{part}</MathJaxNode>
+      )}
+    </>
+  )
 }
 
 function SectionHeader({ icon, title }: { icon: string; title: string }) {
