@@ -53,7 +53,7 @@ export default function ProjectDetail() {
   if (!project) return <Navigate to="/" replace />
 
   const content = (
-    <main className="min-h-screen pt-24 pb-32 max-w-4xl mx-auto px-6 space-y-16">
+    <main className="min-h-screen pt-24 pb-16 md:pb-32 max-w-4xl mx-auto px-6 space-y-16">
       {/* Back link */}
       <AnimatedSection>
         <Link
