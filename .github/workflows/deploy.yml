@@ -47,6 +47,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          VITE_CDN_BASE: ${{ vars.VITE_CDN_BASE }}
 
       - uses: actions/configure-pages@v5
 

@@ -1,60 +1,61 @@
-import thumbnailAmr      from '../assets/images/thumbnail-amr.avif'
-import thumbnailChessbot from '../assets/images/thumbnail-chessbot.avif'
-import thumbnailProsarm  from '../assets/images/thumbnail-prosarm.avif'
-import thumbnailDental   from '../assets/images/thumbnail-dental.avif'
-import thumbnailPersonal   from '../assets/images/thumbnail-personal-web.avif'
-import thumbnailEcommerce  from '../assets/images/thumbnail-ecommerce.avif'
+const CDN = import.meta.env.VITE_CDN_BASE;
+const thumbnailAmr = `${CDN}/assets/images/thumbnail-amr.avif`;
+const thumbnailChessbot = `${CDN}/assets/images/thumbnail-chessbot.avif`;
+const thumbnailProsarm = `${CDN}/assets/images/thumbnail-prosarm.avif`;
+const thumbnailDental = `${CDN}/assets/images/thumbnail-dental.avif`;
+const thumbnailPersonal = `${CDN}/assets/images/thumbnail-personal-web.avif`;
+const thumbnailEcommerce = `${CDN}/assets/images/thumbnail-ecommerce.avif`;
 
-import amrWarehouse   from '../assets/images/amr/warehouselayout.avif'
-import amrSetup       from '../assets/images/amr/setup-pp.avif'
-import amrExample     from '../assets/images/amr/example-pp.avif'
-import amrTraj        from '../assets/images/amr/trajtrack.avif'
-import amrDiagram     from '../assets/images/amr/systems-level-diagram.avif'
+const amrWarehouse = `${CDN}/assets/images/amr/warehouselayout.avif`;
+const amrSetup = `${CDN}/assets/images/amr/setup-pp.avif`;
+const amrExample = `${CDN}/assets/images/amr/example-pp.avif`;
+const amrTraj = `${CDN}/assets/images/amr/trajtrack.avif`;
+const amrDiagram = `${CDN}/assets/images/amr/systems-level-diagram.avif`;
 
-import chessbotCad       from '../assets/images/chessbot/cad-model.avif'
-import chessbotSchematic from '../assets/images/chessbot/schematic.avif'
-import chessbotWorkspace from '../assets/images/chessbot/workspace-side-view-top-view.avif'
-import chessbotReachable from '../assets/images/chessbot/workspace-reachable.avif'
-import chessbotIk        from '../assets/images/chessbot/ik-result.avif'
-import chessbotCorner    from '../assets/images/chessbot/corner-visual.avif'
-import chessbotSide      from '../assets/images/chessbot/sideview-traj.avif'
-import chessbotResult    from '../assets/images/chessbot/result-traj.avif'
+const chessbotCad = `${CDN}/assets/images/chessbot/cad-model.avif`;
+const chessbotSchematic = `${CDN}/assets/images/chessbot/schematic.avif`;
+const chessbotWorkspace = `${CDN}/assets/images/chessbot/workspace-side-view-top-view.avif`;
+const chessbotReachable = `${CDN}/assets/images/chessbot/workspace-reachable.avif`;
+const chessbotIk = `${CDN}/assets/images/chessbot/ik-result.avif`;
+const chessbotCorner = `${CDN}/assets/images/chessbot/corner-visual.avif`;
+const chessbotSide = `${CDN}/assets/images/chessbot/sideview-traj.avif`;
+const chessbotResult = `${CDN}/assets/images/chessbot/result-traj.avif`;
 
 export enum ProjectStatus {
-  Finished   = 'Finished',
-  InProgress = 'In Progress',
+  Finished = "Finished",
+  InProgress = "In Progress",
 }
 
 export interface ProjectContributor {
-  name:   string
-  email?: string
+  name: string;
+  email?: string;
 }
 
 export interface ProjectImage {
-  src:      string
-  alt:      string
-  caption?: string
+  src: string;
+  alt: string;
+  caption?: string;
 }
 
 export interface Project {
-  id:           string
-  title:        string
-  year:         string
-  status:       ProjectStatus
-  tech:         string[]
-  summary:      string
-  thumbnail?:   string
-  github?:      string
-  liveUrl?:     string
-  videoEmbed?:  string
-  contributors: ProjectContributor[]
-  goal?:           string
-  whatWasDone?:    string[]
-  challenges?:     string[]
-  improvements?:   string[]
-  images?:         ProjectImage[]
-  hasMath?:        boolean
-  richSections?:   { heading: string; body: string; isMath?: boolean }[]
+  id: string;
+  title: string;
+  year: string;
+  status: ProjectStatus;
+  tech: string[];
+  summary: string;
+  thumbnail?: string;
+  github?: string;
+  liveUrl?: string;
+  videoEmbed?: string;
+  contributors: ProjectContributor[];
+  goal?: string;
+  whatWasDone?: string[];
+  challenges?: string[];
+  improvements?: string[];
+  images?: ProjectImage[];
+  hasMath?: boolean;
+  richSections?: { heading: string; body: string; isMath?: boolean }[];
 }
 
 export const projects: Project[] = [
