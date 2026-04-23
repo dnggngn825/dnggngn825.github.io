@@ -9,7 +9,7 @@ export function Projects() {
   const navigate = useNavigate()
 
   return (
-    <section id="projects" className="py-32 max-w-7xl mx-auto px-6">
+    <section id="projects" className="py-16 md:py-32 max-w-7xl mx-auto px-6">
       <AnimatedSection>
         <div className="flex items-center gap-4 mb-16">
           <span className="text-gradient font-mono text-sm">03.</span>

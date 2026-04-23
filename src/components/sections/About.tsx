@@ -86,9 +86,9 @@ export function About() {
               {skillGroups.map((group) => (
                 <div
                   key={group.category}
-                  className="flex flex-col sm:flex-row sm:gap-4 sm:items-baseline py-2 border-b border-outline-variant/20"
+                  className="flex flex-col gap-0.5 py-2 border-b border-outline-variant/20"
                 >
-                  <p className="text-on-surface text-sm font-semibold sm:w-44 sm:shrink-0">
+                  <p className="text-on-surface text-sm font-semibold">
                     {group.category}
                   </p>
                   <p className="text-secondary text-sm">
