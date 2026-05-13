@@ -6,29 +6,6 @@
 
 @layer base {
   :root {
-    /* shadcn/ui CSS variable aliases — mapped to our design tokens */
-    /* These allow shadcn components to resolve their internal vars */
-    --background: 0 0 0;
-    --foreground: 248 250 252;
-    --card: 32 32 36;
-    --card-foreground: 248 250 252;
-    --popover: 17 24 39;
-    --popover-foreground: 248 250 252;
-    --primary: 248 250 252;
-    --primary-foreground: 15 23 42;
-    --secondary: 31 41 55;
-    --secondary-foreground: 248 250 252;
-    --muted: 31 41 55;
-    --muted-foreground: 161 161 170;
-    --accent: 31 41 55;
-    --accent-foreground: 248 250 252;
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
-    --border: 55 65 81;
-    --input: 55 65 81;
-    --ring: 248 250 252;
-    --radius: 0.5rem;
-
     /* Color channels (R G B) — used as rgb(var(--color-x) / alpha) */
     --color-bg:               0 0 0;
     --color-primary:          248 250 252;
@@ -96,27 +73,6 @@
     --color-surface-card: 248 250 252;
     --gradient-card-border:    linear-gradient(135deg, rgba(15,23,42,0.07) 0%, rgba(100,116,139,0.02) 50%, rgba(15,23,42,0.05) 100%);
     --bg-container-glow:       radial-gradient(ellipse at 20% 0%, rgba(230,230,232,1) 0%, rgba(241,245,249,1) 70%);
-
-    /* shadcn/ui CSS variable aliases — light theme overrides */
-    --background: 248 250 252;
-    --foreground: 15 23 42;
-    --card: 248 250 252;
-    --card-foreground: 15 23 42;
-    --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
-    --primary: 15 23 42;
-    --primary-foreground: 248 250 252;
-    --secondary: 226 232 240;
-    --secondary-foreground: 15 23 42;
-    --muted: 226 232 240;
-    --muted-foreground: 100 116 139;
-    --accent: 226 232 240;
-    --accent-foreground: 15 23 42;
-    --destructive: 220 38 38;
-    --destructive-foreground: 248 250 252;
-    --border: 203 213 225;
-    --input: 203 213 225;
-    --ring: 15 23 42;
   }
 
   html {
