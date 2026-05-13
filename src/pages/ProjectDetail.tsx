@@ -7,6 +7,7 @@ import { YouTubeEmbed } from '../components/ui/YouTubeEmbed'
 import { AnimatedSection } from '../components/ui/AnimatedSection'
 import { GitHubIcon } from '../components/ui/GitHubIcon'
 import { Lightbox } from '../components/ui/Lightbox'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion'
 import { Context as MathJaxContext, Node as MathJaxNode } from 'react-mathjax2'
 
 const MathJaxProvider: React.ComponentType<{ children: React.ReactNode }> =
@@ -149,16 +150,38 @@ export default function ProjectDetail() {
       {/* Challenges */}
       {project.challenges && project.challenges.length > 0 && (
         <AnimatedSection>
-          <SectionHeader icon="warning" title="What Didn't Go Well" />
-          <BulletList items={project.challenges} />
+          <Accordion className="border border-outline-variant/20 rounded-xl px-4">
+            <AccordionItem value="challenges" className="border-none">
+              <AccordionTrigger className="hover:no-underline py-4 gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary text-[20px]">warning</span>
+                  <span className="text-on-surface text-xl font-bold">What Didn't Go Well</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <BulletList items={project.challenges} />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </AnimatedSection>
       )}
 
       {/* Improvements */}
       {project.improvements && project.improvements.length > 0 && (
         <AnimatedSection>
-          <SectionHeader icon="lightbulb" title="Areas for Improvement" />
-          <BulletList items={project.improvements} />
+          <Accordion className="border border-outline-variant/20 rounded-xl px-4">
+            <AccordionItem value="improvements" className="border-none">
+              <AccordionTrigger className="hover:no-underline py-4 gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+                  <span className="text-on-surface text-xl font-bold">Areas for Improvement</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <BulletList items={project.improvements} />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </AnimatedSection>
       )}
 

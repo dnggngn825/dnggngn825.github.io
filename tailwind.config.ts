@@ -39,6 +39,14 @@ export default {
         full:    '9999px',
       },
       keyframes: {
+        'accordion-down': {
+          from: { height: '0px' },
+          to:   { height: 'var(--accordion-panel-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--accordion-panel-height)' },
+          to:   { height: '0px' },
+        },
         'spin-gradient': {
           '0%':   { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(1080deg)' },
@@ -57,6 +65,8 @@ export default {
         },
       },
       animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up':   'accordion-up 0.2s ease-out',
         'spin-gradient': 'spin-gradient 2s infinite',
         'fade-up':       'fade-up 0.5s ease-out forwards',
         'fade-in':       'fade-in 0.5s ease-out forwards',
