@@ -1,3 +1,6 @@
+import thumbnailTaperoot from "../assets/images/taperoot-dashboard.png";
+import taperootNotetaker from "../assets/images/taperoot-notetaker.png";
+
 const CDN = import.meta.env.VITE_CDN_BASE;
 const thumbnailAmr = `${CDN}/assets/images/thumbnail-amr.avif`;
 const thumbnailChessbot = `${CDN}/assets/images/thumbnail-chessbot.avif`;
@@ -59,6 +62,66 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "taperoot",
+    title: "Taperoot — Relationship Follow-up Assistant",
+    year: "2026",
+    status: ProjectStatus.Finished,
+    thumbnail: thumbnailTaperoot,
+    tech: [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Node.js",
+      "GraphQL Yoga",
+      "Pothos",
+      "Prisma",
+      "SQLite",
+      "gRPC",
+      "Protocol Buffers",
+      "Anthropic Claude",
+      "Playwright",
+    ],
+    summary:
+      "A personal relationship workspace that turns contact notes and conversation transcripts into editable AI-suggested follow-ups, due dates, and email drafts.",
+    github: "https://github.com/dnggngn825/taperoot",
+    contributors: [{ name: "Danny Nguyen", email: "h.danggnguyen@gmail.com" }],
+    goal: "Make it easy to act on professional conversations by bringing each contact's notes, conversation history, and next steps into one focused workspace.",
+    whatWasDone: [
+      "Built a React workspace for browsing contacts, reviewing notes and conversations, and managing suggested follow-up actions.",
+      "Implemented a GraphQL API with GraphQL Yoga and Pothos, backed by Prisma and a file-based SQLite database.",
+      "Separated AI extraction into a gRPC service with a Protocol Buffers contract and Anthropic Claude integration.",
+      "Made follow-up generation asynchronous and safe to rerun, preserving completed and manually authored actions.",
+      "Added a rule-based extraction fallback so the application remains usable without an API key.",
+      "Added one-click email drafts and Playwright end-to-end coverage.",
+    ],
+    images: [
+      {
+        src: thumbnailTaperoot,
+        alt: "Taperoot contact workspace with suggested follow-up actions",
+        caption: "Contact notes and suggested next steps",
+      },
+      {
+        src: taperootNotetaker,
+        alt: "Taperoot conversation notetaker view",
+        caption: "Conversation context captured for follow-up extraction",
+      },
+    ],
+    richSections: [
+      {
+        heading: "Service Architecture",
+        body: "The React client requests contact data and mutations through a GraphQL API. GraphQL Yoga and Pothos define the API, while Prisma persists the contact graph in SQLite. The API calls a separate extraction service over gRPC using a shared Protocol Buffers contract, keeping model-specific work outside the web and API layers.",
+      },
+      {
+        heading: "Follow-up Extraction",
+        body: "When generation is requested, the API gathers a contact's notes and conversations and sends their context to the extraction service. Claude produces actionable follow-ups with inferred due dates and conversation notes; a rule-based extractor is available when no model API key is configured.",
+      },
+      {
+        heading: "Safe, Editable Suggestions",
+        body: "AI-generated actions remain editable by the user. Re-running extraction preserves completed follow-ups and actions written manually, so refreshed suggestions do not overwrite the user's progress.",
+      },
+    ],
+  },
   {
     id: "oda-furniture-store",
     title: "Oda — Contemporary Furniture Store",
